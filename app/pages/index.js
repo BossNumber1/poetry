@@ -80,16 +80,20 @@ export default function Home() {
                     <source src="one.mp3" type="audio/mpeg" />
                 </audio>
 
-                <button onClick={switchOnSwitchOff}>
-                    <Image
-                        src={imgMusic}
-                        alt={onMusic !== "true" ? "icon_play" : "icon_pause"}
-                        width={64}
-                        height={64}
-                    />
-                </button>
-
+                <div style={{ marginBottom: 453, marginLeft: 1130 }}>
+                    <button onClick={switchOnSwitchOff}>
+                        <Image
+                            src={imgMusic}
+                            alt={
+                                onMusic !== "true" ? "icon_play" : "icon_pause"
+                            }
+                            width={64}
+                            height={64}
+                        />
+                    </button>
+                </div>
                 <div
+                    style={{ position: "absolute" }}
                     dangerouslySetInnerHTML={{
                         __html: content,
                     }}
