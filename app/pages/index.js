@@ -18,8 +18,8 @@ export default function Home() {
     const [selectedScriptSection, setSelectedScriptSection] = React.useState(0);
 
     const [content, setContent] = React.useState(
-        `<div style="float: center"><div>приветствую, о, милый путник</div><div>нажимаешь на пробел и погружаешься в мир стихов</div>
-                <p>погнаааали! 🤘</p></div>`
+        `<div>приветствую, о, милый путник</div><div>нажимаешь на пробел и погружаешься в мир стихов</div>
+                <p>погнаааали! 🤘</p>`
     );
 
     React.useEffect(() => {
@@ -63,17 +63,21 @@ export default function Home() {
 
             <main className={styles.main}>
                 <div
+                    // style={{ marginRight: 235 }}
+
                     dangerouslySetInnerHTML={{
                         __html: content,
                     }}
                 />
                 {selectedScriptSection == 1 && (
-                    <Image
-                        src="/one.jpg"
-                        alt="Vercel Logo"
-                        width={500}
-                        height={333}
-                    />
+                    <div style={{ marginTop: "34px" }}>
+                        <Image
+                            src="/one.jpg"
+                            alt="Vercel Logo"
+                            width={500}
+                            height={333}
+                        />
+                    </div>
                 )}
             </main>
         </div>
