@@ -78,45 +78,58 @@ export default function Home() {
             </Head>
 
             <main className={styles.main}>
-                <audio id="track">
-                    <source src="music.mp3" type="audio/mpeg" />
-                </audio>
-
-                <div style={{ marginBottom: 453, marginLeft: 1130 }}>
-                    <button
-                        onClick={switchOnSwitchOff}
-                        style={{
-                            border: 0,
-                            borderRadius: 50,
-                            cursor: "pointer",
-                        }}
-                    >
-                        <Image
-                            src={imgMusic}
-                            alt={
-                                onMusic !== "true" ? "icon_play" : "icon_pause"
-                            }
-                            width={64}
-                            height={64}
-                        />
-                    </button>
-                </div>
-                <div
-                    style={{ position: "absolute" }}
-                    dangerouslySetInnerHTML={{
-                        __html: content,
-                    }}
-                />
-                {selectedScriptSection == 1 && (
-                    <div style={{ marginTop: "34px" }}>
-                        <Image
-                            src="/one.jpg"
-                            alt="first_picture"
-                            width={500}
-                            height={333}
-                        />
+                <div className="body_page2">
+                    <div className="topBlock2">
+                        <audio id="track">
+                            <source src="music.mp3" type="audio/mpeg" />
+                        </audio>
+                        <div
+                            style={{
+                                top: 32,
+                                right: 32,
+                                position: "fixed",
+                            }}
+                        >
+                            <button
+                                onClick={switchOnSwitchOff}
+                                style={{
+                                    border: 0,
+                                    borderRadius: 50,
+                                    cursor: "pointer",
+                                }}
+                            >
+                                <Image
+                                    src={imgMusic}
+                                    alt={
+                                        onMusic !== "true"
+                                            ? "icon_play"
+                                            : "icon_pause"
+                                    }
+                                    width={64}
+                                    height={64}
+                                />
+                            </button>
+                        </div>
                     </div>
-                )}
+                    <div className="blockBelow2">
+                        <div
+                            style={{ position: "absolute" }}
+                            dangerouslySetInnerHTML={{
+                                __html: content,
+                            }}
+                        />
+                        {selectedScriptSection == 1 && (
+                            <div style={{ marginTop: "34px" }}>
+                                <Image
+                                    src="/one.jpg"
+                                    alt="first_picture"
+                                    width={500}
+                                    height={333}
+                                />
+                            </div>
+                        )}
+                    </div>
+                </div>
             </main>
         </div>
     );
