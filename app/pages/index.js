@@ -113,7 +113,10 @@ export default function Home() {
                     </div>
                     <div className="blockBelow2">
                         <div
-                            style={{ position: "absolute" }}
+                            style={{
+                                marginLeft: 30,
+                                // position: "absolute"
+                            }}
                             dangerouslySetInnerHTML={{
                                 __html: content,
                             }}
