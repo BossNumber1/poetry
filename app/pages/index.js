@@ -56,6 +56,7 @@ export default function Home() {
     }, [poetry]);
 
     let switchOnSwitchOff = () => {
+        document.getElementById("track").volume = 0.1;
         if (onMusic === false) {
             document.getElementById("track").play();
             setOnMusic(!onMusic);
@@ -77,7 +78,7 @@ export default function Home() {
 
             <main className={styles.main}>
                 <audio id="track">
-                    <source src="one.mp3" type="audio/mpeg" />
+                    <source src="music.mp3" type="audio/mpeg" />
                 </audio>
 
                 <div style={{ marginBottom: 453, marginLeft: 1130 }}>
