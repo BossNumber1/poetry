@@ -15,7 +15,10 @@ export default function Home() {
                     <div>не смогу.</div>`,
         },
 
-        { text: "2" },
+        {
+            text: ` <div>если вдруг станет на сердце пусто,</div>
+                    <div>вспоминай наше светлое чувство.</div>`,
+        },
     ];
     const [selectedScriptSection, setSelectedScriptSection] = React.useState(0);
 
