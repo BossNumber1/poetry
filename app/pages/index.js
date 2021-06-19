@@ -3,8 +3,11 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
+// import onemusic from "../public/one.mp3";
+
 export default function Home() {
     const [poetry, setPoetry] = React.useState("");
+    const [onMusic, setOnMusic] = React.useState(true);
 
     let scriptArray = [
         {
@@ -62,9 +65,21 @@ export default function Home() {
             </Head>
 
             <main className={styles.main}>
-                <div
-                    // style={{ marginRight: 235 }}
+                <audio id="track" controls>
+                    <source src="one.mp3" type="audio/mpeg" />
+                </audio>
 
+                <button onClick={() => document.getElementById("track").play()}>
+                    Играть
+                </button>
+
+                <button
+                    onClick={() => document.getElementById("track").pause()}
+                >
+                    Пауза
+                </button>
+
+                <div
                     dangerouslySetInnerHTML={{
                         __html: content,
                     }}
