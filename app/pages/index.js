@@ -57,6 +57,7 @@ export default function Home() {
 
     let switchOnSwitchOff = () => {
         document.getElementById("track").volume = 0.1;
+
         if (onMusic === false) {
             document.getElementById("track").play();
             setOnMusic(!onMusic);
@@ -82,7 +83,7 @@ export default function Home() {
                 </audio>
 
                 <div style={{ marginBottom: 453, marginLeft: 1130 }}>
-                    <button onClick={switchOnSwitchOff}>
+                    <button onClick={switchOnSwitchOff} style={{ border: 0 }}>
                         <Image
                             src={imgMusic}
                             alt={
