@@ -3,11 +3,10 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
-// import onemusic from "../public/one.mp3";
-
 export default function Home() {
     const [poetry, setPoetry] = React.useState("");
-    const [onMusic, setOnMusic] = React.useState(true);
+    const [onMusic, setOnMusic] = React.useState(false);
+    const [imgMusic, setImgMusic] = React.useState("/play.png");
 
     let scriptArray = [
         {
@@ -56,6 +55,18 @@ export default function Home() {
         }
     }, [poetry]);
 
+    let switchOnSwitchOff = () => {
+        if (onMusic === false) {
+            document.getElementById("track").play();
+            setOnMusic(!onMusic);
+            setImgMusic("/pause.png");
+        } else {
+            document.getElementById("track").pause();
+            setImgMusic("/play.png");
+            setOnMusic(!onMusic);
+        }
+    };
+
     return (
         <div className={styles.container}>
             <Head>
@@ -65,18 +76,17 @@ export default function Home() {
             </Head>
 
             <main className={styles.main}>
-                <audio id="track" controls>
+                <audio id="track">
                     <source src="one.mp3" type="audio/mpeg" />
                 </audio>
 
-                <button onClick={() => document.getElementById("track").play()}>
-                    Играть
-                </button>
-
-                <button
-                    onClick={() => document.getElementById("track").pause()}
-                >
-                    Пауза
+                <button onClick={switchOnSwitchOff}>
+                    <Image
+                        src={imgMusic}
+                        alt={onMusic !== "true" ? "icon_play" : "icon_pause"}
+                        width={64}
+                        height={64}
+                    />
                 </button>
 
                 <div
@@ -88,7 +98,7 @@ export default function Home() {
                     <div style={{ marginTop: "34px" }}>
                         <Image
                             src="/one.jpg"
-                            alt="Vercel Logo"
+                            alt="first_picture"
                             width={500}
                             height={333}
                         />
