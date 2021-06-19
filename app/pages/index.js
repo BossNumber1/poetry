@@ -83,7 +83,14 @@ export default function Home() {
                 </audio>
 
                 <div style={{ marginBottom: 453, marginLeft: 1130 }}>
-                    <button onClick={switchOnSwitchOff} style={{ border: 0 }}>
+                    <button
+                        onClick={switchOnSwitchOff}
+                        style={{
+                            border: 0,
+                            borderRadius: 50,
+                            cursor: "pointer",
+                        }}
+                    >
                         <Image
                             src={imgMusic}
                             alt={
