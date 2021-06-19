@@ -112,15 +112,26 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="blockBelow2">
-                        <div
-                            style={{
-                                marginLeft: 30,
-                                // position: "absolute"
-                            }}
-                            dangerouslySetInnerHTML={{
-                                __html: content,
-                            }}
-                        />
+                        <div style={{ display: "flex", marginLeft: 20 }}>
+                            <div style={{ borderRadius: 50 }}>
+                                <Image
+                                    src="/ava.jpg"
+                                    alt="ava"
+                                    width={74}
+                                    height={74}
+                                    style={{ borderRadius: 50 }}
+                                />
+                            </div>
+                            <div
+                                style={{
+                                    marginLeft: 30,
+                                    // position: "absolute"
+                                }}
+                                dangerouslySetInnerHTML={{
+                                    __html: content,
+                                }}
+                            />
+                        </div>
                         {selectedScriptSection == 1 && (
                             <div style={{ marginTop: "34px" }}>
                                 <Image
