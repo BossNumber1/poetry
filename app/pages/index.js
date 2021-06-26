@@ -19,6 +19,46 @@ export default function Home() {
             text: ` <div>если вдруг станет на сердце пусто,</div>
                     <div>вспоминай наше светлое чувство.</div>`,
         },
+
+        {
+            text: ` <div>3</div>
+                    <div>стих</div>`,
+        },
+
+        {
+            text: ` <div>4</div>
+                    <div>стих</div>`,
+        },
+
+        {
+            text: ` <div>5</div>
+                    <div>стих</div>`,
+        },
+
+        {
+            text: ` <div>6</div>
+                    <div>стих</div>`,
+        },
+
+        {
+            text: ` <div>7</div>
+                    <div>стих</div>`,
+        },
+
+        {
+            text: ` <div>8</div>
+                    <div>стих</div>`,
+        },
+
+        {
+            text: ` <div>9</div>
+                    <div>стих</div>`,
+        },
+
+        {
+            text: ` <div>10</div>
+                    <div>стих</div>`,
+        },
     ];
 
     React.useEffect(() => {
@@ -34,11 +74,6 @@ export default function Home() {
     const [selectedScriptSection, setSelectedScriptSection] =
         React.useState(false);
 
-    // const [content, setContent] = React.useState(
-    //     `<div>приветствую, о, милый путник</div><div>нажимаешь на пробел и погружаешься в мир стихов</div>
-    //             <p>погнаааали! 🤘</p>`
-    // );
-
     React.useEffect(() => {
         let randomn = [];
 
@@ -47,9 +82,6 @@ export default function Home() {
                 if (
                     event.code == "Space" &&
                     localStorage.getItem("selectedScriptSection")
-                    // <
-                    //     scriptArray.length
-                    // selectedScriptSection < scriptArray.length
                 ) {
                     randomn = [];
 
@@ -57,32 +89,17 @@ export default function Home() {
                     // let lex = JSON.parse(localStorage.getItem("hram"));
 
                     if (lux === "false") {
-                        // if (selectedScriptSection === false) {
-                        // alert("lux=false");
-                        // randomn.push(scriptArray[0].text); ????
                         localStorage.setItem("selectedScriptSection", "0");
-                    }
-
-                    // if
-
-                    // (lux < scriptArray.length) {
-                    // alert("aeeee");
-                    //  } else if (selectedScriptSection < scriptArray.length) {
-                    // randomn.push(scriptArray[selectedScriptSection].text);
-                    else if (lux === "0") {
+                    } else if (lux === "0") {
                         localStorage.setItem("selectedScriptSection", "1");
-                        // randomn.push("hhhh");
-                        // randomn.push(scriptArray[0].text);
-                    } else if (lux === "1") {
-                        //   } else if (selectedScriptSection === 1) {
-                        // alert(lex[1].text);
-                        // randomn.push(scriptArray[1].text);
+                    } else if (Number(lux) > 1 && Number(lux) < 8) {
+                        localStorage.setItem(
+                            "selectedScriptSection",
+                            String(Number(lux) + 1)
+                        );
+                    } else if (lux === "9") {
                         localStorage.removeItem("selectedScriptSection");
                     }
-                    // }
-                    // else {?????
-                    //     randomn.push("конец");
-                    // }
 
                     func();
                     document.removeEventListener("keydown", listener);
@@ -94,14 +111,17 @@ export default function Home() {
         runOnKeys(() => setPoetry(randomn));
 
         if (poetry !== "") {
-            // setContent(poetry);
-
-            if (selectedScriptSection !== false) {
-                setSelectedScriptSection(Number(selectedScriptSection) + 1);
-                localStorage.setItem("selectedText", scriptArray[1].text);
-            } else {
+            if (selectedScriptSection === false) {
                 setSelectedScriptSection(0);
                 localStorage.setItem("selectedText", scriptArray[0].text);
+            } else {
+                setSelectedScriptSection(Number(selectedScriptSection) + 1);
+
+                let gg = scriptArray[Number(selectedScriptSection) + 1]
+                    ? scriptArray[Number(selectedScriptSection) + 1].text
+                    : "конец";
+
+                localStorage.setItem("selectedText", gg);
             }
         }
     }, [poetry]);
@@ -164,11 +184,16 @@ export default function Home() {
                     </div>
                     <div className="blockBelow2">
                         <div style={{ display: "flex", marginLeft: 20 }}>
-                            <div style={{ borderRadius: 50 }}>
+                            <div
+                                className="avatar"
+                                style={{ borderRadius: 50 }}
+                            >
                                 {typeof window !== "undefined" &&
                                     localStorage.getItem(
                                         "selectedScriptSection"
                                     ) &&
+                                    localStorage.getItem("selectedText") !==
+                                        "конец" &&
                                     Number(
                                         localStorage.getItem(
                                             "selectedScriptSection"
@@ -184,21 +209,21 @@ export default function Home() {
                                     )}
                             </div>
                             {typeof window !== "undefined" &&
-                            localStorage.getItem("selectedScriptSection") ? (
-                                <div
-                                    style={{
-                                        marginLeft: 30,
-                                        // position: "absolute"
-                                    }}
-                                    dangerouslySetInnerHTML={{
-                                        __html: localStorage.getItem(
-                                            "selectedText"
-                                        ),
-                                    }}
-                                />
-                            ) : (
-                                "конец"
-                            )}
+                                localStorage.getItem(
+                                    "selectedScriptSection"
+                                ) && (
+                                    <div
+                                        style={{
+                                            marginLeft: 30,
+                                            // position: "absolute"
+                                        }}
+                                        dangerouslySetInnerHTML={{
+                                            __html: localStorage.getItem(
+                                                "selectedText"
+                                            ),
+                                        }}
+                                    />
+                                )}
                         </div>
                         {selectedScriptSection === 0 && (
                             <div style={{ marginTop: "34px" }}>
@@ -210,6 +235,13 @@ export default function Home() {
                                 />
                             </div>
                         )}
+
+                        <div
+                            className="tempbox"
+                            data-title="Наиболее интересные"
+                        >
+                            ggg
+                        </div>
                     </div>
                 </div>
             </main>
