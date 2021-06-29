@@ -10,68 +10,69 @@ export default function Home() {
 
     let scriptArray = [
         {
+            nameAuthor: "ff",
             text: ` <div>и мы, счастливые, спали в стогу...</div>
                     <div> я без тебя прожить </div>
                     <div>не смогу.</div>`,
         },
 
         {
+            nameAuthor: "ff22",
             text: ` <div>если вдруг станет на сердце пусто,</div>
                     <div>вспоминай наше светлое чувство.</div>`,
         },
 
         {
+            nameAuthor: "ff33",
             text: ` <div>3</div>
                     <div>стих</div>`,
         },
 
         {
+            nameAuthor: "ff44",
             text: ` <div>4</div>
                     <div>стих</div>`,
         },
 
         {
+            nameAuthor: "ff55",
             text: ` <div>5</div>
                     <div>стих</div>`,
         },
 
         {
+            nameAuthor: "ff66",
             text: ` <div>6</div>
                     <div>стих</div>`,
         },
 
         {
+            nameAuthor: "ff77",
             text: ` <div>7</div>
                     <div>стих</div>`,
         },
 
         {
+            nameAuthor: "ff88",
             text: ` <div>8</div>
                     <div>стих</div>`,
         },
 
         {
+            nameAuthor: "ff99",
             text: ` <div>9</div>
                     <div>стих</div>`,
         },
 
         {
+            nameAuthor: "ff10",
             text: ` <div>10</div>
                     <div>стих</div>`,
         },
     ];
 
-    let nameAuthor = [
-        {
-            name: `Мой Устимов`,
-        },
-        {
-            name: `Ах Астахова`,
-        },
-    ];
-
     React.useEffect(() => {
-        localStorage.setItem("hram", JSON.stringify(scriptArray));
+        // localStorage.setItem("hram", JSON.stringify(scriptArray));
         localStorage.setItem("selectedScriptSection", "false");
         localStorage.setItem(
             "selectedText",
@@ -124,6 +125,7 @@ export default function Home() {
             if (selectedScriptSection === false) {
                 setSelectedScriptSection(0);
                 localStorage.setItem("selectedText", scriptArray[0].text);
+                localStorage.setItem("nameAuthor", scriptArray[0].nameAuthor);
             } else {
                 setSelectedScriptSection(Number(selectedScriptSection) + 1);
 
@@ -131,7 +133,12 @@ export default function Home() {
                     ? scriptArray[Number(selectedScriptSection) + 1].text
                     : "конец";
 
+                let gg2 = scriptArray[Number(selectedScriptSection) + 1]
+                    ? scriptArray[Number(selectedScriptSection) + 1].nameAuthor
+                    : "";
+
                 localStorage.setItem("selectedText", gg);
+                localStorage.setItem("nameAuthor", gg2);
             }
         }
     }, [poetry]);
@@ -206,15 +213,9 @@ export default function Home() {
                                     <div
                                         className="avatar"
                                         style={{ borderRadius: 50 }}
-                                        data-title={
-                                            nameAuthor[
-                                                Number(
-                                                    localStorage.getItem(
-                                                        "selectedScriptSection"
-                                                    )
-                                                )
-                                            ].name
-                                        }
+                                        data-title={localStorage.getItem(
+                                            "nameAuthor"
+                                        )}
                                     >
                                         <Image
                                             src="/ava.jpg"
