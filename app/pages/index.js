@@ -65,6 +65,9 @@ export default function Home() {
         {
             name: `Мой Устимов`,
         },
+        {
+            name: `Ах Астахова`,
+        },
     ];
 
     React.useEffect(() => {
@@ -203,7 +206,15 @@ export default function Home() {
                                     <div
                                         className="avatar"
                                         style={{ borderRadius: 50 }}
-                                        data-title={nameAuthor[0].name}
+                                        data-title={
+                                            nameAuthor[
+                                                Number(
+                                                    localStorage.getItem(
+                                                        "selectedScriptSection"
+                                                    )
+                                                )
+                                            ].name
+                                        }
                                     >
                                         <Image
                                             src="/ava.jpg"
