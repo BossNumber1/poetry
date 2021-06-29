@@ -61,6 +61,12 @@ export default function Home() {
         },
     ];
 
+    let nameAuthor = [
+        {
+            name: `Мой Устимов`,
+        },
+    ];
+
     React.useEffect(() => {
         localStorage.setItem("hram", JSON.stringify(scriptArray));
         localStorage.setItem("selectedScriptSection", "false");
@@ -69,6 +75,7 @@ export default function Home() {
             `<div>приветствую, о, милый путник</div><div>нажимаешь на пробел и погружаешься в мир стихов</div>
                 <p>погнаааали! 🤘</p>`
         );
+        // localStorage.setItem("nameAuthor", "mu");
     }, []);
 
     const [selectedScriptSection, setSelectedScriptSection] =
@@ -184,21 +191,20 @@ export default function Home() {
                     </div>
                     <div className="blockBelow2">
                         <div style={{ display: "flex", marginLeft: 20 }}>
-                            <div
-                                className="avatar"
-                                style={{ borderRadius: 50 }}
-                            >
-                                {typeof window !== "undefined" &&
+                            {typeof window !== "undefined" &&
+                                localStorage.getItem("selectedScriptSection") &&
+                                localStorage.getItem("selectedText") !==
+                                    "конец" &&
+                                Number(
                                     localStorage.getItem(
                                         "selectedScriptSection"
-                                    ) &&
-                                    localStorage.getItem("selectedText") !==
-                                        "конец" &&
-                                    Number(
-                                        localStorage.getItem(
-                                            "selectedScriptSection"
-                                        )
-                                    ) < scriptArray.length && (
+                                    )
+                                ) < scriptArray.length && (
+                                    <div
+                                        className="avatar"
+                                        style={{ borderRadius: 50 }}
+                                        data-title={nameAuthor[0].name}
+                                    >
                                         <Image
                                             src="/ava.jpg"
                                             alt="ava"
@@ -206,8 +212,9 @@ export default function Home() {
                                             height={74}
                                             style={{ borderRadius: 50 }}
                                         />
-                                    )}
-                            </div>
+                                    </div>
+                                )}
+
                             {typeof window !== "undefined" &&
                                 localStorage.getItem(
                                     "selectedScriptSection"
@@ -235,13 +242,6 @@ export default function Home() {
                                 />
                             </div>
                         )}
-
-                        <div
-                            className="tempbox"
-                            data-title="Наиболее интересные"
-                        >
-                            ggg
-                        </div>
                     </div>
                 </div>
             </main>

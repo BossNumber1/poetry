@@ -45,20 +45,15 @@ a {
     overflow: hidden;
     width: 74px;
     height: 74px;
-}
-
-.tempbox {
-    background-color: orange;
     cursor: pointer;
+    position: relative;
 }
 
-/* И - Инициативность
-Д - Дружба
-П - Призвание */
-
-/*всплывающая prompt при наведении*/
-.tempbox:hover::after {
+/* всплывающая подсказка при наведении */
+.avatar:hover::after {
+    /* overflow: visible; */
     position: absolute;
+    /* position: relative; */
     z-index: 1;
     background: yellow;
     font-family: Arial, sans-serif;
@@ -68,6 +63,10 @@ a {
     border-radius: 3px;
     width: 140px;
     content: attr(data-title);
-    left: 45%;
-    top: -15%;
+    /* padding-top: 32px;
+    margin-left: 32px; */
+    left: -10%;
+    top: 30%;
+    /* left: 54px;
+    top: 31px; */
 }
