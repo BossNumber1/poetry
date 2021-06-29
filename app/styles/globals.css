@@ -61,12 +61,14 @@ a {
     padding: 5px 10px;
     border: 1px solid #333;
     border-radius: 3px;
-    width: 140px;
+    width: 74px;
     content: attr(data-title);
     /* padding-top: 32px;
     margin-left: 32px; */
-    left: -10%;
+    left: -15%;
     top: 30%;
     /* left: 54px;
     top: 31px; */
+    /* padding-left: 35px; */
+    text-align: center;
 }

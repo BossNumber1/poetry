@@ -10,14 +10,14 @@ export default function Home() {
 
     let scriptArray = [
         {
-            nameAuthor: "ff",
+            nameAuthor: "Мой Устимов",
             text: ` <div>и мы, счастливые, спали в стогу...</div>
                     <div> я без тебя прожить </div>
                     <div>не смогу.</div>`,
         },
 
         {
-            nameAuthor: "ff22",
+            nameAuthor: "Ах Астахова",
             text: ` <div>если вдруг станет на сердце пусто,</div>
                     <div>вспоминай наше светлое чувство.</div>`,
         },
