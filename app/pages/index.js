@@ -3,6 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
+import PictureForPoetry from "../components/PictureForPoetry.jsx";
+
 export default function Home() {
     const [poetry, setPoetry] = React.useState("");
     const [onMusic, setOnMusic] = React.useState(false);
@@ -10,6 +12,8 @@ export default function Home() {
 
     let scriptArray = [
         {
+            //ava: "https://images.unsplash.com/photo-1623084938405-0390c1d86ce8?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
+            ava: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Phase_Portrait_Unstable_Focus.svg/800px-Phase_Portrait_Unstable_Focus.svg.png",
             nameAuthor: "Мой Устимов",
             text: ` <div>и мы, счастливые, спали в стогу...</div>
                     <div> я без тебя прожить </div>
@@ -17,6 +21,7 @@ export default function Home() {
         },
 
         {
+            // ava: "https://images.unsplash.com/photo-1624788998878-c25950fecdc1?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
             nameAuthor: "Ах Астахова",
             text: ` <div>если вдруг станет на сердце пусто,</div>
                     <div>вспоминай наше светлое чувство.</div>`,
@@ -217,13 +222,35 @@ export default function Home() {
                                             "nameAuthor"
                                         )}
                                     >
-                                        <Image
+                                        <img
+                                            src={
+                                                "https://images.unsplash.com/photo-1623084938405-0390c1d86ce8?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
+                                            }
+                                            // src={scriptArray[0].ava}
+                                            // src={
+                                            //  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Phase_Portrait_Unstable_Focus.svg/800px-Phase_Portrait_Unstable_Focus.svg.png"
+                                            //  }
+                                            width={74}
+                                            height={74}
+                                            // style={{
+                                            //     // display: "table-cell",
+                                            //     // textAlign: "center",
+                                            //     // verticalAlign: "middle",
+                                            //     marginLeft: "auto",
+                                            //     marginRight: "auto",
+                                            // }}
+                                        ></img>
+                                        {/* <Image
                                             src="/ava.jpg"
+                                            // src={scriptArray[0].ava}
+                                            // src={
+                                            //     "https://images.unsplash.com/photo-1623084938405-0390c1d86ce8?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
+                                            // }
                                             alt="ava"
                                             width={74}
                                             height={74}
                                             style={{ borderRadius: 50 }}
-                                        />
+                                        /> */}
                                     </div>
                                 )}
 
@@ -244,16 +271,10 @@ export default function Home() {
                                     />
                                 )}
                         </div>
-                        {selectedScriptSection === 0 && (
-                            <div style={{ marginTop: "34px" }}>
-                                <Image
-                                    src="/one.jpg"
-                                    alt="first_picture"
-                                    width={500}
-                                    height={333}
-                                />
-                            </div>
-                        )}
+
+                        <PictureForPoetry
+                            selectedScriptSection={selectedScriptSection}
+                        />
                     </div>
                 </div>
             </main>
