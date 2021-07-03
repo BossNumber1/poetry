@@ -12,8 +12,7 @@ export default function Home() {
 
     let scriptArray = [
         {
-            //ava: "https://images.unsplash.com/photo-1623084938405-0390c1d86ce8?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
-            ava: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Phase_Portrait_Unstable_Focus.svg/800px-Phase_Portrait_Unstable_Focus.svg.png",
+            ava: "https://images.unsplash.com/photo-1623084938405-0390c1d86ce8?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
             nameAuthor: "Мой Устимов",
             text: ` <div>и мы, счастливые, спали в стогу...</div>
                     <div> я без тебя прожить </div>
@@ -21,13 +20,14 @@ export default function Home() {
         },
 
         {
-            // ava: "https://images.unsplash.com/photo-1624788998878-c25950fecdc1?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
+            ava: "https://images.unsplash.com/photo-1624788998878-c25950fecdc1?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
             nameAuthor: "Ах Астахова",
             text: ` <div>если вдруг станет на сердце пусто,</div>
                     <div>вспоминай наше светлое чувство.</div>`,
         },
 
         {
+            ava: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Phase_Portrait_Unstable_Focus.svg/800px-Phase_Portrait_Unstable_Focus.svg.png",
             nameAuthor: "ff33",
             text: ` <div>3</div>
                     <div>стих</div>`,
@@ -198,13 +198,7 @@ export default function Home() {
                                         )}
                                     >
                                         <img
-                                            src={
-                                                "https://images.unsplash.com/photo-1623084938405-0390c1d86ce8?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
-                                            }
-                                            // src={scriptArray[0].ava}
-                                            // src={
-                                            //  "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Phase_Portrait_Unstable_Focus.svg/800px-Phase_Portrait_Unstable_Focus.svg.png"
-                                            //  }
+                                            src={scriptArray[2].ava}
                                             width={74}
                                             height={74}
                                             // style={{
