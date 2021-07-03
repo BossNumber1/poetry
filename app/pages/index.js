@@ -131,6 +131,7 @@ export default function Home() {
                 setSelectedScriptSection(0);
                 localStorage.setItem("selectedText", scriptArray[0].text);
                 localStorage.setItem("nameAuthor", scriptArray[0].nameAuthor);
+                localStorage.setItem("avatarka", scriptArray[0].ava);
             } else {
                 setSelectedScriptSection(Number(selectedScriptSection) + 1);
 
@@ -142,8 +143,13 @@ export default function Home() {
                     ? scriptArray[Number(selectedScriptSection) + 1].nameAuthor
                     : "";
 
+                let gg3 = scriptArray[Number(selectedScriptSection) + 1]
+                    ? scriptArray[Number(selectedScriptSection) + 1].ava
+                    : "";
+
                 localStorage.setItem("selectedText", gg);
                 localStorage.setItem("nameAuthor", gg2);
+                localStorage.setItem("avatarka", gg3);
             }
         }
     }, [poetry]);
@@ -198,7 +204,9 @@ export default function Home() {
                                         )}
                                     >
                                         <img
-                                            src={scriptArray[2].ava}
+                                            src={localStorage.getItem(
+                                                "avatarka"
+                                            )}
                                             width={74}
                                             height={74}
                                             // style={{
