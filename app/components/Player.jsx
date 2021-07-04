@@ -55,39 +55,47 @@ export default function Player({ onMusic, imgMusic, switchOnSwitchOff }) {
                 <div className="postAddForm">
                     <form>
                         <fieldset>
-                            <div class="mb-3">
+                            <div className="mb-3">
                                 <input
                                     type="text"
                                     id="disabledTextInput"
-                                    class="form-control"
+                                    className="form-control"
                                     placeholder="Ваш творческий псевдоним"
                                 />
                             </div>
-                            <div class="mb-3">
+
+                            <label for="avatar" className="form-label">
+                                Ваш аватар
+                            </label>
+                            <div className="mb-3">
                                 <input
-                                    type="text"
-                                    id="disabledTextInput"
-                                    class="form-control"
-                                    placeholder="Аватарка"
+                                    className="form-control form-control-sm"
+                                    id="avatar"
+                                    type="file"
                                 />
                             </div>
-                            <div class="mb-3">
-                                <input
-                                    type="text"
-                                    id="disabledTextInput"
-                                    class="form-control"
+
+                            <div className="mb-3">
+                                <textarea
+                                    className="form-control"
+                                    id="verse"
+                                    rows="1"
                                     placeholder="Стих"
-                                />
+                                ></textarea>
                             </div>
-                            <div class="mb-3">
+
+                            <label for="illustration" className="form-label">
+                                Иллюстрация
+                            </label>
+                            <div className="mb-3">
                                 <input
-                                    type="text"
-                                    id="disabledTextInput"
-                                    class="form-control"
-                                    placeholder="Иллюстрация"
+                                    className="form-control form-control-sm"
+                                    id="illustration"
+                                    type="file"
                                 />
                             </div>
-                            <button type="submit" class="btn btn-warning">
+
+                            <button type="submit" className="btn btn-warning">
                                 Сделать частью истории
                             </button>
                         </fieldset>
