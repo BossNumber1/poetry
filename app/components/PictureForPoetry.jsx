@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-let arrImgSrc = [{ src: "one.jpg" }, { src: "two.jpg" }];
-
 export default function PictureForPoetry({ selectedScriptSection }) {
     return (
         <>
