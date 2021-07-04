@@ -52,7 +52,7 @@ export default function Player({ onMusic, imgMusic, switchOnSwitchOff }) {
             </div>
 
             {showForm && (
-                <div>
+                <div className="postAddForm">
                     <form>
                         <input type="text" />
                     </form>
