@@ -21,6 +21,8 @@ export default function Player({ onMusic, imgMusic, switchOnSwitchOff }) {
                         borderRadius: 50,
                         cursor: "pointer",
                     }}
+                    className="player"
+                    data-title="Фоновая музыка"
                 >
                     <Image
                         src={imgMusic}
