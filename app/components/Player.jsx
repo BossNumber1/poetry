@@ -56,11 +56,13 @@ export default function Player({ onMusic, imgMusic, switchOnSwitchOff }) {
                     <form>
                         <fieldset>
                             <div className="mb-3">
+                                <label for="nik" className="form-label">
+                                    Ваш творческий псевдоним
+                                </label>
                                 <input
                                     type="text"
                                     id="disabledTextInput"
                                     className="form-control"
-                                    placeholder="Ваш творческий псевдоним"
                                 />
                             </div>
 
@@ -76,11 +78,13 @@ export default function Player({ onMusic, imgMusic, switchOnSwitchOff }) {
                             </div>
 
                             <div className="mb-3">
+                                <label for="verse" className="form-label">
+                                    Стих
+                                </label>
                                 <textarea
                                     className="form-control"
                                     id="verse"
                                     rows="1"
-                                    placeholder="Стих"
                                 ></textarea>
                             </div>
 
