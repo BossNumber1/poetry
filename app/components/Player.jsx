@@ -38,6 +38,8 @@ export default function Player({ onMusic, imgMusic, switchOnSwitchOff }) {
                         borderRadius: 50,
                         cursor: "pointer",
                     }}
+                    className="addPost"
+                    data-title="Добавить свои стихи"
                 >
                     <Image
                         src={"/add.png"}
