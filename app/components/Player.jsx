@@ -29,6 +29,21 @@ export default function Player({ onMusic, imgMusic, switchOnSwitchOff }) {
                         height={64}
                     />
                 </button>
+                <button
+                    onClick={() => alert("hao")}
+                    style={{
+                        border: 0,
+                        borderRadius: 50,
+                        cursor: "pointer",
+                    }}
+                >
+                    <Image
+                        src={"/add.png"}
+                        alt={"add post"}
+                        width={64}
+                        height={64}
+                    />
+                </button>
             </div>
         </>
     );
