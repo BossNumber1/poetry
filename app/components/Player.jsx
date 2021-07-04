@@ -53,76 +53,44 @@ export default function Player({ onMusic, imgMusic, switchOnSwitchOff }) {
 
             {showForm && (
                 <div className="postAddForm">
-                    {/* <form>
-                        <p>
-                            <input
-                                type="text"
-                                placeholder="Ваш творческий псевдоним"
-                            />
-                        </p>
-                        <p>
-                            <input type="text" placeholder="Аватарка" />
-                        </p>
-                        <p>
-                            <input type="text" placeholder="Стих" />
-                        </p>
-                        <p>
-                            <input type="text" placeholder="Иллюстрация" />
-                        </p>
-                        <p>
-                            <input
-                                type="button"
-                                value="Сделать частью истории"
-                            />
-                        </p>
-                    </form> */}
                     <form>
-                        <div className="mb-3">
-                            <label
-                                for="exampleInputEmail1"
-                                className="form-label"
-                            >
-                                Email address
-                            </label>
-                            <input
-                                type="email"
-                                className="form-control"
-                                id="exampleInputEmail1"
-                                aria-describedby="emailHelp"
-                            />
-                            <div id="emailHelp" className="form-text">
-                                We'll never share your email with anyone else.
+                        <fieldset>
+                            <div class="mb-3">
+                                <input
+                                    type="text"
+                                    id="disabledTextInput"
+                                    class="form-control"
+                                    placeholder="Ваш творческий псевдоним"
+                                />
                             </div>
-                        </div>
-                        <div className="mb-3">
-                            <label
-                                for="exampleInputPassword1"
-                                className="form-label"
-                            >
-                                Password
-                            </label>
-                            <input
-                                type="password"
-                                className="form-control"
-                                id="exampleInputPassword1"
-                            />
-                        </div>
-                        <div className="mb-3 form-check">
-                            <input
-                                type="checkbox"
-                                className="form-check-input"
-                                id="exampleCheck1"
-                            />
-                            <label
-                                className="form-check-label"
-                                for="exampleCheck1"
-                            >
-                                Check me out
-                            </label>
-                        </div>
-                        <button type="submit" className="btn btn-primary">
-                            Submit
-                        </button>
+                            <div class="mb-3">
+                                <input
+                                    type="text"
+                                    id="disabledTextInput"
+                                    class="form-control"
+                                    placeholder="Аватарка"
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <input
+                                    type="text"
+                                    id="disabledTextInput"
+                                    class="form-control"
+                                    placeholder="Стих"
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <input
+                                    type="text"
+                                    id="disabledTextInput"
+                                    class="form-control"
+                                    placeholder="Иллюстрация"
+                                />
+                            </div>
+                            <button type="submit" class="btn btn-warning">
+                                Сделать частью истории
+                            </button>
+                        </fieldset>
                     </form>
                 </div>
             )}
