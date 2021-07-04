@@ -54,7 +54,27 @@ export default function Player({ onMusic, imgMusic, switchOnSwitchOff }) {
             {showForm && (
                 <div className="postAddForm">
                     <form>
-                        <input type="text" />
+                        <p>
+                            <input
+                                type="text"
+                                placeholder="Ваш творческий псевдоним"
+                            />
+                        </p>
+                        <p>
+                            <input type="text" placeholder="Аватарка" />
+                        </p>
+                        <p>
+                            <input type="text" placeholder="Стих" />
+                        </p>
+                        <p>
+                            <input type="text" placeholder="Иллюстрация" />
+                        </p>
+                        <p>
+                            <input
+                                type="button"
+                                value="Сделать частью истории"
+                            />
+                        </p>
                     </form>
                 </div>
             )}

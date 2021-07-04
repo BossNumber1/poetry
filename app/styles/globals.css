@@ -122,7 +122,8 @@ a {
 }
 
 .postAddForm {
-    background-color: orange;
-    position: absolute;
+    /* background-color: orange; */
+    position: fixed;
     right: 25px;
+    top: 32%;
 }
