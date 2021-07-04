@@ -17,6 +17,7 @@ export default function Home() {
             text: ` <div>и мы, счастливые, спали в стогу...</div>
                     <div> я без тебя прожить </div>
                     <div>не смогу.</div>`,
+            picture: "one.jpg",
         },
 
         {
@@ -24,6 +25,7 @@ export default function Home() {
             nameAuthor: "Ах Астахова",
             text: ` <div>если вдруг станет на сердце пусто,</div>
                     <div>вспоминай наше светлое чувство.</div>`,
+            picture: "two.jpg",
         },
 
         {
@@ -139,6 +141,7 @@ export default function Home() {
                 localStorage.setItem("selectedText", scriptArray[0].text);
                 localStorage.setItem("nameAuthor", scriptArray[0].nameAuthor);
                 localStorage.setItem("avatarka", scriptArray[0].ava);
+                localStorage.setItem("picture", scriptArray[0].picture);
             } else {
                 setSelectedScriptSection(Number(selectedScriptSection) + 1);
 
@@ -154,9 +157,14 @@ export default function Home() {
                     ? scriptArray[Number(selectedScriptSection) + 1].ava
                     : "";
 
+                let gg4 = scriptArray[Number(selectedScriptSection) + 1]
+                    ? scriptArray[Number(selectedScriptSection) + 1].picture
+                    : "";
+
                 localStorage.setItem("selectedText", gg);
                 localStorage.setItem("nameAuthor", gg2);
                 localStorage.setItem("avatarka", gg3);
+                localStorage.setItem("picture", gg4);
             }
         }
     }, [poetry]);
@@ -216,25 +224,8 @@ export default function Home() {
                                             )}
                                             width={74}
                                             height={74}
-                                            // style={{
-                                            //     // display: "table-cell",
-                                            //     // textAlign: "center",
-                                            //     // verticalAlign: "middle",
-                                            //     marginLeft: "auto",
-                                            //     marginRight: "auto",
-                                            // }}
+                                            alt="аватарка автора"
                                         ></img>
-                                        {/* <Image
-                                            src="/ava.jpg"
-                                            // src={scriptArray[0].ava}
-                                            // src={
-                                            //     "https://images.unsplash.com/photo-1623084938405-0390c1d86ce8?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"
-                                            // }
-                                            alt="ava"
-                                            width={74}
-                                            height={74}
-                                            style={{ borderRadius: 50 }}
-                                        /> */}
                                     </div>
                                 )}
 

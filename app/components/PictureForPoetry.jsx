@@ -1,13 +1,18 @@
 import React from "react";
 import Image from "next/image";
 
+let arrImgSrc = [{ src: "one.jpg" }, { src: "two.jpg" }];
+
 export default function PictureForPoetry({ selectedScriptSection }) {
     return (
         <>
-            {selectedScriptSection === 0 && (
+            {(selectedScriptSection === 0 || selectedScriptSection > 0) && (
                 <div style={{ marginTop: "34px" }}>
                     <Image
-                        src="/one.jpg"
+                        src={`/${
+                            typeof window !== "undefined" &&
+                            localStorage.getItem("picture")
+                        }`}
                         alt="first_picture"
                         width={500}
                         height={333}
