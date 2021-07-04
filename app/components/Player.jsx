@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 export default function Player({ onMusic, imgMusic, switchOnSwitchOff }) {
+    const [showForm, setShowForm] = React.useState(false);
     return (
         <>
             <audio id="track">
@@ -32,7 +33,7 @@ export default function Player({ onMusic, imgMusic, switchOnSwitchOff }) {
                     />
                 </button>
                 <button
-                    onClick={() => alert("hao")}
+                    onClick={() => setShowForm(!showForm)}
                     style={{
                         border: 0,
                         borderRadius: 50,
@@ -49,6 +50,14 @@ export default function Player({ onMusic, imgMusic, switchOnSwitchOff }) {
                     />
                 </button>
             </div>
+
+            {showForm && (
+                <div>
+                    <form>
+                        <input type="text" />
+                    </form>
+                </div>
+            )}
         </>
     );
 }
