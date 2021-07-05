@@ -2,7 +2,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
-const Basic = () => {
+const VerseAddingForm = () => {
     const [showError, setShowError] = React.useState(false);
 
     return (
@@ -114,4 +114,4 @@ const Basic = () => {
     );
 };
 
-export default Basic;
+export default VerseAddingForm;

@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css";
 
 import Player from "../components/Player.jsx";
 import PictureForPoetry from "../components/PictureForPoetry.jsx";
-import Form from "../components/Form.jsx";
+import VerseAddingForm from "../components/VerseAddingForm.jsx";
 
 export default function Home() {
     const [poetry, setPoetry] = React.useState("");
@@ -258,7 +258,7 @@ export default function Home() {
                             selectedScriptSection={selectedScriptSection}
                         />
 
-                        <Form />
+                        <VerseAddingForm />
                     </div>
                 </div>
             </main>
