@@ -52,7 +52,7 @@ export default function Player({ onMusic, imgMusic, switchOnSwitchOff }) {
             </div>
 
             {showForm && (
-                <div className="postAddForm">
+                <div className="postAddForm33">
                     <form>
                         <fieldset>
                             <div className="mb-3">
