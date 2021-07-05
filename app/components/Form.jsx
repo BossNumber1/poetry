@@ -42,7 +42,7 @@ const Basic = () => {
                 }}
             >
                 {({ isSubmitting }) => (
-                    <div className="postAddForm">
+                    <div className="postAddForm" id="postAddFormId">
                         {showError && (
                             <div style={{ color: "red" }}>{showError}</div>
                         )}

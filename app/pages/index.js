@@ -87,14 +87,12 @@ export default function Home() {
     ];
 
     React.useEffect(() => {
-        // localStorage.setItem("hram", JSON.stringify(scriptArray));
         localStorage.setItem("selectedScriptSection", "false");
         localStorage.setItem(
             "selectedText",
             `<div>приветствую, о, милый путник</div><div>нажимаешь на пробел и погружаешься в мир стихов</div>
                 <p>погнаааали! 🤘</p>`
         );
-        // localStorage.setItem("nameAuthor", "mu");
     }, []);
 
     const [selectedScriptSection, setSelectedScriptSection] =
@@ -112,7 +110,6 @@ export default function Home() {
                     randomn = [];
 
                     let lux = localStorage.getItem("selectedScriptSection");
-                    // let lex = JSON.parse(localStorage.getItem("hram"));
 
                     if (lux === "false") {
                         localStorage.setItem("selectedScriptSection", "0");
@@ -131,6 +128,7 @@ export default function Home() {
                     document.removeEventListener("keydown", listener);
                 }
             };
+
             document.addEventListener("keydown", listener);
         }
 
@@ -146,26 +144,34 @@ export default function Home() {
             } else {
                 setSelectedScriptSection(Number(selectedScriptSection) + 1);
 
-                let gg = scriptArray[Number(selectedScriptSection) + 1]
+                let counterSelectedText = scriptArray[
+                    Number(selectedScriptSection) + 1
+                ]
                     ? scriptArray[Number(selectedScriptSection) + 1].text
                     : "конец";
 
-                let gg2 = scriptArray[Number(selectedScriptSection) + 1]
+                let counterNameAuthor = scriptArray[
+                    Number(selectedScriptSection) + 1
+                ]
                     ? scriptArray[Number(selectedScriptSection) + 1].nameAuthor
                     : "";
 
-                let gg3 = scriptArray[Number(selectedScriptSection) + 1]
+                let counterAvatarka = scriptArray[
+                    Number(selectedScriptSection) + 1
+                ]
                     ? scriptArray[Number(selectedScriptSection) + 1].ava
                     : "";
 
-                let gg4 = scriptArray[Number(selectedScriptSection) + 1]
+                let counterPicture = scriptArray[
+                    Number(selectedScriptSection) + 1
+                ]
                     ? scriptArray[Number(selectedScriptSection) + 1].picture
                     : "";
 
-                localStorage.setItem("selectedText", gg);
-                localStorage.setItem("nameAuthor", gg2);
-                localStorage.setItem("avatarka", gg3);
-                localStorage.setItem("picture", gg4);
+                localStorage.setItem("selectedText", counterSelectedText);
+                localStorage.setItem("nameAuthor", counterNameAuthor);
+                localStorage.setItem("avatarka", counterAvatarka);
+                localStorage.setItem("picture", counterPicture);
             }
         }
     }, [poetry]);
