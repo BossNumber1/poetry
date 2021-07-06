@@ -1,9 +1,13 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
-import axios from "axios";
+// import axios from "axios";
+
+import { useHttpPost } from "./useHttp.hook";
 
 const VerseAddingForm = () => {
     const [showError, setShowError] = React.useState(false);
+
+    const { requestPost } = useHttpPost();
 
     React.useEffect(() => {
         document.querySelector("form").addEventListener("keydown", (event) => {
@@ -37,15 +41,31 @@ const VerseAddingForm = () => {
                         values.verse !== "" &&
                         values.illustration !== ""
                     ) {
-                        alert(JSON.stringify(values, null, 2));
+                        // alert(JSON.stringify(values, null, 2));
 
-                        axios
-                            .get(
-                                `http://localhost:80/api/allGenresAndTheirDescription/`
-                            )
-                            .then((response) => {
-                                // setAllo(response.data);
-                            });
+                        // axios
+                        //     .get(`http://localhost:80/api/createPost/`)
+                        //     .then((response) => {
+                        //         alert(response);
+                        //         // setAllo(response.data);
+                        //     });
+
+                        requestPost(`http://localhost:80/api/createPost/`, {
+                            nameAuthor: values.nameAuthor,
+                            avatar: values.avatar,
+                            verse: values.verse,
+                            illustration: values.illustration,
+                        }).then((response) => {
+                            alert(response);
+                            // showSuccess(true);
+                            // localStorage.setItem("login", formData.login);
+                            // localStorage.setItem("pass", formData.password);
+                            // dispatch(logOffDouble(false));
+                            // const { pathname } = Router;
+                            // if (pathname == "/access") {
+                            //     Router.push("/booksAll");
+                            // }
+                        });
                     } else {
                         setShowError("Стоит полностью заполнить форму");
                     }
