@@ -1,13 +1,16 @@
 import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field } from "formik";
+import axios from "axios";
 
 const VerseAddingForm = () => {
     const [showError, setShowError] = React.useState(false);
+
     React.useEffect(() => {
         document.querySelector("form").addEventListener("keydown", (event) => {
             event.stopPropagation();
         });
     }, []);
+
     return (
         <Formik
             initialValues={{
@@ -35,6 +38,14 @@ const VerseAddingForm = () => {
                         values.illustration !== ""
                     ) {
                         alert(JSON.stringify(values, null, 2));
+
+                        axios
+                            .get(
+                                `http://localhost:80/api/allGenresAndTheirDescription/`
+                            )
+                            .then((response) => {
+                                // setAllo(response.data);
+                            });
                     } else {
                         setShowError("Стоит полностью заполнить форму");
                     }
