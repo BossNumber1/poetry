@@ -11,6 +11,8 @@ export default function Home() {
     const [onMusic, setOnMusic] = React.useState(false);
     const [imgMusic, setImgMusic] = React.useState("/play.png");
 
+    const [showForm, setShowForm] = React.useState(false);
+
     let scriptArray = [
         {
             ava: "https://images.unsplash.com/photo-1623084938405-0390c1d86ce8?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
@@ -130,12 +132,6 @@ export default function Home() {
             };
 
             document.addEventListener("keydown", listener);
-
-            document
-                .querySelector("form")
-                .addEventListener("keydown", (event) => {
-                    event.stopPropagation();
-                });
         }
 
         runOnKeys(() => setPoetry(randomn));
@@ -211,6 +207,8 @@ export default function Home() {
                             onMusic={onMusic}
                             imgMusic={imgMusic}
                             switchOnSwitchOff={switchOnSwitchOff}
+                            setShowForm={setShowForm}
+                            showForm={showForm}
                         />
                     </div>
                     <div className="blockBelow2">
@@ -264,7 +262,7 @@ export default function Home() {
                             selectedScriptSection={selectedScriptSection}
                         />
 
-                        <VerseAddingForm />
+                        {showForm && <VerseAddingForm />}
                     </div>
                 </div>
             </main>
