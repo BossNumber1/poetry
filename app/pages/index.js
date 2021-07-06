@@ -130,6 +130,12 @@ export default function Home() {
             };
 
             document.addEventListener("keydown", listener);
+
+            document
+                .querySelector("form")
+                .addEventListener("keydown", (event) => {
+                    event.stopPropagation();
+                });
         }
 
         runOnKeys(() => setPoetry(randomn));
