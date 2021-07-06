@@ -13,13 +13,7 @@ export default function Player({
             <audio id="track">
                 <source src="music.mp3" type="audio/mpeg" />
             </audio>
-            <div
-                style={{
-                    top: 32,
-                    right: 32,
-                    position: "fixed",
-                }}
-            >
+            <div className="iconBtns">
                 <button
                     onClick={switchOnSwitchOff}
                     style={{

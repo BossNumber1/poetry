@@ -121,9 +121,22 @@ a {
     text-align: center;
 }
 
+.player:active,
+.player:focus,
+.addPost:active,
+.addPost:focus {
+    outline: none;
+}
+
 .postAddForm {
     /* background-color: orange; */
     position: fixed;
     right: 25px;
     top: 26%;
+}
+
+.iconBtns {
+    top: 32px;
+    right: 32px;
+    position: fixed;
 }
