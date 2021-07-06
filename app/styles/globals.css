@@ -97,6 +97,13 @@ a {
     text-align: center;
 }
 
+.addPost,
+.player {
+    border: 0px;
+    border-radius: 50px;
+    /* cursor: "pointer", */
+}
+
 /* всплывающая подсказка при наведении для добавления поста */
 .addPost:hover::after {
     /* overflow: visible; */

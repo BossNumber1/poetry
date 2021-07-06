@@ -16,11 +16,6 @@ export default function Player({
             <div className="iconBtns">
                 <button
                     onClick={switchOnSwitchOff}
-                    style={{
-                        border: 0,
-                        borderRadius: 50,
-                        cursor: "pointer",
-                    }}
                     className="player"
                     data-title="Фоновая музыка"
                 >
@@ -34,11 +29,6 @@ export default function Player({
 
                 <button
                     onClick={() => setShowForm(!showForm)}
-                    style={{
-                        border: 0,
-                        borderRadius: 50,
-                        cursor: "pointer",
-                    }}
                     className="addPost"
                     data-title="Добавить свои стихи"
                 >
