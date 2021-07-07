@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css";
 import Player from "../components/Player.jsx";
 import PictureForPoetry from "../components/PictureForPoetry.jsx";
 import VerseAddingForm from "../components/VerseAddingForm.jsx";
+import axios from "axios";
 
 export default function Home() {
     const [poetry, setPoetry] = React.useState("");
@@ -13,7 +14,9 @@ export default function Home() {
 
     const [showForm, setShowForm] = React.useState(false);
 
-    let scriptArray = [
+    const [scriptArray, setScriptArray] = React.useState(false);
+
+    let scriptArray2 = [
         {
             ava: "https://images.unsplash.com/photo-1623084938405-0390c1d86ce8?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
             nameAuthor: "Мой Устимов",
@@ -89,6 +92,13 @@ export default function Home() {
     ];
 
     React.useEffect(() => {
+        axios.get(`http://localhost:80/api/getAllVerses/`).then((response) => {
+            setScriptArray(response.data);
+            console.log(response.data);
+        });
+    }, []);
+
+    React.useEffect(() => {
         localStorage.setItem("selectedScriptSection", "false");
         localStorage.setItem(
             "selectedText",
@@ -139,17 +149,17 @@ export default function Home() {
         if (poetry !== "") {
             if (selectedScriptSection === false) {
                 setSelectedScriptSection(0);
-                localStorage.setItem("selectedText", scriptArray[0].text);
+                localStorage.setItem("selectedText", scriptArray[0].verse);
                 localStorage.setItem("nameAuthor", scriptArray[0].nameAuthor);
-                localStorage.setItem("avatarka", scriptArray[0].ava);
-                localStorage.setItem("picture", scriptArray[0].picture);
+                localStorage.setItem("avatarka", scriptArray[0].avatar);
+                localStorage.setItem("picture", scriptArray[0].illustration);
             } else {
                 setSelectedScriptSection(Number(selectedScriptSection) + 1);
 
                 let counterSelectedText = scriptArray[
                     Number(selectedScriptSection) + 1
                 ]
-                    ? scriptArray[Number(selectedScriptSection) + 1].text
+                    ? scriptArray[Number(selectedScriptSection) + 1].verse
                     : "конец";
 
                 let counterNameAuthor = scriptArray[
@@ -161,13 +171,14 @@ export default function Home() {
                 let counterAvatarka = scriptArray[
                     Number(selectedScriptSection) + 1
                 ]
-                    ? scriptArray[Number(selectedScriptSection) + 1].ava
+                    ? scriptArray[Number(selectedScriptSection) + 1].avatar
                     : "";
 
                 let counterPicture = scriptArray[
                     Number(selectedScriptSection) + 1
                 ]
-                    ? scriptArray[Number(selectedScriptSection) + 1].picture
+                    ? scriptArray[Number(selectedScriptSection) + 1]
+                          .illustration
                     : "";
 
                 localStorage.setItem("selectedText", counterSelectedText);
