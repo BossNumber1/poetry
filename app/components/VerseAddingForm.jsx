@@ -2,12 +2,8 @@ import React from "react";
 // import { Formik, Form, Field } from "formik";
 import axios from "axios";
 
-// import { useHttpPost } from "./useHttp.hook";
-
 const VerseAddingForm = () => {
     // const [showError, setShowError] = React.useState(false);
-
-    // const { requestPost } = useHttpPost();
 
     React.useEffect(() => {
         document.querySelector("form").addEventListener("keydown", (event) => {
@@ -15,34 +11,24 @@ const VerseAddingForm = () => {
         });
     }, []);
 
-    const blet = (e) => {
+    const beforeSending = (e) => {
         e.preventDefault();
 
-        let bro = [];
+        let formDataStore = [];
 
         const formData = new FormData(document.querySelector("form"));
-        for (var pair of formData.entries()) {
-            bro.push(pair[1]);
+
+        for (let pair of formData.entries()) {
+            formDataStore.push(pair[1]);
         }
 
-        if (bro.length > 0) {
+        if (formDataStore.length > 0) {
             let formData = new FormData();
-            // formData.append("avatar", bro[1]);
-            // formData.append("illustration", bro[3]);
 
-            // let textData = {
-            //     nameAuthor: bro[0],
-            //     verse: bro[2]
-            // }
-
-            formData.append("nameAuthor", bro[0]);
-            formData.append("avatar", bro[1]);
-            formData.append("verse", bro[2]);
-            formData.append("illustration", bro[3]);
-
-            // axios
-            //     .post("http://localhost:80/api/upload", textData)
-            //     .then((res) => alert(res.data));
+            formData.append("nameAuthor", formDataStore[0]);
+            formData.append("avatar", formDataStore[1]);
+            formData.append("verse", formDataStore[2]);
+            formData.append("illustration", formDataStore[3]);
 
             axios
                 .post(
@@ -61,8 +47,6 @@ const VerseAddingForm = () => {
 
     return (
         <form
-            // ref="uploadForm"
-            // id="uploadForm"
             action="http://localhost:80/upload"
             method="post"
             encType="multipart/form-data"
@@ -93,9 +77,7 @@ const VerseAddingForm = () => {
                 <input type="file" name="illustration" />
             </div>
 
-            <input type="submit" value="Отправить" onClick={blet} />
-
-            {/* <VerseAddingForm /> */}
+            <input type="submit" value="Отправить" onClick={beforeSending} />
         </form>
         // <Formik
         //     initialValues={{
