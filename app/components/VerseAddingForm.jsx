@@ -31,16 +31,11 @@ const VerseAddingForm = () => {
             formData.append("illustration", formDataStore[3]);
 
             axios
-                .post(
-                    "http://localhost:80/api/upload",
-                    formData,
-
-                    {
-                        headers: {
-                            "Content-Type": "multipart/form-data",
-                        },
-                    }
-                )
+                .post("http://localhost:80/api/upload", formData, {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    },
+                })
                 .then((res) => alert(res.data));
         }
     };
@@ -50,7 +45,6 @@ const VerseAddingForm = () => {
             action="http://localhost:80/upload"
             method="post"
             encType="multipart/form-data"
-            // style={{ textAlign: "center" }}
         >
             <div style={{ marginBottom: "20px" }}>
                 <b>
