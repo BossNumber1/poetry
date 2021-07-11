@@ -21,42 +21,40 @@ const VerseAddingForm = () => {
             formDataStore.push(pair[1]);
         }
 
-        if (formDataStore.length > 0) {
-            let nameAuthor = formDataStore[0];
-            let avatar = formDataStore[1];
-            let verse = formDataStore[2];
-            let illustration = formDataStore[3];
+        let nameAuthor = formDataStore[0];
+        let avatar = formDataStore[1];
+        let verse = formDataStore[2];
+        let illustration = formDataStore[3];
 
-            if (
-                nameAuthor !== "" &&
-                avatar.name !== "" &&
-                verse !== "" &&
-                illustration.name !== ""
-            ) {
-                localStorage.setItem("nameAuthor", nameAuthor);
-                let formData = new FormData();
+        if (
+            nameAuthor !== "" &&
+            avatar.name !== "" &&
+            verse !== "" &&
+            illustration.name !== ""
+        ) {
+            localStorage.setItem("nameAuthor", nameAuthor);
+            let formData = new FormData();
 
-                formData.append("nameAuthor", nameAuthor);
-                formData.append("avatar", avatar);
-                formData.append("verse", verse);
-                formData.append("illustration", illustration);
+            formData.append("nameAuthor", nameAuthor);
+            formData.append("avatar", avatar);
+            formData.append("verse", verse);
+            formData.append("illustration", illustration);
 
-                axios
-                    .post("http://localhost:80/api/upload", formData, {
-                        headers: {
-                            "Content-Type": "multipart/form-data",
-                        },
-                    })
-                    .then((res) => {
-                        alert(res.data);
-                        setShowError(false);
-                        document.querySelector("form").reset();
-                        document.getElementsByName("nameAuthor")[0].value =
-                            localStorage.getItem("nameAuthor");
-                    });
-            } else {
-                setShowError(true);
-            }
+            axios
+                .post("http://localhost:80/api/upload", formData, {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    },
+                })
+                .then((res) => {
+                    alert(res.data);
+                    setShowError(false);
+                    document.querySelector("form").reset();
+                    document.getElementsByName("nameAuthor")[0].value =
+                        localStorage.getItem("nameAuthor");
+                });
+        } else {
+            setShowError(true);
         }
     };
 
