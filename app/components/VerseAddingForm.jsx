@@ -3,6 +3,13 @@ import axios from "axios";
 
 const VerseAddingForm = () => {
     const [showError, setShowError] = React.useState(false);
+    const [nameAuthorState, setNameAuthorState] = React.useState(
+        localStorage.getItem("nameAuthor") || ""
+    );
+
+    const changeAlias = (e) => {
+        setNameAuthorState(e.target.value);
+    };
 
     React.useEffect(() => {
         document.querySelector("form").addEventListener("keydown", (event) => {
@@ -76,6 +83,8 @@ const VerseAddingForm = () => {
                         type="text"
                         name="nameAuthor"
                         className="form-control"
+                        value={nameAuthorState}
+                        onChange={changeAlias}
                     />
                 </div>
 
@@ -110,7 +119,6 @@ const VerseAddingForm = () => {
 
                 <button
                     type="submit"
-                    // disabled={isSubmitting}
                     className="btn btn-warning"
                     onClick={beforeSending}
                 >
