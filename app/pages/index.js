@@ -94,7 +94,7 @@ export default function Home() {
     React.useEffect(() => {
         axios.get(`http://localhost:80/api/getAllVerses/`).then((response) => {
             setScriptArray(response.data);
-            console.log(response.data);
+            // console.log(response.data);
         });
     }, []);
 
