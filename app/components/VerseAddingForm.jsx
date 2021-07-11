@@ -33,6 +33,7 @@ const VerseAddingForm = () => {
                 verse !== "" &&
                 illustration.name !== ""
             ) {
+                localStorage.setItem("nameAuthor", nameAuthor);
                 let formData = new FormData();
 
                 formData.append("nameAuthor", nameAuthor);
@@ -49,6 +50,9 @@ const VerseAddingForm = () => {
                     .then((res) => {
                         alert(res.data);
                         setShowError(false);
+                        document.querySelector("form").reset();
+                        document.getElementsByName("nameAuthor")[0].value =
+                            localStorage.getItem("nameAuthor");
                     });
             } else {
                 setShowError(true);
