@@ -35,8 +35,8 @@ export default function Player({
                     }
                 >
                     <Image
-                        src={"/add.png"}
-                        alt={"add post"}
+                        src={showForm ? "/hide.png" : "/add.png"}
+                        alt={showForm ? "hide form" : "add post"}
                         width={64}
                         height={64}
                     />
