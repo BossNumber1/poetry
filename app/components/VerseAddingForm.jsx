@@ -61,30 +61,29 @@ const VerseAddingForm = () => {
                         localStorage.getItem("nameAuthor");
                 });
         } else {
-            setShowError(true);
+            setShowError("Стоит заполнить все поля");
         }
     };
 
     return (
         <div className="postAddForm" id="postAddFormId">
             {showError && (
-                <div style={{ color: "red" }}>{"Стоит заполнить все поля"}</div>
+                <div
+                    className="alert-danger"
+                    style={{
+                        marginBottom: 20,
+                        borderRadius: 5,
+                        paddingLeft: 20,
+                        paddingBottom: 5,
+                        paddingTop: 5,
+                        textAlign: "center",
+                        top: "50%",
+                        left: "50%",
+                    }}
+                >
+                    {showError}
+                </div>
             )}
-            <div
-                className="alert-success"
-                style={{
-                    marginBottom: 20,
-                    borderRadius: 5,
-                    paddingLeft: 20,
-                    paddingBottom: 5,
-                    paddingTop: 5,
-                    textAlign: "center",
-                    top: "50%",
-                    left: "50%",
-                }}
-            >
-                Пост добавлен
-            </div>
             <form
                 action="http://localhost:80/upload"
                 method="post"
