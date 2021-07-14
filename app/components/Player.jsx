@@ -30,7 +30,9 @@ export default function Player({
                 <button
                     onClick={() => setShowForm(!showForm)}
                     className="addPost"
-                    data-title="Добавить свои стихи"
+                    data-title={
+                        showForm ? "Скрыть форму" : "Добавить свои стихи"
+                    }
                 >
                     <Image
                         src={"/add.png"}
