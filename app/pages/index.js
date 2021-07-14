@@ -212,6 +212,23 @@ export default function Home() {
             </Head>
 
             <main className={styles.main}>
+                <div
+                    style={{
+                        position: "fixed",
+                        // left: 13,
+                        // top: 13,
+                        left: 13,
+                        bottom: 13,
+                        border: "1px solid black",
+                        height: 100,
+                        // width: 1030,
+                        width: "98%",
+                        textAlign: "center",
+                        background: "orange",
+                    }}
+                >
+                    здесь будет ваша реклама
+                </div>
                 <div className="body_page2">
                     <div className="topBlock2">
                         <Player
@@ -279,11 +296,21 @@ export default function Home() {
                         style={{
                             color: "#535353",
                             position: "fixed",
-                            left: 530,
-                            bottom: 49,
+                            // left: 530,
+                            left: 450,
+                            // bottom: 49,
+                            // bottom: 129,
+                            top: -50,
                         }}
                     >
-                        Создал <b>полностью</b> Мой Устимов, 2021
+                        {/* Мой Устимов Entertainment представляет */}
+                        <img src="/mue.png" width="50%" height="50%"></img>
+                        <div
+                            style={{ marginLeft: 163, marginTop: -43 }}
+                            className="presents"
+                        >
+                            представляет
+                        </div>
                     </div>
                 </div>
             </main>
