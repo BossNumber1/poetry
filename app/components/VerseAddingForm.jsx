@@ -3,6 +3,9 @@ import axios from "axios";
 
 const VerseAddingForm = () => {
     const [showError, setShowError] = React.useState(false);
+
+    const [responseFromServer, setResponseFromServer] = React.useState(false);
+
     const [nameAuthorState, setNameAuthorState] = React.useState(
         localStorage.getItem("nameAuthor") || ""
     );
@@ -54,7 +57,7 @@ const VerseAddingForm = () => {
                     },
                 })
                 .then((res) => {
-                    alert(res.data);
+                    setResponseFromServer(res.data);
                     setShowError(false);
                     document.querySelector("form").reset();
                     document.getElementsByName("nameAuthor")[0].value =
@@ -67,9 +70,9 @@ const VerseAddingForm = () => {
 
     return (
         <div className="postAddForm" id="postAddFormId">
-            {showError && (
+            {(showError || responseFromServer) && (
                 <div
-                    className="alert-danger"
+                    className={showError ? "alert-danger" : "alert-success"}
                     style={{
                         marginBottom: 20,
                         borderRadius: 5,
@@ -81,7 +84,7 @@ const VerseAddingForm = () => {
                         left: "50%",
                     }}
                 >
-                    {showError}
+                    {showError || responseFromServer}
                 </div>
             )}
             <form
