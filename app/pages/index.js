@@ -275,6 +275,16 @@ export default function Home() {
 
                         {showForm && <VerseAddingForm />}
                     </div>
+                    <div
+                        style={{
+                            color: "#535353",
+                            position: "fixed",
+                            left: 530,
+                            bottom: 49,
+                        }}
+                    >
+                        Создал <b>полностью</b> Мой Устимов, 2021
+                    </div>
                 </div>
             </main>
         </div>
