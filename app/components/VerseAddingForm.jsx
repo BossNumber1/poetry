@@ -70,6 +70,21 @@ const VerseAddingForm = () => {
             {showError && (
                 <div style={{ color: "red" }}>{"Стоит заполнить все поля"}</div>
             )}
+            <div
+                className="alert-success"
+                style={{
+                    marginBottom: 20,
+                    borderRadius: 5,
+                    paddingLeft: 20,
+                    paddingBottom: 5,
+                    paddingTop: 5,
+                    textAlign: "center",
+                    top: "50%",
+                    left: "50%",
+                }}
+            >
+                Пост добавлен
+            </div>
             <form
                 action="http://localhost:80/upload"
                 method="post"
