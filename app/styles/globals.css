@@ -205,34 +205,32 @@ a {
     background: orange;
 }
 
-.vkShare {
+.vkShare,
+.fbShare {
     cursor: pointer;
     position: fixed;
-    /* bottom: 82px; */
     top: 32px;
+}
+
+.vkShare {
     left: 32px;
 }
 
-/* всплывающая подсказка при наведении на иконку вк */
-.vkShare:hover::after {
-    /* overflow: visible; */
+.fbShare {
+    left: 112px;
+}
+
+/* всплывающая подсказка при наведении на иконки шаринга */
+.vkShare:hover::after,
+.fbShare:hover::after {
     position: absolute;
-    /* position: relative; */
     z-index: 1;
-    /* background: yellow; */
     font-family: Arial, sans-serif;
     font-size: 11px;
     padding: 5px 10px;
-    /* border: 1px solid #333;
-    border-radius: 3px; */
-    width: 194px;
     content: attr(data-title);
-    /* padding-top: 32px;
-    margin-left: 32px; */
-    left: -85%;
     top: -50%;
-    /* left: 54px;
-    top: 31px; */
-    /* padding-left: 35px; */
+    left: -85%;
+    width: 194px;
     text-align: center;
 }

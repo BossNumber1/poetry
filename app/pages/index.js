@@ -6,6 +6,7 @@ import Player from "../components/Player.jsx";
 import PictureForPoetry from "../components/PictureForPoetry.jsx";
 import VerseAddingForm from "../components/VerseAddingForm.jsx";
 import axios from "axios";
+import Share from "../components/Share";
 
 export default function Home() {
     const [poetry, setPoetry] = React.useState("");
@@ -209,23 +210,6 @@ export default function Home() {
         }
     };
 
-    function vk(purl, ptitle, pimg, text) {
-        let url = "http://vkontakte.ru/share.php?";
-        url += "url=" + encodeURIComponent(purl);
-        url += "&title=" + encodeURIComponent(ptitle);
-        url += "&description=" + encodeURIComponent(text);
-        url += "&image=" + encodeURIComponent(pimg);
-        url += "&noparse=true";
-
-        popup(url);
-    }
-
-    function popup(url) {
-        if (typeof window !== "undefined") {
-            window.open(url, "", "toolbar=0,status=0,width=626,height=436");
-        }
-    }
-
     return (
         <div className={styles.container}>
             <Head>
@@ -241,23 +225,7 @@ export default function Home() {
 
                 <div className="body_page">
                     <div className="topBlock">
-                        <div
-                            data-title="Поделиться во ВКонтакте"
-                            className="vkShare"
-                        >
-                            <img
-                                src={"/vkShare.png"}
-                                alt="Поделиться во ВКонтакте"
-                                onClick={() =>
-                                    vk(
-                                        "https://www.ustinnov.ru/",
-                                        "Пробел Поэзии",
-                                        "https://res.cloudinary.com/dxhbjabsy/image/upload/v1626377484/pp/%D0%9F%D0%9F_njdont.png",
-                                        "Стихи в новом формате"
-                                    )
-                                }
-                            />
-                        </div>
+                        <Share />
                         <Player
                             onMusic={onMusic}
                             imgMusic={imgMusic}
