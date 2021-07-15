@@ -305,12 +305,6 @@ export default function Home() {
                     >
                         {/* Мой Устимов Entertainment представляет */}
                         <img src="/mue.png" width="50%" height="50%"></img>
-                        <div
-                            style={{ marginLeft: 163, marginTop: -43 }}
-                            className="presents"
-                        >
-                            представляет
-                        </div>
                     </div>
                 </div>
             </main>
