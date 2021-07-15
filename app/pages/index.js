@@ -299,7 +299,7 @@ export default function Home() {
                             "false" && (
                             <div
                                 style={{
-                                    color: "#535353",
+                                    // color: "#535353",
                                     position: "fixed",
                                     // left: 530,
                                     left: 400,
@@ -308,6 +308,7 @@ export default function Home() {
                                     top: -50,
                                 }}
                                 className="logo"
+                                data-title="Кликнуть, чтобы попасть на сайт"
                             >
                                 <a href="https://www.ustinnov.ru">
                                     <img src="/mue.png" />

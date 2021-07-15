@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap"); */
 
 html,
 body {
@@ -82,17 +82,17 @@ a {
     position: absolute;
     /* position: relative; */
     z-index: 1;
-    background: yellow;
+    /* background: yellow; */
     font-family: Arial, sans-serif;
     font-size: 11px;
     padding: 5px 10px;
-    border: 1px solid #333;
-    border-radius: 3px;
-    width: 74px;
+    /* border: 1px solid #333; */
+    /* border-radius: 3px; */
+    width: 114px;
     content: attr(data-title);
     /* padding-top: 32px;
     margin-left: 32px; */
-    left: -5%;
+    left: -10%;
     top: 100%;
     /* left: 54px;
     top: 31px; */
@@ -113,17 +113,17 @@ a {
     position: absolute;
     /* position: relative; */
     z-index: 1;
-    background: yellow;
+    /* background: yellow; */
     font-family: Arial, sans-serif;
     font-size: 11px;
     padding: 5px 10px;
-    border: 1px solid #333;
-    border-radius: 3px;
-    width: 74px;
+    /* border: 1px solid #333; */
+    /* border-radius: 3px; */
+    width: 134px;
     content: attr(data-title);
     /* padding-top: 32px;
     margin-left: 32px; */
-    left: 45%;
+    left: 30%;
     top: 100%;
     /* left: 54px;
     top: 31px; */
@@ -153,9 +153,9 @@ a {
     position: fixed;
 }
 
-.presents {
+/* .presents {
     font-family: "STIX Two Math", serif;
-}
+} */
 
 .logo img:hover {
     transform: scale(1.2);
@@ -166,4 +166,28 @@ a {
     width: 525px;
     height: 300px;
     overflow: hidden;
+}
+
+/* всплывающая подсказка при наведении на лого */
+.logo:hover::after {
+    /* overflow: visible; */
+    position: absolute;
+    /* position: relative; */
+    z-index: 1;
+    /* background: yellow; */
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    /* border: 1px solid #333;
+    border-radius: 3px; */
+    width: 194px;
+    content: attr(data-title);
+    /* padding-top: 32px;
+    margin-left: 32px; */
+    left: 35%;
+    top: 25%;
+    /* left: 54px;
+    top: 31px; */
+    /* padding-left: 35px; */
+    text-align: center;
 }
