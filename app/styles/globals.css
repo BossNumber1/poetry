@@ -123,6 +123,12 @@ a {
     font-family: "STIX Two Math", serif;
 } */
 
+.logo {
+    position: fixed;
+    left: 400px;
+    top: -50px;
+}
+
 .logo img:hover {
     transform: scale(1.2);
     transition-duration: 1.5s;

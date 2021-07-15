@@ -7,6 +7,7 @@ import PictureForPoetry from "../components/PictureForPoetry.jsx";
 import VerseAddingForm from "../components/VerseAddingForm.jsx";
 import axios from "axios";
 import Share from "../components/Share";
+import Logo from "../components/Logo";
 
 export default function Home() {
     const [poetry, setPoetry] = React.useState("");
@@ -289,27 +290,7 @@ export default function Home() {
 
                         {showForm && <VerseAddingForm />}
                     </div>
-                    {typeof window !== "undefined" &&
-                        localStorage.getItem("selectedScriptSection") ===
-                            "false" && (
-                            <div
-                                style={{
-                                    // color: "#535353",
-                                    position: "fixed",
-                                    // left: 530,
-                                    left: 400,
-                                    // bottom: 49,
-                                    // bottom: 129,
-                                    top: -50,
-                                }}
-                                className="logo"
-                                data-title="Кликнуть, чтобы попасть на сайт"
-                            >
-                                <a href="https://www.ustinnov.ru">
-                                    <img src="/mue.png" />
-                                </a>
-                            </div>
-                        )}
+                    <Logo />
                 </div>
             </main>
         </div>
