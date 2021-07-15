@@ -191,3 +191,21 @@ a {
     /* padding-left: 35px; */
     text-align: center;
 }
+
+.advertising {
+    /*// position: "fixed",*/
+    position: absolute;
+    /*// left: 13,
+                                    // top: 13,*/
+    left: 13px;
+    bottom: -46px;
+    border: 1px solid black;
+    height: 100px;
+    /*  // width: 1030,*/
+    width: 98%;
+    padding: 2.5em 0;
+    text-align: center;
+    background: orange;
+    /*  // marginBottom: 55,
+                                    // verticalAlign: "middle",*/
+}
