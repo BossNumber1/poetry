@@ -251,9 +251,9 @@ export default function Home() {
                                 onClick={() =>
                                     vk(
                                         "https://www.ustinnov.ru/",
-                                        "ust",
-                                        "https://i.pinimg.com/originals/0d/2d/21/0d2d21641ec91289e1501424d77f9911.jpg",
-                                        "mue"
+                                        "Пробел Поэзии",
+                                        "https://res.cloudinary.com/dxhbjabsy/image/upload/v1626377484/pp/%D0%9F%D0%9F_njdont.png",
+                                        "Стихи в новом формате"
                                     )
                                 }
                             />
