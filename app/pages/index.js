@@ -8,6 +8,7 @@ import VerseAddingForm from "../components/VerseAddingForm.jsx";
 import axios from "axios";
 import Share from "../components/Share";
 import Logo from "../components/Logo";
+import Advertising from "../components/Advertising";
 
 export default function Home() {
     const [poetry, setPoetry] = React.useState("");
@@ -220,9 +221,7 @@ export default function Home() {
             </Head>
 
             <main className={styles.main}>
-                <div className="advertising" id="advertisingId">
-                    здесь будет ваша реклама
-                </div>
+                <Advertising />
 
                 <div className="body_page">
                     <div className="topBlock">
