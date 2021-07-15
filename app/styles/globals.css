@@ -104,7 +104,7 @@ a {
 .player {
     border: 0px;
     border-radius: 50px;
-    /* cursor: "pointer", */
+    cursor: pointer;
 }
 
 /* всплывающая подсказка при наведении для добавления поста */
@@ -143,6 +143,8 @@ a {
     position: fixed;
     right: 25px;
     top: 26%;
+    overflow: hidden;
+    z-index: 50;
 }
 
 .iconBtns {
@@ -158,4 +160,10 @@ a {
 .logo img:hover {
     transform: scale(1.2);
     transition-duration: 1.5s;
+}
+
+.logo img {
+    width: 525px;
+    height: 300px;
+    overflow: hidden;
 }

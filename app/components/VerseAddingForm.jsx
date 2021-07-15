@@ -3,9 +3,7 @@ import axios from "axios";
 
 const VerseAddingForm = () => {
     const [showError, setShowError] = React.useState(false);
-
     const [responseFromServer, setResponseFromServer] = React.useState(false);
-
     const [nameAuthorState, setNameAuthorState] = React.useState(
         localStorage.getItem("nameAuthor") || ""
     );

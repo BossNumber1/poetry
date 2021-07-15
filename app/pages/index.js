@@ -276,6 +276,8 @@ export default function Home() {
                                         style={{
                                             marginLeft: 30,
                                             // position: "absolute"
+                                            overflow: "hidden",
+                                            zIndex: 50,
                                         }}
                                         dangerouslySetInnerHTML={{
                                             __html: localStorage.getItem(
@@ -300,7 +302,7 @@ export default function Home() {
                                     color: "#535353",
                                     position: "fixed",
                                     // left: 530,
-                                    left: 450,
+                                    left: 400,
                                     // bottom: 49,
                                     // bottom: 129,
                                     top: -50,
@@ -308,11 +310,7 @@ export default function Home() {
                                 className="logo"
                             >
                                 <a href="https://www.ustinnov.ru">
-                                    <img
-                                        src="/mue.png"
-                                        width="50%"
-                                        height="50%"
-                                    />
+                                    <img src="/mue.png" />
                                 </a>
                             </div>
                         )}
