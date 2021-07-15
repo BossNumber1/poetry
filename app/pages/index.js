@@ -209,6 +209,33 @@ export default function Home() {
         }
     };
 
+    // let Share;
+    // React.useEffect(() => {
+
+    function vk(purl, ptitle, pimg, text) {
+        let url = "http://vkontakte.ru/share.php?";
+        url += "url=" + encodeURIComponent(purl);
+        url += "&title=" + encodeURIComponent(ptitle);
+        url += "&description=" + encodeURIComponent(text);
+        url += "&image=" + encodeURIComponent(pimg);
+        url += "&noparse=true";
+
+        popup(url);
+    }
+
+    function popup(url) {
+        // const Demo = () => (
+        //     <NewWindow>
+        //         <h1>Hi 👋</h1>
+        //     </NewWindow>
+        // );
+        if (typeof window !== "undefined") {
+            window.open(url, "", "toolbar=0,status=0,width=626,height=436");
+        }
+    }
+
+    // }, [Share]);
+
     return (
         <div className={styles.container}>
             <Head>
@@ -218,6 +245,21 @@ export default function Home() {
             </Head>
 
             <main className={styles.main}>
+                <div>
+                    <button
+                        onClick={() =>
+                            vk(
+                                "https://www.ustinnov.ru/",
+                                "ust",
+                                "https://i.pinimg.com/originals/0d/2d/21/0d2d21641ec91289e1501424d77f9911.jpg",
+                                "mue"
+                            )
+                        }
+                    >
+                        шарить
+                    </button>
+                </div>
+
                 <div className="advertising" id="advertisingId">
                     здесь будет ваша реклама
                 </div>
