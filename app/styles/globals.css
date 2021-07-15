@@ -33,13 +33,13 @@ a {
 
 .topBlock {
     grid-area: topBlock;
-    background-color: aqua;
-    border-right: 1px solid gray;
+    /* background-color: red; */
+    /* border-right: 1px solid gray; */
 }
 
 .blockBelow {
     grid-area: blockBelow;
-    background-color: orange;
+    /* background-color: orange; */
 }
 
 .avatar {
@@ -208,7 +208,9 @@ a {
 .vkShare {
     cursor: pointer;
     position: fixed;
-    bottom: 82px;
+    /* bottom: 82px; */
+    top: 32px;
+    left: 32px;
 }
 
 /* всплывающая подсказка при наведении на иконку вк */

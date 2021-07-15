@@ -209,9 +209,6 @@ export default function Home() {
         }
     };
 
-    // let Share;
-    // React.useEffect(() => {
-
     function vk(purl, ptitle, pimg, text) {
         let url = "http://vkontakte.ru/share.php?";
         url += "url=" + encodeURIComponent(purl);
@@ -224,17 +221,10 @@ export default function Home() {
     }
 
     function popup(url) {
-        // const Demo = () => (
-        //     <NewWindow>
-        //         <h1>Hi 👋</h1>
-        //     </NewWindow>
-        // );
         if (typeof window !== "undefined") {
             window.open(url, "", "toolbar=0,status=0,width=626,height=436");
         }
     }
-
-    // }, [Share]);
 
     return (
         <div className={styles.container}>
@@ -245,27 +235,29 @@ export default function Home() {
             </Head>
 
             <main className={styles.main}>
-                <div data-title="Поделиться во ВКонтакте" className="vkShare">
-                    <img
-                        src={"/vkShare.png"}
-                        alt="Поделиться во ВКонтакте"
-                        onClick={() =>
-                            vk(
-                                "https://www.ustinnov.ru/",
-                                "ust",
-                                "https://i.pinimg.com/originals/0d/2d/21/0d2d21641ec91289e1501424d77f9911.jpg",
-                                "mue"
-                            )
-                        }
-                    />
-                </div>
-
                 <div className="advertising" id="advertisingId">
                     здесь будет ваша реклама
                 </div>
 
-                <div className="body_page2">
-                    <div className="topBlock2">
+                <div className="body_page">
+                    <div className="topBlock">
+                        <div
+                            data-title="Поделиться во ВКонтакте"
+                            className="vkShare"
+                        >
+                            <img
+                                src={"/vkShare.png"}
+                                alt="Поделиться во ВКонтакте"
+                                onClick={() =>
+                                    vk(
+                                        "https://www.ustinnov.ru/",
+                                        "ust",
+                                        "https://i.pinimg.com/originals/0d/2d/21/0d2d21641ec91289e1501424d77f9911.jpg",
+                                        "mue"
+                                    )
+                                }
+                            />
+                        </div>
                         <Player
                             onMusic={onMusic}
                             imgMusic={imgMusic}
@@ -274,7 +266,7 @@ export default function Home() {
                             showForm={showForm}
                         />
                     </div>
-                    <div className="blockBelow2">
+                    <div className="blockBelow">
                         <div style={{ display: "flex", marginLeft: 20 }}>
                             {typeof window !== "undefined" &&
                                 localStorage.getItem("selectedScriptSection") &&
