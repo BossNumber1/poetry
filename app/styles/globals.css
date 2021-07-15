@@ -195,17 +195,42 @@ a {
 .advertising {
     /*// position: "fixed",*/
     position: absolute;
-    /*// left: 13,
-                                    // top: 13,*/
     left: 13px;
     bottom: -46px;
     border: 1px solid black;
     height: 100px;
-    /*  // width: 1030,*/
     width: 98%;
     padding: 2.5em 0;
     text-align: center;
     background: orange;
-    /*  // marginBottom: 55,
-                                    // verticalAlign: "middle",*/
+}
+
+.vkShare {
+    cursor: pointer;
+    position: fixed;
+    bottom: 82px;
+}
+
+/* всплывающая подсказка при наведении на иконку вк */
+.vkShare:hover::after {
+    /* overflow: visible; */
+    position: absolute;
+    /* position: relative; */
+    z-index: 1;
+    /* background: yellow; */
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    /* border: 1px solid #333;
+    border-radius: 3px; */
+    width: 194px;
+    content: attr(data-title);
+    /* padding-top: 32px;
+    margin-left: 32px; */
+    left: -85%;
+    top: -50%;
+    /* left: 54px;
+    top: 31px; */
+    /* padding-left: 35px; */
+    text-align: center;
 }

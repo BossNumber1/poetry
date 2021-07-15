@@ -245,8 +245,10 @@ export default function Home() {
             </Head>
 
             <main className={styles.main}>
-                <div>
-                    <button
+                <div data-title="Поделиться во ВКонтакте" className="vkShare">
+                    <img
+                        src={"/vkShare.png"}
+                        alt="Поделиться во ВКонтакте"
                         onClick={() =>
                             vk(
                                 "https://www.ustinnov.ru/",
@@ -255,9 +257,7 @@ export default function Home() {
                                 "mue"
                             )
                         }
-                    >
-                        шарить
-                    </button>
+                    />
                 </div>
 
                 <div className="advertising" id="advertisingId">
@@ -299,7 +299,7 @@ export default function Home() {
                                             width={74}
                                             height={74}
                                             alt="аватарка автора"
-                                        ></img>
+                                        />
                                     </div>
                                 )}
 
