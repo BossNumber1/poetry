@@ -214,11 +214,12 @@ export default function Home() {
             <main className={styles.main}>
                 <div
                     style={{
-                        position: "fixed",
+                        // position: "fixed",
+                        position: "absolute",
                         // left: 13,
                         // top: 13,
                         left: 13,
-                        bottom: -36,
+                        bottom: -46,
                         border: "1px solid black",
                         height: 100,
                         // width: 1030,
