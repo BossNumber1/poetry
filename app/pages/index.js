@@ -218,7 +218,7 @@ export default function Home() {
                         // left: 13,
                         // top: 13,
                         left: 13,
-                        bottom: 13,
+                        bottom: -36,
                         border: "1px solid black",
                         height: 100,
                         // width: 1030,
@@ -302,9 +302,11 @@ export default function Home() {
                             // bottom: 129,
                             top: -50,
                         }}
+                        className="logo"
                     >
-                        {/* Мой Устимов Entertainment представляет */}
-                        <img src="/mue.png" width="50%" height="50%"></img>
+                        <a href="https://www.ustinnov.ru">
+                            <img src="/mue.png" width="50%" height="50%" />
+                        </a>
                     </div>
                 </div>
             </main>
