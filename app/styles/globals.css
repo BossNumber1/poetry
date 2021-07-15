@@ -207,7 +207,8 @@ a {
 
 .vkShare,
 .fbShare,
-.twtShare {
+.twtShare,
+.okShare {
     cursor: pointer;
     position: fixed;
     top: 32px;
@@ -225,10 +226,15 @@ a {
     left: 192px;
 }
 
+.okShare {
+    left: 272px;
+}
+
 /* всплывающая подсказка при наведении на иконки шаринга */
 .vkShare:hover::after,
 .fbShare:hover::after,
-.twtShare:hover::after {
+.twtShare:hover::after,
+.okShare:hover::after {
     position: absolute;
     z-index: 1;
     font-family: Arial, sans-serif;

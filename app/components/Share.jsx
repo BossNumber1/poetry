@@ -31,6 +31,14 @@ function Share() {
         popup(url);
     }
 
+    function odnoklassniki(purl, text) {
+        let url = "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1";
+        url += "&st.comments=" + encodeURIComponent(text);
+        url += "&st._surl=" + encodeURIComponent(purl);
+
+        popup(url);
+    }
+
     function popup(url) {
         if (typeof window !== "undefined") {
             window.open(url, "", "toolbar=0,status=0,width=626,height=436");
@@ -72,7 +80,22 @@ function Share() {
                     src={"/twtShare.png"}
                     alt="Поделиться c Twitter`ом"
                     onClick={() =>
-                        twitter("https://www.ustinnov.ru/", "Пробел Поэзии")
+                        twitter(
+                            "https://www.ustinnov.ru/",
+                            "Стихи в новом формате"
+                        )
+                    }
+                />
+            </div>
+            <div data-title="Рассказать одноклассникам" className="okShare">
+                <img
+                    src={"/okShare.png"}
+                    alt="Рассказать одноклассникам"
+                    onClick={() =>
+                        odnoklassniki(
+                            "https://www.ustinnov.ru/",
+                            "Стихи в новом формате"
+                        )
                     }
                 />
             </div>
