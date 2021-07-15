@@ -292,22 +292,30 @@ export default function Home() {
 
                         {showForm && <VerseAddingForm />}
                     </div>
-                    <div
-                        style={{
-                            color: "#535353",
-                            position: "fixed",
-                            // left: 530,
-                            left: 450,
-                            // bottom: 49,
-                            // bottom: 129,
-                            top: -50,
-                        }}
-                        className="logo"
-                    >
-                        <a href="https://www.ustinnov.ru">
-                            <img src="/mue.png" width="50%" height="50%" />
-                        </a>
-                    </div>
+                    {typeof window !== "undefined" &&
+                        localStorage.getItem("selectedScriptSection") ===
+                            "false" && (
+                            <div
+                                style={{
+                                    color: "#535353",
+                                    position: "fixed",
+                                    // left: 530,
+                                    left: 450,
+                                    // bottom: 49,
+                                    // bottom: 129,
+                                    top: -50,
+                                }}
+                                className="logo"
+                            >
+                                <a href="https://www.ustinnov.ru">
+                                    <img
+                                        src="/mue.png"
+                                        width="50%"
+                                        height="50%"
+                                    />
+                                </a>
+                            </div>
+                        )}
                 </div>
             </main>
         </div>
