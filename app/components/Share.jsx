@@ -22,6 +22,15 @@ function Share() {
         popup(url);
     }
 
+    function twitter(purl, ptitle) {
+        let url = "http://twitter.com/share?";
+        url += "text=" + encodeURIComponent(ptitle);
+        url += "&url=" + encodeURIComponent(purl);
+        url += "&counturl=" + encodeURIComponent(purl);
+
+        popup(url);
+    }
+
     function popup(url) {
         if (typeof window !== "undefined") {
             window.open(url, "", "toolbar=0,status=0,width=626,height=436");
@@ -55,6 +64,15 @@ function Share() {
                             "https://res.cloudinary.com/dxhbjabsy/image/upload/v1626377484/pp/%D0%9F%D0%9F_njdont.png",
                             "Стихи в новом формате"
                         )
+                    }
+                />
+            </div>
+            <div data-title="Поделиться c Twitter`ом" className="twtShare">
+                <img
+                    src={"/twtShare.png"}
+                    alt="Поделиться c Twitter`ом"
+                    onClick={() =>
+                        twitter("https://www.ustinnov.ru/", "Пробел Поэзии")
                     }
                 />
             </div>
