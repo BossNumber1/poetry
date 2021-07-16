@@ -96,8 +96,8 @@ a {
 }
 
 .statistics:hover::after {
-    width: 134px;
-    left: 60%;
+    width: 164px;
+    left: 50%;
 }
 
 .addPost,

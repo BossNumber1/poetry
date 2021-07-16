@@ -44,11 +44,11 @@ export default function Player({
                 <button
                     onClick={() => setShowStatistics(!showStatistics)}
                     className="statistics"
-                    data-title={"Статистика сайта"}
+                    data-title={"Показать статистику сайта"}
                 >
                     <Image
                         src={"/statistics.png"}
-                        alt={"Статистика сайта"}
+                        alt={"Показать статистику сайта"}
                         width={64}
                         height={64}
                     />
