@@ -114,8 +114,8 @@ a {
 }
 
 .iconBtns {
-    top: 32px;
-    right: 32px;
+    top: 168px;
+    right: 180px;
     position: fixed;
 }
 
@@ -166,13 +166,34 @@ a {
     background: orange;
 }
 
+.shareIcons {
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    margin-top: 124px;
+    margin-left: 23px;
+    /* display: none; */
+}
+
+.shareLabel {
+    margin-top: -354px;
+    margin-left: 23px;
+    /* z-index: 100; */
+}
+
+.mainMenuLabel {
+    margin-top: 4px;
+    margin-left: 23px;
+}
+
 .vkShare,
 .fbShare,
 .twtShare,
 .okShare {
     cursor: pointer;
-    position: fixed;
-    top: 32px;
+    display: inline-block;
+    /* position: fixed; */
+    /* top: 32px; */
 }
 
 .vkShare {
@@ -209,11 +230,14 @@ a {
 }
 
 .menuWindow {
-    background-color: red;
+    /* background-color: red; */
     position: fixed;
-    right: 12px;
-    top: 152px;
+    right: 32px;
+    top: 132px;
     width: 320px;
     height: 320px;
     overflow: hidden;
+    border: 1px solid black;
+    border-radius: 5px;
+    z-index: 50;
 }

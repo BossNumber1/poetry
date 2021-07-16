@@ -46,7 +46,7 @@ function Share() {
     }
 
     return (
-        <>
+        <div className="shareIcons">
             <div data-title="Поделиться во ВКонтакте" className="vkShare">
                 <img
                     src={"/vkShare.png"}
@@ -99,7 +99,7 @@ function Share() {
                     }
                 />
             </div>
-        </>
+        </div>
     );
 }
 

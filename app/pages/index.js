@@ -224,7 +224,6 @@ export default function Home() {
 
                 <div className="body_page">
                     <div className="topBlock">
-                        {showMenu && <div className="menuWindow">menu</div>}
                         <TopBlock
                             onMusic={onMusic}
                             imgMusic={imgMusic}

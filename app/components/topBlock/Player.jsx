@@ -7,17 +7,7 @@ export default function Player({
     switchOnSwitchOff,
     setShowForm,
     showForm,
-    setShowMenu,
-    showMenu,
 }) {
-    // React.useEffect(() => {
-    //     showMenu;
-    // }, [showMenu]);
-
-    let chan = () => {
-        setShowMenu(!showMenu);
-    };
-
     return (
         <>
             <audio id="track">
@@ -51,24 +41,6 @@ export default function Player({
                         height={64}
                     />
                 </button>
-
-                <img
-                    src={"/menu.png"}
-                    alt="Поделиться c Twitter`ом"
-                    style={{ cursor: "pointer" }}
-                    onClick={
-                        // () =>
-                        // // twitter(
-                        // //     "https://www.ustinnov.ru/",
-                        // //     "Стихи в новом формате"
-                        // // )
-                        // alert("ggg")
-                        // showMenu === false
-                        //     ?
-                        chan
-                        // : setShowMenu(false)
-                    }
-                />
             </div>
         </>
     );
