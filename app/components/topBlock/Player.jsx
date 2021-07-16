@@ -8,6 +8,7 @@ export default function Player({
     setShowForm,
     showForm,
 }) {
+    const [showStatistics, setShowStatistics] = React.useState(false);
     return (
         <>
             <audio id="track">
@@ -26,7 +27,6 @@ export default function Player({
                         height={64}
                     />
                 </button>
-
                 <button
                     onClick={() => setShowForm(!showForm)}
                     className="addPost"
@@ -41,7 +41,22 @@ export default function Player({
                         height={64}
                     />
                 </button>
+                <button
+                    onClick={() => setShowStatistics(!showStatistics)}
+                    className="statistics"
+                    data-title={"Статистика сайта"}
+                >
+                    <Image
+                        src={"/statistics.png"}
+                        alt={"Статистика сайта"}
+                        width={64}
+                        height={64}
+                    />
+                </button>
             </div>
+            {showStatistics && (
+                <div className="statisticWindow">Статистика</div>
+            )}
         </>
     );
 }

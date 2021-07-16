@@ -1,11 +1,12 @@
-/* @import url("https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap");
 
 html,
 body {
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+    font-family: "STIX Two Math", serif;
 }
 
 a {
@@ -65,17 +66,21 @@ a {
     text-align: center;
 }
 
-/* всплывающая подсказка при наведении для плеера и добавления поста */
+/* всплывающая подсказка при наведении для плеера, добавления поста и статистики */
 .player:hover::after,
-.addPost:hover::after {
+.addPost:hover::after,
+.statistics:hover::after {
     position: absolute;
     z-index: 1;
     font-family: Arial, sans-serif;
     font-size: 11px;
     padding: 5px 10px;
-    width: 114px;
+    /* width: 114px; */
     content: attr(data-title);
-    left: -10%;
+    /* left: -10%; */
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
     top: -40%;
     text-align: center;
 }
@@ -90,8 +95,14 @@ a {
     left: 30%;
 }
 
+.statistics:hover::after {
+    width: 134px;
+    left: 60%;
+}
+
 .addPost,
-.player {
+.player,
+.statistics {
     border: 0px;
     border-radius: 50px;
     cursor: pointer;
@@ -100,28 +111,33 @@ a {
 .player:active,
 .player:focus,
 .addPost:active,
-.addPost:focus {
+.addPost:focus,
+.statistics:active,
+.statistics:focus {
     outline: none;
 }
 
 .postAddForm {
-    /* background-color: orange; */
+    background-color: white;
     position: fixed;
-    right: 25px;
-    top: 26%;
+    right: 20px;
+    top: 34%;
     overflow: hidden;
-    z-index: 50;
+    z-index: 150;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 7px;
 }
 
 .iconBtns {
-    top: 168px;
-    right: 180px;
+    top: 118px;
+    right: 70px;
     position: fixed;
 }
 
-/* .presents {
-    font-family: "STIX Two Math", serif;
-} */
+.iconBtns button {
+    margin-right: 10px;
+}
 
 .logo {
     position: fixed;
@@ -155,28 +171,34 @@ a {
 }
 
 .advertising {
-    position: absolute;
-    left: 13px;
-    bottom: -46px;
+    /* position: absolute; */
+    position: fixed;
+    /* right: 13px; */
+    /* bottom: 34px; */
+    bottom: 75px;
+    margin-left: -1px;
+    /* position: inherit; */
+    /* margin-bottom: 23px; */
     border: 1px solid black;
-    height: 100px;
-    width: 98%;
-    padding: 2.5em 0;
+    height: 180px;
+    width: 25%;
+    padding: 4.5em 0;
     text-align: center;
     background: orange;
+    border-radius: 5px;
 }
 
 .shareIcons {
     /* background-color: red; */
     width: 100%;
     height: 100%;
-    margin-top: 124px;
+    margin-top: 114px;
     margin-left: 23px;
     /* display: none; */
 }
 
 .shareLabel {
-    margin-top: -354px;
+    margin-top: -448px;
     margin-left: 23px;
     /* z-index: 100; */
 }
@@ -184,6 +206,11 @@ a {
 .mainMenuLabel {
     margin-top: 4px;
     margin-left: 23px;
+}
+
+.mainMenuLabelRight {
+    margin-top: -23px;
+    margin-left: 194px;
 }
 
 .vkShare,
@@ -216,16 +243,20 @@ a {
 .vkShare:hover::after,
 .fbShare:hover::after,
 .twtShare:hover::after,
-.okShare:hover::after {
+.okShare:hover::after,
+.menuIcon:hover::after {
     position: absolute;
     z-index: 1;
     font-family: Arial, sans-serif;
     font-size: 11px;
     padding: 5px 10px;
     content: attr(data-title);
-    top: -50%;
-    left: -85%;
+    /* background-color: orange; */
+    top: -25px;
+    right: -65px;
+    /* left: -85%; */
     width: 194px;
+    /* height: 1230px; */
     text-align: center;
 }
 
@@ -233,11 +264,32 @@ a {
     /* background-color: red; */
     position: fixed;
     right: 32px;
-    top: 132px;
+    top: 82px;
     width: 320px;
-    height: 320px;
+    height: 420px;
     overflow: hidden;
     border: 1px solid black;
     border-radius: 5px;
     z-index: 50;
+}
+
+.menuIcon {
+    cursor: pointer;
+    position: fixed;
+    right: 32px;
+    top: 32px;
+}
+
+.statisticWindow {
+    background-color: white;
+    border: 1px solid black;
+    width: 25%;
+    height: 130px;
+    z-index: 150;
+    overflow: hidden;
+    border-radius: 5px;
+    position: fixed;
+    top: 33%;
+    /* right: 20px; */
+    padding: 7px;
 }

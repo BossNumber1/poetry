@@ -104,8 +104,8 @@ export default function Home() {
         localStorage.setItem("selectedScriptSection", "false");
         localStorage.setItem(
             "selectedText",
-            `<div>приветствую, о, милый путник</div><div>нажимаешь на пробел и погружаешься в мир стихов</div>
-                <p>погнаааали! 🤘</p>`
+            `<div>Приветствую, о, путник.</div><br /><div>Нажимаешь на пробел и погружаешься в мир стихов.</div><br />
+                <p>Погнаааали! 🤘</p>`
         );
     }, []);
 
@@ -127,19 +127,19 @@ export default function Home() {
 
                     if (lux === "false") {
                         localStorage.setItem("selectedScriptSection", "0");
-                        document.getElementById("advertisingId") &&
-                            document.getElementById("advertisingId").remove();
+                        // document.getElementById("advertisingId") &&
+                        //     document.getElementById("advertisingId").remove();
                     } else if (lux === "0") {
                         localStorage.setItem("selectedScriptSection", "1");
-                        document.getElementById("advertisingId") &&
-                            document.getElementById("advertisingId").remove();
+                        // document.getElementById("advertisingId") &&
+                        //     document.getElementById("advertisingId").remove();
                     } else if (Number(lux) > 1 && Number(lux) < 8) {
                         localStorage.setItem(
                             "selectedScriptSection",
                             String(Number(lux) + 1)
                         );
-                        document.getElementById("advertisingId") &&
-                            document.getElementById("advertisingId").remove();
+                        // document.getElementById("advertisingId") &&
+                        //     document.getElementById("advertisingId").remove();
                     } else if (lux === "9") {
                         localStorage.removeItem("selectedScriptSection");
                     }
@@ -220,8 +220,6 @@ export default function Home() {
             </Head>
 
             <main className={styles.main}>
-                <Advertising />
-
                 <div className="body_page">
                     <div className="topBlock">
                         <TopBlock
@@ -273,6 +271,7 @@ export default function Home() {
                                             // position: "absolute"
                                             overflow: "hidden",
                                             zIndex: 50,
+                                            textAlign: "center",
                                         }}
                                         dangerouslySetInnerHTML={{
                                             __html: localStorage.getItem(

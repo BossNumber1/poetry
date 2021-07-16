@@ -1,4 +1,5 @@
 import React from "react";
+import Advertising from "../Advertising";
 import Player from "./Player";
 import Share from "./Share";
 
@@ -16,20 +17,23 @@ function TopBlock({
     };
     return (
         <>
-            <img
-                src={"/menu.png"}
-                alt="menu"
-                style={{
-                    cursor: "pointer",
-                    position: "fixed",
-                    right: 32,
-                    top: 32,
-                }}
-                onClick={chan}
-            />
+            <div
+                className="menuIcon"
+                data-title={
+                    !showMenu ? "Показать возможности" : "Скрыть возможности"
+                }
+            >
+                <img
+                    src={!showMenu ? "/menu.png" : "/closeMenu.png"}
+                    alt="menu"
+                    onClick={chan}
+                />
+            </div>
+
             {showMenu && (
                 <div className="menuWindow">
                     <div className="mainMenuLabel">Основные функции</div>
+                    <div className="mainMenuLabelRight">Партнёрам</div>
                     <Share />
                     <div className="shareLabel">Поделиться</div>
 
@@ -42,6 +46,7 @@ function TopBlock({
                         setShowMenu={setShowMenu}
                         showMenu={showMenu}
                     />
+                    <Advertising />
                 </div>
             )}
         </>
