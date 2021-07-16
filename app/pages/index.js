@@ -291,6 +291,111 @@ export default function Home() {
                     </div>
                     <Logo />
                 </div>
+                <div className="tape">
+                    <div>
+                        <div style={{ marginLeft: 83 }}>
+                            <img src="https://clck.ru/WCBTB" height="60px" />
+                        </div>
+                        <p style={{ fontWeight: "bold", marginLeft: 83 }}>
+                            Удобство
+                        </p>
+                        <div
+                            style={{
+                                position: "fixed",
+                                bottom: 97,
+                                // color: "red",
+                            }}
+                        >
+                            Простой, интуитивный интерфейс.
+                        </div>
+                    </div>
+                    <div>
+                        <div style={{ marginLeft: 83 }}>
+                            <img src="https://clck.ru/WCBTB" height="60px" />
+                        </div>
+                        <p style={{ fontWeight: "bold", marginLeft: 83 }}>
+                            Красота
+                        </p>
+                        <div
+                            style={{
+                                position: "fixed",
+                                bottom: 97,
+                                // color: "red",
+                            }}
+                        >
+                            Красивый дизайн.
+                        </div>
+                    </div>
+                    <div>
+                        <div style={{ marginLeft: 83 }}>
+                            <img src="https://clck.ru/WCBTB" height="60px" />
+                        </div>
+                        <p style={{ fontWeight: "bold", marginLeft: 83 }}>
+                            Простота
+                        </p>
+                        <div
+                            style={{
+                                position: "fixed",
+                                bottom: 97,
+                                // color: "red",
+                            }}
+                        >
+                            Ничего лишнего, всё по делу.
+                        </div>
+                    </div>
+                    <div>
+                        <div style={{ marginLeft: 83 }}>
+                            <img src="https://clck.ru/WCBTB" height="60px" />
+                        </div>
+                        <p style={{ fontWeight: "bold", marginLeft: 83 }}>
+                            Нет рекламы
+                        </p>
+                        <div
+                            style={{
+                                position: "fixed",
+                                bottom: 97,
+                                // color: "red",
+                            }}
+                        >
+                            На главной страницы нет рекламы. Такова концепция
+                            сайта.
+                        </div>
+                    </div>
+                    <div>
+                        <div style={{ marginLeft: 83 }}>
+                            <img src="https://clck.ru/WCBTB" height="60px" />
+                        </div>
+                        <p style={{ fontWeight: "bold", marginLeft: 83 }}>
+                            Новизна
+                        </p>
+                        <div
+                            style={{
+                                position: "fixed",
+                                bottom: 97,
+                                // color: "red",
+                            }}
+                        >
+                            Вы такое встречали? Я - нет.
+                        </div>
+                    </div>
+                    <div>
+                        <div style={{ marginLeft: 83 }}>
+                            <img src="https://clck.ru/WCBTB" height="60px" />
+                        </div>
+                        <p style={{ fontWeight: "bold", marginLeft: 83 }}>
+                            Перспективы
+                        </p>
+                        <div
+                            style={{
+                                position: "fixed",
+                                bottom: 97,
+                                // color: "red",
+                            }}
+                        >
+                            У меня ещё полно идей 😉
+                        </div>
+                    </div>
+                </div>
             </main>
             <footer className="signature">
                 © <a href="https://vk.com/moyustimov">Устинов Дмитрий</a>,
