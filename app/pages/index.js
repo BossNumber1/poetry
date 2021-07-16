@@ -104,8 +104,8 @@ export default function Home() {
         localStorage.setItem("selectedScriptSection", "false");
         localStorage.setItem(
             "selectedText",
-            `<div>Приветствую, о, путник.</div><br /><div>Нажимаешь на пробел и погружаешься в мир стихов.</div><br />
-                <p>Погнаааали! 🤘</p>`
+            `<div style="line-height: 30px"><div>Приветствую, о, путник.</div><div>Нажимаешь на пробел и погружаешься в мир стихов.</div>
+                <p>Погнаааали! 🤘</p></div>`
         );
     }, []);
 
@@ -272,7 +272,7 @@ export default function Home() {
                                             overflow: "hidden",
                                             zIndex: 50,
                                             textAlign: "center",
-                                            fontSize: 18,
+                                            fontSize: 14,
                                         }}
                                         dangerouslySetInnerHTML={{
                                             __html: localStorage.getItem(
