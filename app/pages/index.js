@@ -292,7 +292,10 @@ export default function Home() {
                     <Logo />
                 </div>
             </main>
-            <footer className="signature">© Устинов Дмитрий, 2021-й год</footer>
+            <footer className="signature">
+                © <a href="https://vk.com/moyustimov">Устинов Дмитрий</a>,
+                2021-й год
+            </footer>
         </div>
     );
 }
