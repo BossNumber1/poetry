@@ -2,22 +2,21 @@ import React from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
-import Player from "../components/Player.jsx";
 import PictureForPoetry from "../components/PictureForPoetry.jsx";
 import VerseAddingForm from "../components/VerseAddingForm.jsx";
 import axios from "axios";
-import Share from "../components/Share";
 import Logo from "../components/Logo";
 import Advertising from "../components/Advertising";
+import TopBlock from "../components/topBlock/TopBlock";
 
 export default function Home() {
     const [poetry, setPoetry] = React.useState("");
     const [onMusic, setOnMusic] = React.useState(false);
     const [imgMusic, setImgMusic] = React.useState("/play.png");
-
     const [showForm, setShowForm] = React.useState(false);
-
     const [scriptArray, setScriptArray] = React.useState(false);
+
+    const [showMenu, setShowMenu] = React.useState(false);
 
     let scriptArray2 = [
         {
@@ -225,13 +224,15 @@ export default function Home() {
 
                 <div className="body_page">
                     <div className="topBlock">
-                        <Share />
-                        <Player
+                        {showMenu && <div className="menuWindow">menu</div>}
+                        <TopBlock
                             onMusic={onMusic}
                             imgMusic={imgMusic}
                             switchOnSwitchOff={switchOnSwitchOff}
                             setShowForm={setShowForm}
                             showForm={showForm}
+                            setShowMenu={setShowMenu}
+                            showMenu={showMenu}
                         />
                     </div>
                     <div className="blockBelow">

@@ -207,3 +207,13 @@ a {
     width: 194px;
     text-align: center;
 }
+
+.menuWindow {
+    background-color: red;
+    position: fixed;
+    right: 12px;
+    top: 152px;
+    width: 320px;
+    height: 320px;
+    overflow: hidden;
+}
