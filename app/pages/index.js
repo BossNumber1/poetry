@@ -272,6 +272,7 @@ export default function Home() {
                                             overflow: "hidden",
                                             zIndex: 50,
                                             textAlign: "center",
+                                            fontSize: 18,
                                         }}
                                         dangerouslySetInnerHTML={{
                                             __html: localStorage.getItem(
@@ -291,6 +292,7 @@ export default function Home() {
                     <Logo />
                 </div>
             </main>
+            <footer className="signature">© Устинов Дмитрий, 2021-й год</footer>
         </div>
     );
 }

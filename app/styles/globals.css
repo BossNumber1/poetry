@@ -294,3 +294,9 @@ a {
     /* right: 20px; */
     padding: 7px;
 }
+
+.signature {
+    color: rgb(83, 83, 83);
+    margin-bottom: 23px;
+    font-size: 13px;
+}
