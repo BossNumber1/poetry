@@ -6,7 +6,6 @@ function Tape() {
             {typeof window !== "undefined" &&
             localStorage.getItem("selectedScriptSection") == "false" ? (
                 <>
-                    {/* // className="tape"> */}
                     <div className="seventhBlock">
                         <div>
                             <div>
