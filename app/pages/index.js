@@ -212,45 +212,50 @@ export default function Home() {
     };
 
     return (
-        <div className={styles.container}>
+        <div>
+            {/* className={styles.container}> */}
             <Head>
                 <title>Пробел Поэзии</title>
                 <meta name="description" content="Стихи в новом формате" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className={styles.main}>
+            <main>
+                {/* className={styles.main}> */}
                 <div className="body_page">
-                    <div className="topBlock">
-                        <TopBlock
-                            onMusic={onMusic}
-                            imgMusic={imgMusic}
-                            switchOnSwitchOff={switchOnSwitchOff}
-                            setShowForm={setShowForm}
-                            showForm={showForm}
-                            setShowMenu={setShowMenu}
-                            showMenu={showMenu}
-                        />
-                    </div>
-                    <div className="blockBelow">
+                    <div className="firstBlock" />
+                    {/* // className="body_page3"> */}
+                    {/* <div className="topBlock"> */}
+                    <TopBlock
+                        onMusic={onMusic}
+                        imgMusic={imgMusic}
+                        switchOnSwitchOff={switchOnSwitchOff}
+                        setShowForm={setShowForm}
+                        showForm={showForm}
+                        setShowMenu={setShowMenu}
+                        showMenu={showMenu}
+                    />
+                    {/* </div> */}
+                    <>
+                        {/* className="blockBelow"> */}
                         <BlockBelow
                             showForm={showForm}
                             selectedScriptSection={selectedScriptSection}
                             scriptArray={scriptArray}
                         />
-                    </div>
-                    <Logo />
+                    </>
                 </div>
-                <Tape />
+
+                {/* <div class="body_page"> */}
+
+                {/* </div> */}
             </main>
-            {typeof window !== "undefined" &&
+            {/* {typeof window !== "undefined" &&
                 localStorage.getItem("selectedScriptSection") == "false" && (
                     <footer className="signature">
-                        ©{" "}
-                        <a href="https://vk.com/moyustimov">Устинов Дмитрий</a>,
-                        2021-й год
+                        
                     </footer>
-                )}
+                )} */}
         </div>
     );
 }

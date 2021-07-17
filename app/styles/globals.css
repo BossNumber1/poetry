@@ -18,21 +18,166 @@ a {
     box-sizing: border-box;
 }
 
-.body_page {
+.body_page2 {
     display: grid;
     grid-template-areas:
-        "topBlock"
+        "logo" "topBlock"
         "blockBelow";
     grid-template-rows:
-        10%
+        5% 5%
         90%;
     /* grid-auto-rows: minmax(20%, auto); */
     grid-gap: 1em;
 }
 
+/* -------------------------------------------------------------------------------------------------------- */
+
+.body_page {
+    display: grid;
+    grid-template-areas:
+        "firstBlock firstBlock secondBlock secondBlock thirdBlock thirdBlock"
+        "fourthBlock fourthBlock fifthBlock fifthBlock sixthBlock sixthBlock"
+        "seventhBlock eighthBlock ninthBlock tenthBlock eleventhBlock twelfthBlock"
+        "thirteenth thirteenth fourteenth fourteenth fifteenth fifteenth";
+
+    /* grid-template-rows:
+        10%
+        90%; */
+    /* grid-auto-rows: minmax(20%, auto); */
+
+    grid-template-rows: repeat(4, 150px);
+    grid-template-columns: repeat(6, 1fr);
+
+    grid-gap: 1em;
+}
+
+.firstBlock {
+    grid-area: firstBlock;
+    background-color: yellow;
+}
+
+.secondBlock {
+    grid-area: secondBlock;
+    background-color: green;
+    /* font-size: large; */
+    /* text-align: center; */
+    /* margin: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thirdBlock {
+    grid-area: thirdBlock;
+    background-color: orange;
+    text-align: right;
+}
+
+.fourthBlock {
+    grid-area: fourthBlock;
+    background-color: rgb(0, 255, 200);
+}
+
+.fifthBlock {
+    grid-area: fifthBlock;
+    background-color: rgb(150, 108, 137);
+    text-align: center;
+    /* margin: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sixthBlock {
+    grid-area: sixthBlock;
+    background-color: rgb(255, 0, 179);
+}
+
+.seventhBlock {
+    grid-area: seventhBlock;
+    background-color: rgb(255, 8, 0);
+    /* text-align: center; */
+    /* margin: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eighthBlock {
+    grid-area: eighthBlock;
+    background-color: rgb(94, 255, 0);
+    text-align: center;
+    /* margin: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ninthBlock {
+    grid-area: ninthBlock;
+    background-color: rgb(238, 255, 0);
+    text-align: center;
+    /* margin: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tenthBlock {
+    grid-area: tenthBlock;
+    background-color: rgb(25, 0, 255);
+    text-align: center;
+    /* margin: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eleventhBlock {
+    grid-area: eleventhBlock;
+    background-color: rgb(0, 255, 200);
+    text-align: center;
+    /* margin: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.twelfthBlock {
+    grid-area: twelfthBlock;
+    background-color: rgb(0, 255, 98);
+    text-align: center;
+    /* margin: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thirteenth {
+    grid-area: thirteenth;
+    background-color: rgb(25, 0, 255);
+}
+
+.fourteenth {
+    grid-area: fourteenth;
+    background-color: rgb(43, 255, 0);
+    text-align: center;
+    /* margin: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fifteenth {
+    grid-area: fifteenth;
+    background-color: rgb(0, 255, 98);
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------- */
+
 .topBlock {
     grid-area: topBlock;
-    /* background-color: red; */
+    /* background-color: blue; */
     /* border-right: 1px solid gray; */
 }
 
@@ -119,8 +264,9 @@ a {
 
 .postAddForm {
     background-color: white;
-    position: fixed;
-    right: 20px;
+    /* position: fixed; */
+    /* right: 20px; */
+    margin-left: 350px;
     top: 34%;
     overflow: hidden;
     z-index: 150;
@@ -140,9 +286,11 @@ a {
 }
 
 .logo {
-    position: fixed;
-    left: 400px;
-    top: -50px;
+    grid-area: logo;
+    /* background-color: green; */
+    /* border: 1px solid orange; */
+    /* margin-top: -170px;
+    margin-left: 350px; */
 }
 
 .logo img:hover {
@@ -165,8 +313,8 @@ a {
     padding: 5px 10px;
     width: 194px;
     content: attr(data-title);
-    left: 35%;
-    top: 25%;
+    left: 43%;
+    top: 3%;
     text-align: center;
 }
 
@@ -300,8 +448,8 @@ a {
     /* border: 1px solid black; */
     width: 100%;
     height: 120px;
-    position: fixed;
-    bottom: 93px;
+    /* position: fixed; */
+    /* margin-bottom: -303px; */
     padding: 5px;
     display: flex;
     font-size: 15px;

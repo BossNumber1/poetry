@@ -1,5 +1,6 @@
 import React from "react";
 import Advertising from "../Advertising";
+import Logo from "../Logo";
 import Player from "./Player";
 import Share from "./Share";
 
@@ -15,19 +16,27 @@ function TopBlock({
     let chan = () => {
         setShowMenu(!showMenu);
     };
+
     return (
         <>
-            <div
-                className="menuIcon"
-                data-title={
-                    !showMenu ? "Показать возможности" : "Скрыть возможности"
-                }
-            >
-                <img
-                    src={!showMenu ? "/menu.png" : "/closeMenu.png"}
-                    alt="menu"
-                    onClick={chan}
-                />
+            <div className="secondBlock">
+                <Logo />
+            </div>
+            <div className="thirdBlock">
+                <div
+                    className="menuIcon"
+                    data-title={
+                        !showMenu
+                            ? "Показать возможности"
+                            : "Скрыть возможности"
+                    }
+                >
+                    <img
+                        src={!showMenu ? "/menu.png" : "/closeMenu.png"}
+                        alt="menu"
+                        onClick={chan}
+                    />
+                </div>
             </div>
 
             {showMenu && (
