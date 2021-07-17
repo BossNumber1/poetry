@@ -28,11 +28,11 @@ function Tape() {
                     style={{
                         position: "fixed",
                         bottom: 97,
-                        left: 260,
+                        left: 245,
                         // color: "red",
                     }}
                 >
-                    Красивый дизайн
+                    Эстетичный дизайн
                 </div>
             </div>
             <div>
@@ -72,23 +72,23 @@ function Tape() {
                 <div style={{ marginLeft: 83 }}>
                     <img src="https://clck.ru/WCC7Y" height="60px" />
                 </div>
-                <p style={{ fontWeight: "bold", marginLeft: 83 }}>Новизна</p>
+                <p style={{ fontWeight: "bold", marginLeft: 70 }}>Новизна</p>
                 <div
                     style={{
                         position: "fixed",
                         bottom: 97,
                         // color: "red",
-                        left: 840,
+                        left: 830,
                     }}
                 >
                     Вы такое встречали? Я - нет
                 </div>
             </div>
             <div>
-                <div style={{ marginLeft: 83 }}>
+                <div style={{ marginLeft: 60 }}>
                     <img src="https://clck.ru/WCC4j" height="60px" />
                 </div>
-                <p style={{ fontWeight: "bold", marginLeft: 83 }}>
+                <p style={{ fontWeight: "bold", marginLeft: 53 }}>
                     Перспективность
                 </p>
                 <div
@@ -96,7 +96,7 @@ function Tape() {
                         position: "fixed",
                         bottom: 97,
                         // color: "red",
-                        right: -10,
+                        right: 30,
                     }}
                 >
                     У меня ещё полно идей 😉
