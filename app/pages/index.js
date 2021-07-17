@@ -2,14 +2,12 @@ import React from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
-import PictureForPoetry from "../components/PictureForPoetry.jsx";
-import VerseAddingForm from "../components/VerseAddingForm.jsx";
 import axios from "axios";
 import Logo from "../components/Logo";
-import Advertising from "../components/Advertising";
 import TopBlock from "../components/topBlock/TopBlock";
 
 import Tape from "../components/Tape.jsx";
+import BlockBelow from "../components/blockBelow/BlockBelow";
 
 export default function Home() {
     const [poetry, setPoetry] = React.useState("");
@@ -235,61 +233,11 @@ export default function Home() {
                         />
                     </div>
                     <div className="blockBelow">
-                        <div style={{ display: "flex", marginLeft: 20 }}>
-                            {typeof window !== "undefined" &&
-                                localStorage.getItem("selectedScriptSection") &&
-                                localStorage.getItem("selectedText") !==
-                                    "конец" &&
-                                Number(
-                                    localStorage.getItem(
-                                        "selectedScriptSection"
-                                    )
-                                ) < scriptArray.length && (
-                                    <div
-                                        className="avatar"
-                                        style={{ borderRadius: 50 }}
-                                        data-title={localStorage.getItem(
-                                            "nameAuthor"
-                                        )}
-                                    >
-                                        <img
-                                            src={localStorage.getItem(
-                                                "avatarka"
-                                            )}
-                                            width={74}
-                                            height={74}
-                                            alt="аватарка автора"
-                                        />
-                                    </div>
-                                )}
-
-                            {typeof window !== "undefined" &&
-                                localStorage.getItem(
-                                    "selectedScriptSection"
-                                ) && (
-                                    <div
-                                        style={{
-                                            marginLeft: 30,
-                                            // position: "absolute"
-                                            overflow: "hidden",
-                                            zIndex: 50,
-                                            textAlign: "center",
-                                            fontSize: 14,
-                                        }}
-                                        dangerouslySetInnerHTML={{
-                                            __html: localStorage.getItem(
-                                                "selectedText"
-                                            ),
-                                        }}
-                                    />
-                                )}
-                        </div>
-
-                        <PictureForPoetry
+                        <BlockBelow
+                            showForm={showForm}
                             selectedScriptSection={selectedScriptSection}
+                            scriptArray={scriptArray}
                         />
-
-                        {showForm && <VerseAddingForm />}
                     </div>
                     <Logo />
                 </div>
