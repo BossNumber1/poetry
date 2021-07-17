@@ -227,12 +227,13 @@ export default function Home() {
                         showMenu={showMenu}
                     />
                     <BlockBelow
-                        showForm={showForm}
                         selectedScriptSection={selectedScriptSection}
                         scriptArray={scriptArray}
                     />
 
-                    <div className="etc">{showForm && <VerseAddingForm />}</div>
+                    <div className="etc">
+                        {showForm && showMenu && <VerseAddingForm />}
+                    </div>
                 </div>
             </main>
         </div>

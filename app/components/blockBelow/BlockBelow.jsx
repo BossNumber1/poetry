@@ -1,9 +1,8 @@
 import React from "react";
 import PictureForPoetry from "../PictureForPoetry";
 import Tape from "../Tape";
-import VerseAddingForm from "../VerseAddingForm";
 
-function BlockBelow({ showForm, selectedScriptSection, scriptArray }) {
+function BlockBelow({ selectedScriptSection, scriptArray }) {
     return (
         <>
             <div className="fourthBlock" />
