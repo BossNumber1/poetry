@@ -293,7 +293,9 @@ export default function Home() {
                     </div>
                     <Logo />
                 </div>
-                <Tape />
+                {typeof window !== "undefined" &&
+                    localStorage.getItem("selectedScriptSection") ==
+                        "false" && <Tape />}
             </main>
             <footer className="signature">
                 © <a href="https://vk.com/moyustimov">Устинов Дмитрий</a>,
