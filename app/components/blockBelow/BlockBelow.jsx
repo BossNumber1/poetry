@@ -8,12 +8,7 @@ function BlockBelow({ showForm, selectedScriptSection, scriptArray }) {
         <>
             <div className="fourthBlock" />
             <div className="fifthBlock">
-                <div
-                    style={{
-                        display: "flex",
-                        // marginLeft: 20
-                    }}
-                >
+                <div>
                     {typeof window !== "undefined" &&
                         localStorage.getItem("selectedScriptSection") &&
                         localStorage.getItem("selectedText") !== "конец" &&
@@ -74,7 +69,7 @@ function BlockBelow({ showForm, selectedScriptSection, scriptArray }) {
                         </>
                     )}
             </div>
-            <div class="fifteenth"></div>
+            <div className="fifteenth" />
         </>
     );
 }

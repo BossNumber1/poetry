@@ -232,12 +232,6 @@ export default function Home() {
                     />
                 </div>
             </main>
-            {/* {typeof window !== "undefined" &&
-                localStorage.getItem("selectedScriptSection") == "false" && (
-                    <footer className="signature">
-                        
-                    </footer>
-                )} */}
         </div>
     );
 }

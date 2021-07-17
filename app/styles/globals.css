@@ -31,7 +31,7 @@ a {
         90%; */
     /* grid-auto-rows: minmax(20%, auto); */
 
-    grid-template-rows: repeat(4, 150px);
+    grid-template-rows: 150px 150px 150px 50px;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 1em;
     font-size: 15px;
@@ -39,7 +39,7 @@ a {
 
 .firstBlock {
     grid-area: firstBlock;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 .secondBlock {
@@ -55,13 +55,13 @@ a {
 
 .thirdBlock {
     grid-area: thirdBlock;
-    background-color: orange;
+    /* background-color: orange; */
     text-align: right;
 }
 
 .fourthBlock {
     grid-area: fourthBlock;
-    background-color: rgb(0, 255, 200);
+    /* background-color: rgb(0, 255, 200); */
 }
 
 .fifthBlock {
@@ -76,7 +76,7 @@ a {
 
 .sixthBlock {
     grid-area: sixthBlock;
-    background-color: rgb(255, 0, 179);
+    /* background-color: rgb(255, 0, 179); */
 }
 
 .seventhBlock {
@@ -141,22 +141,26 @@ a {
 
 .thirteenth {
     grid-area: thirteenth;
-    background-color: rgb(25, 0, 255);
+    /* background-color: rgb(25, 0, 255); */
 }
 
 .fourteenth {
     grid-area: fourteenth;
-    background-color: rgb(43, 255, 0);
+    /* background-color: rgb(43, 255, 0); */
     text-align: center;
     /* margin: auto; */
     display: flex;
     align-items: center;
     justify-content: center;
+
+    color: rgb(83, 83, 83);
+    /* margin-bottom: 23px; */
+    font-size: 13px;
 }
 
 .fifteenth {
     grid-area: fifteenth;
-    background-color: rgb(0, 255, 98);
+    /* background-color: rgb(0, 255, 98); */
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------- */
@@ -408,10 +412,4 @@ a {
     margin-left: -0.5px;
     /* right: 20px; */
     padding: 7px;
-}
-
-.signature {
-    color: rgb(83, 83, 83);
-    margin-bottom: 23px;
-    font-size: 13px;
 }
