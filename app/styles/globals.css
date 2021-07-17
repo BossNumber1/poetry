@@ -7,6 +7,7 @@ body {
     /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
     font-family: "STIX Two Math", serif;
+    overflow: hidden;
 }
 
 a {
@@ -31,7 +32,7 @@ a {
         90%; */
     /* grid-auto-rows: minmax(20%, auto); */
 
-    grid-template-rows: 150px 150px 150px 50px;
+    grid-template-rows: 25% 25% 25% 10%;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 1em;
     font-size: 15px;
@@ -66,7 +67,7 @@ a {
 
 .fifthBlock {
     grid-area: fifthBlock;
-    background-color: rgb(150, 108, 137);
+    /* background-color: rgb(150, 108, 137); */
     text-align: center;
     /* margin: auto; */
     display: flex;
@@ -81,7 +82,7 @@ a {
 
 .seventhBlock {
     grid-area: seventhBlock;
-    background-color: rgb(255, 8, 0);
+    /* background-color: rgb(255, 8, 0); */
     /* text-align: center; */
     /* margin: auto; */
     display: flex;
@@ -91,7 +92,7 @@ a {
 
 .eighthBlock {
     grid-area: eighthBlock;
-    background-color: rgb(94, 255, 0);
+    /* background-color: rgb(94, 255, 0); */
     text-align: center;
     /* margin: auto; */
     display: flex;
@@ -101,7 +102,7 @@ a {
 
 .ninthBlock {
     grid-area: ninthBlock;
-    background-color: rgb(238, 255, 0);
+    /* background-color: rgb(238, 255, 0); */
     text-align: center;
     /* margin: auto; */
     display: flex;
@@ -111,7 +112,7 @@ a {
 
 .tenthBlock {
     grid-area: tenthBlock;
-    background-color: rgb(25, 0, 255);
+    /* background-color: rgb(25, 0, 255); */
     text-align: center;
     /* margin: auto; */
     display: flex;
@@ -121,7 +122,7 @@ a {
 
 .eleventhBlock {
     grid-area: eleventhBlock;
-    background-color: rgb(0, 255, 200);
+    /* background-color: rgb(0, 255, 200); */
     text-align: center;
     /* margin: auto; */
     display: flex;
@@ -131,7 +132,7 @@ a {
 
 .twelfthBlock {
     grid-area: twelfthBlock;
-    background-color: rgb(0, 255, 98);
+    /* background-color: rgb(0, 255, 98); */
     text-align: center;
     /* margin: auto; */
     display: flex;
@@ -150,7 +151,7 @@ a {
     text-align: center;
     /* margin: auto; */
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 
     color: rgb(83, 83, 83);
