@@ -297,10 +297,14 @@ export default function Home() {
                     localStorage.getItem("selectedScriptSection") ==
                         "false" && <Tape />}
             </main>
-            <footer className="signature">
-                © <a href="https://vk.com/moyustimov">Устинов Дмитрий</a>,
-                2021-й год
-            </footer>
+            {typeof window !== "undefined" &&
+                localStorage.getItem("selectedScriptSection") == "false" && (
+                    <footer className="signature">
+                        ©{" "}
+                        <a href="https://vk.com/moyustimov">Устинов Дмитрий</a>,
+                        2021-й год
+                    </footer>
+                )}
         </div>
     );
 }
