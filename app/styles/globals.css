@@ -239,11 +239,7 @@ a {
     left: 272px;
 }
 
-/* всплывающая подсказка при наведении на иконки шаринга */
-.vkShare:hover::after,
-.fbShare:hover::after,
-.twtShare:hover::after,
-.okShare:hover::after,
+/* всплывающая подсказка при наведении на иконку меню */
 .menuIcon:hover::after {
     position: absolute;
     z-index: 1;
@@ -251,12 +247,9 @@ a {
     font-size: 11px;
     padding: 5px 10px;
     content: attr(data-title);
-    /* background-color: orange; */
     top: -25px;
     right: -65px;
-    /* left: -85%; */
     width: 194px;
-    /* height: 1230px; */
     text-align: center;
 }
 

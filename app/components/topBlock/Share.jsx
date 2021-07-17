@@ -47,7 +47,7 @@ function Share() {
 
     return (
         <div className="shareIcons">
-            <div data-title="Поделиться во ВКонтакте" className="vkShare">
+            <div className="vkShare">
                 <img
                     src={"/vkShare.png"}
                     alt="Поделиться во ВКонтакте"
@@ -61,7 +61,7 @@ function Share() {
                     }
                 />
             </div>
-            <div data-title="Поделиться на Facebook" className="fbShare">
+            <div className="fbShare">
                 <img
                     src={"/fbShare.png"}
                     alt="Поделиться на Facebook"
@@ -75,7 +75,7 @@ function Share() {
                     }
                 />
             </div>
-            <div data-title="Поделиться c Twitter`ом" className="twtShare">
+            <div className="twtShare">
                 <img
                     src={"/twtShare.png"}
                     alt="Поделиться c Twitter`ом"
@@ -87,7 +87,7 @@ function Share() {
                     }
                 />
             </div>
-            <div data-title="Рассказать одноклассникам" className="okShare">
+            <div className="okShare">
                 <img
                     src={"/okShare.png"}
                     alt="Рассказать одноклассникам"
