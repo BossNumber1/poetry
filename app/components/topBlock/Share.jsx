@@ -1,4 +1,5 @@
 import React from "react";
+import shareStyles from "../../styles/Share.module.css";
 
 function Share() {
     function vk(purl, ptitle, pimg, text) {
@@ -46,8 +47,8 @@ function Share() {
     }
 
     return (
-        <div className="shareIcons">
-            <div className="vkShare">
+        <div className={shareStyles.shareIcons}>
+            <div className={shareStyles.vkShare}>
                 <img
                     src={"/vkShare.png"}
                     alt="Поделиться во ВКонтакте"
@@ -61,7 +62,7 @@ function Share() {
                     }
                 />
             </div>
-            <div className="fbShare">
+            <div className={shareStyles.fbShare}>
                 <img
                     src={"/fbShare.png"}
                     alt="Поделиться на Facebook"
@@ -75,7 +76,7 @@ function Share() {
                     }
                 />
             </div>
-            <div className="twtShare">
+            <div className={shareStyles.twtShare}>
                 <img
                     src={"/twtShare.png"}
                     alt="Поделиться c Twitter`ом"
@@ -87,7 +88,7 @@ function Share() {
                     }
                 />
             </div>
-            <div className="okShare">
+            <div className={shareStyles.okShare}>
                 <img
                     src={"/okShare.png"}
                     alt="Рассказать одноклассникам"

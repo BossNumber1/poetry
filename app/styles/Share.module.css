@@ -1,0 +1,40 @@
+.shareIcons {
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    margin-top: 114px;
+    margin-left: 23px;
+    /* display: none; */
+}
+
+.shareLabel {
+    margin-top: -448px;
+    margin-left: 23px;
+    /* z-index: 100; */
+}
+
+.vkShare,
+.fbShare,
+.twtShare,
+.okShare {
+    cursor: pointer;
+    display: inline-block;
+    /* position: fixed; */
+    /* top: 32px; */
+}
+
+.vkShare {
+    left: 32px;
+}
+
+.fbShare {
+    left: 112px;
+}
+
+.twtShare {
+    left: 192px;
+}
+
+.okShare {
+    left: 272px;
+}

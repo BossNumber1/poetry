@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import mainFuncsStyles from "../../styles/MainFuncs.module.css";
 
 export default function Player({
     onMusic,
@@ -14,10 +15,10 @@ export default function Player({
             <audio id="track">
                 <source src="music.mp3" type="audio/mpeg" />
             </audio>
-            <div className="iconBtns">
+            <div className={mainFuncsStyles.iconBtns}>
                 <button
                     onClick={switchOnSwitchOff}
-                    className="player"
+                    className={mainFuncsStyles.player}
                     data-title="Фоновая музыка"
                 >
                     <Image
@@ -29,7 +30,7 @@ export default function Player({
                 </button>
                 <button
                     onClick={() => setShowForm(!showForm)}
-                    className="addPost"
+                    className={mainFuncsStyles.addPost}
                     data-title={
                         showForm ? "Скрыть форму" : "Добавить свои стихи"
                     }
@@ -43,7 +44,7 @@ export default function Player({
                 </button>
                 <button
                     onClick={() => setShowStatistics(!showStatistics)}
-                    className="statistics"
+                    className={mainFuncsStyles.statistics}
                     data-title={
                         showStatistics
                             ? "Скрыть статистику сайта"
@@ -67,7 +68,9 @@ export default function Player({
                 </button>
             </div>
             {showStatistics && (
-                <div className="statisticWindow">Статистика</div>
+                <div className={mainFuncsStyles.statisticWindow}>
+                    Статистика
+                </div>
             )}
         </>
     );

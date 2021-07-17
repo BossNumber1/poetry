@@ -4,6 +4,9 @@ import Logo from "../Logo";
 import Player from "./Player";
 import Share from "./Share";
 
+import menuStyles from "../../styles/Menu.module.css";
+import shareStyles from "../../styles/Share.module.css";
+
 function TopBlock({
     onMusic,
     imgMusic,
@@ -25,7 +28,7 @@ function TopBlock({
             </div>
             <div className="thirdBlock">
                 <div
-                    className="menuIcon"
+                    className={menuStyles.menuIcon}
                     data-title={
                         !showMenu
                             ? "Показать возможности"
@@ -41,11 +44,15 @@ function TopBlock({
             </div>
 
             {showMenu && (
-                <div className="menuWindow">
-                    <div className="mainMenuLabel">Основные функции</div>
-                    <div className="mainMenuLabelRight">Партнёрам</div>
+                <div className={menuStyles.menuWindow}>
+                    <div className={menuStyles.mainMenuLabel}>
+                        Основные функции
+                    </div>
+                    <div className={menuStyles.mainMenuLabelRight}>
+                        Партнёрам
+                    </div>
                     <Share />
-                    <div className="shareLabel">Поделиться</div>
+                    <div className={shareStyles.shareLabel}>Поделиться</div>
 
                     <Player
                         onMusic={onMusic}

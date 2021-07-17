@@ -1,0 +1,75 @@
+.iconBtns {
+    top: 118px;
+    right: 70px;
+    position: fixed;
+}
+
+.iconBtns button {
+    margin-right: 10px;
+}
+
+/* всплывающая подсказка при наведении для плеера, добавления поста и статистики */
+.player:hover::after,
+.addPost:hover::after,
+.statistics:hover::after {
+    position: absolute;
+    z-index: 1;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    /* width: 114px; */
+    content: attr(data-title);
+    /* left: -10%; */
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    top: -40%;
+    text-align: center;
+}
+
+.player:hover::after {
+    width: 114px;
+    left: -10%;
+}
+
+.addPost:hover::after {
+    width: 134px;
+    left: 30%;
+}
+
+.statistics:hover::after {
+    width: 164px;
+    left: 50%;
+}
+
+.addPost,
+.player,
+.statistics {
+    border: 0px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.player:active,
+.player:focus,
+.addPost:active,
+.addPost:focus,
+.statistics:active,
+.statistics:focus {
+    outline: none;
+}
+
+.statisticWindow {
+    background-color: white;
+    border: 1px solid black;
+    width: 24.9%;
+    height: 130px;
+    z-index: 150;
+    overflow: hidden;
+    border-radius: 5px;
+    position: fixed;
+    top: 33%;
+    margin-left: -0.5px;
+    /* right: 20px; */
+    padding: 7px;
+}

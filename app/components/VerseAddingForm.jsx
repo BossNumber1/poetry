@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 
+import etcStyles from "../styles/Etc.module.css";
+
 const VerseAddingForm = () => {
     const [showError, setShowError] = React.useState(false);
     const [responseFromServer, setResponseFromServer] = React.useState(false);
@@ -67,7 +69,7 @@ const VerseAddingForm = () => {
     };
 
     return (
-        <div className="postAddForm" id="postAddFormId">
+        <div className={etcStyles.postAddForm} id="postAddFormId">
             {(showError || responseFromServer) && (
                 <div
                     className={showError ? "alert-danger" : "alert-success"}

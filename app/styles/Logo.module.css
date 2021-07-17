@@ -1,0 +1,32 @@
+.logo {
+    grid-area: logo;
+    /* background-color: green; */
+    /* border: 1px solid orange; */
+    /* margin-top: -170px;
+    margin-left: 350px; */
+}
+
+.logo img:hover {
+    transform: scale(1.2);
+    transition-duration: 1.5s;
+}
+
+.logo img {
+    width: 525px;
+    height: 300px;
+    overflow: hidden;
+}
+
+/* всплывающая подсказка при наведении на лого */
+.logo:hover::after {
+    position: absolute;
+    z-index: 1;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    width: 194px;
+    content: attr(data-title);
+    left: 43%;
+    top: 0.5%;
+    text-align: center;
+}

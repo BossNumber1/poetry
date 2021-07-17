@@ -1,0 +1,42 @@
+/* всплывающая подсказка при наведении на иконку меню */
+.menuIcon:hover::after {
+    position: absolute;
+    z-index: 1;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    content: attr(data-title);
+    top: -0.2%;
+    right: -2.5%;
+    width: 194px;
+    text-align: center;
+}
+
+.menuIcon {
+    cursor: pointer;
+    margin-right: 4.5%;
+    margin-top: 4.5%;
+}
+
+.menuWindow {
+    /* background-color: red; */
+    position: fixed;
+    right: 32px;
+    top: 82px;
+    width: 320px;
+    height: 420px;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 5px;
+    z-index: 50;
+}
+
+.mainMenuLabel {
+    margin-top: 4px;
+    margin-left: 23px;
+}
+
+.mainMenuLabelRight {
+    margin-top: -23px;
+    margin-left: 194px;
+}

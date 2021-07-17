@@ -2,6 +2,8 @@ import React from "react";
 import PictureForPoetry from "../PictureForPoetry";
 import Tape from "../Tape";
 
+import etcStyles from "../../styles/Etc.module.css";
+
 function BlockBelow({ selectedScriptSection, scriptArray }) {
     return (
         <>
@@ -14,7 +16,7 @@ function BlockBelow({ selectedScriptSection, scriptArray }) {
                         Number(localStorage.getItem("selectedScriptSection")) <
                             scriptArray.length && (
                             <div
-                                className="avatar"
+                                className={etcStyles.avatar}
                                 style={{ borderRadius: 50 }}
                                 data-title={localStorage.getItem("nameAuthor")}
                             >
