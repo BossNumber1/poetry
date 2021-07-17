@@ -241,9 +241,7 @@ export default function Home() {
                     </div>
                     <Logo />
                 </div>
-                {typeof window !== "undefined" &&
-                    localStorage.getItem("selectedScriptSection") ==
-                        "false" && <Tape />}
+                <Tape />
             </main>
             {typeof window !== "undefined" &&
                 localStorage.getItem("selectedScriptSection") == "false" && (
