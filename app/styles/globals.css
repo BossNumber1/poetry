@@ -45,7 +45,7 @@ a {
 
 .secondBlock {
     grid-area: secondBlock;
-    background-color: green;
+    /* background-color: green; */
     /* font-size: large; */
     /* text-align: center; */
     /* margin: auto; */
@@ -294,7 +294,7 @@ a {
     width: 194px;
     content: attr(data-title);
     left: 43%;
-    top: 3%;
+    top: 0.5%;
     text-align: center;
 }
 
@@ -375,8 +375,8 @@ a {
     font-size: 11px;
     padding: 5px 10px;
     content: attr(data-title);
-    top: -25px;
-    right: -65px;
+    top: -0.2%;
+    right: -2.5%;
     width: 194px;
     text-align: center;
 }

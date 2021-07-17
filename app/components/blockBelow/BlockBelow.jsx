@@ -61,7 +61,7 @@ function BlockBelow({ showForm, selectedScriptSection, scriptArray }) {
                     localStorage.getItem("selectedScriptSection") ==
                         "false" && (
                         <>
-                            ©{" "}
+                            ©{"    "}
                             <a href="https://vk.com/moyustimov">
                                 Устинов Дмитрий
                             </a>
