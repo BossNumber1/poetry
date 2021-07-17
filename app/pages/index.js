@@ -1,12 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
-
 import axios from "axios";
-import Logo from "../components/Logo";
 import TopBlock from "../components/topBlock/TopBlock";
-
-import Tape from "../components/Tape.jsx";
 import BlockBelow from "../components/blockBelow/BlockBelow";
 
 export default function Home() {
@@ -213,7 +208,6 @@ export default function Home() {
 
     return (
         <div>
-            {/* className={styles.container}> */}
             <Head>
                 <title>Пробел Поэзии</title>
                 <meta name="description" content="Стихи в новом формате" />
@@ -221,11 +215,7 @@ export default function Home() {
             </Head>
 
             <main>
-                {/* className={styles.main}> */}
                 <div className="body_page">
-                    <div className="firstBlock" />
-                    {/* // className="body_page3"> */}
-                    {/* <div className="topBlock"> */}
                     <TopBlock
                         onMusic={onMusic}
                         imgMusic={imgMusic}
@@ -235,20 +225,12 @@ export default function Home() {
                         setShowMenu={setShowMenu}
                         showMenu={showMenu}
                     />
-                    {/* </div> */}
-                    <>
-                        {/* className="blockBelow"> */}
-                        <BlockBelow
-                            showForm={showForm}
-                            selectedScriptSection={selectedScriptSection}
-                            scriptArray={scriptArray}
-                        />
-                    </>
+                    <BlockBelow
+                        showForm={showForm}
+                        selectedScriptSection={selectedScriptSection}
+                        scriptArray={scriptArray}
+                    />
                 </div>
-
-                {/* <div class="body_page"> */}
-
-                {/* </div> */}
             </main>
             {/* {typeof window !== "undefined" &&
                 localStorage.getItem("selectedScriptSection") == "false" && (

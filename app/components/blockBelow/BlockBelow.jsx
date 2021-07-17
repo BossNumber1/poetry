@@ -57,7 +57,6 @@ function BlockBelow({ showForm, selectedScriptSection, scriptArray }) {
                     selectedScriptSection={selectedScriptSection}
                 />
                 {showForm && <VerseAddingForm />}
-                {/* <Tape /> */}
             </div>
             <div className="sixthBlock" />
             <Tape />

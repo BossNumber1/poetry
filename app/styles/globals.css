@@ -161,17 +161,6 @@ a {
 
 /* --------------------------------------------------------------------------------------------------------------------------- */
 
-.topBlock {
-    grid-area: topBlock;
-    /* background-color: blue; */
-    /* border-right: 1px solid gray; */
-}
-
-.blockBelow {
-    grid-area: blockBelow;
-    /* background-color: orange; */
-}
-
 .avatar {
     overflow: hidden;
     width: 74px;
@@ -387,6 +376,12 @@ a {
     text-align: center;
 }
 
+.menuIcon {
+    cursor: pointer;
+    margin-right: 4.5%;
+    margin-top: 4.5%;
+}
+
 .menuWindow {
     /* background-color: red; */
     position: fixed;
@@ -398,13 +393,6 @@ a {
     border: 1px solid black;
     border-radius: 5px;
     z-index: 50;
-}
-
-.menuIcon {
-    cursor: pointer;
-    position: fixed;
-    right: 32px;
-    top: 32px;
 }
 
 .statisticWindow {

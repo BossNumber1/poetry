@@ -19,6 +19,7 @@ function TopBlock({
 
     return (
         <>
+            <div className="firstBlock" />
             <div className="secondBlock">
                 <Logo />
             </div>
