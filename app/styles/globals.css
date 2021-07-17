@@ -246,8 +246,8 @@ a {
 .postAddForm {
     background-color: white;
     /* position: fixed; */
-    /* right: 20px; */
-    margin-left: 350px;
+    position: absolute;
+    right: 1.7%;
     top: 34%;
     overflow: hidden;
     z-index: 150;

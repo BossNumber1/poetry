@@ -3,6 +3,7 @@ import Head from "next/head";
 import axios from "axios";
 import TopBlock from "../components/topBlock/TopBlock";
 import BlockBelow from "../components/blockBelow/BlockBelow";
+import VerseAddingForm from "../components/VerseAddingForm";
 
 export default function Home() {
     const [poetry, setPoetry] = React.useState("");
@@ -230,6 +231,8 @@ export default function Home() {
                         selectedScriptSection={selectedScriptSection}
                         scriptArray={scriptArray}
                     />
+
+                    <div className="etc">{showForm && <VerseAddingForm />}</div>
                 </div>
             </main>
         </div>

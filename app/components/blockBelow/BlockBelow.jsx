@@ -51,7 +51,6 @@ function BlockBelow({ showForm, selectedScriptSection, scriptArray }) {
                 <PictureForPoetry
                     selectedScriptSection={selectedScriptSection}
                 />
-                {showForm && <VerseAddingForm />}
             </div>
             <div className="sixthBlock" />
             <Tape />
