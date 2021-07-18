@@ -73,8 +73,8 @@ function BlockBelow({ selectedScriptSection, scriptArray }) {
             </div>
 
             <Tape />
-            <div className="thirteenth" />
-            <div className="fourteenth">
+            <div className="thirteenthBlock" />
+            <div className="fourteenthBlock">
                 {typeof window !== "undefined" &&
                     localStorage.getItem("selectedScriptSection") ==
                         "false" && (
@@ -87,7 +87,7 @@ function BlockBelow({ selectedScriptSection, scriptArray }) {
                         </>
                     )}
             </div>
-            <div className="fifteenth" />
+            <div className="fifteenthBlock" />
         </>
     );
 }

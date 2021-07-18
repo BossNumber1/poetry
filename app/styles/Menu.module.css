@@ -52,3 +52,15 @@
         margin-top: 4.5%; */
     }
 }
+
+@media screen and (max-width: 480px) {
+    .menuIcon {
+        /* position: fixed; */
+        position: absolute;
+        top: -1%;
+        right: 1%;
+        /* margin-right: 45px;
+        padding-right: 45%;
+        margin-top: 4.5%; */
+    }
+}
