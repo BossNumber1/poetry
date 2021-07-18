@@ -41,7 +41,7 @@
     margin-left: 194px;
 }
 
-@media screen and (max-width: 320px) {
+@media (min-width: 0px) and (max-width: 320px) {
     .menuIcon {
         /* position: fixed; */
         position: absolute;
@@ -53,7 +53,19 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@media (min-width: 321px) and (max-width: 480px) {
+    .menuIcon {
+        /* position: fixed; */
+        position: absolute;
+        top: -1%;
+        right: 1%;
+        /* margin-right: 45px;
+        padding-right: 45%;
+        margin-top: 4.5%; */
+    }
+}
+
+@media (min-width: 481px) and (max-width: 640px) {
     .menuIcon {
         /* position: fixed; */
         position: absolute;
