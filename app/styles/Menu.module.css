@@ -40,3 +40,14 @@
     margin-top: -23px;
     margin-left: 194px;
 }
+
+@media screen and (max-width: 320px) {
+    .menuIcon {
+        /* position: fixed; */
+        /* position: absolute; */
+        right: 1%;
+        /* margin-right: 45px;
+        padding-right: 45%;
+        margin-top: 4.5%; */
+    }
+}

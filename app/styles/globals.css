@@ -164,3 +164,71 @@ a {
     grid-area: fifteenth;
     /* background-color: rgb(0, 255, 98); */
 }
+
+@media screen and (max-width: 320px) {
+    html,
+    body {
+        overflow: scroll;
+    }
+
+    .body_page {
+        display: grid;
+        grid-template-areas:
+            "secondBlock thirdBlock"
+            "fifthBlock fifthBlock"
+            "seventhBlock seventhBlock"
+            "eighthBlock eighthBlock"
+            "ninthBlock ninthBlock"
+            "tenthBlock tenthBlock"
+            "eleventhBlock eleventhBlock"
+            "twelfthBlock twelfthBlock"
+            "fourteenth fourteenth";
+
+        /* grid-template-rows:
+        10%
+        90%; */
+        /* grid-auto-rows: minmax(20%, auto); */
+
+        grid-template-rows: 9% 10% 15% 15% 15% 15% 15% 15% 3%;
+        grid-template-columns: 91% 0.1fr;
+        grid-gap: 0.5em;
+        /* font-size: 15px; */
+    }
+
+    .secondBlock {
+        grid-area: secondBlock;
+        /* background-color: green; */
+        /* font-size: large; */
+        /* text-align: center; */
+        /* text-align: right; */
+        /* margin: auto; */
+        /* display: flex;
+        align-items: flex-start;
+        justify-content: center; */
+        margin-top: -32px;
+        /* margin-left: 120px; */
+        padding-left: 50px;
+    }
+
+    .thirdBlock {
+        /* background-color: orange; */
+        /* margin-right: 30%; */
+    }
+
+    .seventhBlock {
+        /* background-color: red; */
+        padding-left: 30%;
+        /* padding-top: 10%; */
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+    }
+
+    .eleventhBlock {
+        /* background-color: rgb(94, 255, 0); */
+    }
+
+    .twelfthBlock {
+        /* background-color: orange; */
+    }
+}
