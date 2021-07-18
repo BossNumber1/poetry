@@ -44,7 +44,8 @@
 @media screen and (max-width: 320px) {
     .menuIcon {
         /* position: fixed; */
-        /* position: absolute; */
+        position: absolute;
+        top: -1%;
         right: 1%;
         /* margin-right: 45px;
         padding-right: 45%;

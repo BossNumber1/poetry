@@ -79,6 +79,7 @@ a {
 .sixthBlock {
     grid-area: sixthBlock;
     /* background-color: rgb(255, 0, 179); */
+    display: none;
 }
 
 .seventhBlock {
@@ -176,6 +177,7 @@ a {
         grid-template-areas:
             "secondBlock thirdBlock"
             "fifthBlock fifthBlock"
+            "sixthBlock sixthBlock"
             "seventhBlock seventhBlock"
             "eighthBlock eighthBlock"
             "ninthBlock ninthBlock"
@@ -189,7 +191,7 @@ a {
         90%; */
         /* grid-auto-rows: minmax(20%, auto); */
 
-        grid-template-rows: 9% 10% 15% 15% 15% 15% 15% 15% 3%;
+        grid-template-rows: 15% 15% 15% 15% 15% 15% 15% 15% 15% 3%;
         grid-template-columns: 91% 0.1fr;
         grid-gap: 0.5em;
         /* font-size: 15px; */
@@ -197,6 +199,7 @@ a {
 
     .secondBlock {
         grid-area: secondBlock;
+        /* display: none; */
         /* background-color: green; */
         /* font-size: large; */
         /* text-align: center; */
@@ -205,9 +208,9 @@ a {
         /* display: flex;
         align-items: flex-start;
         justify-content: center; */
-        margin-top: -32px;
+        margin-top: -42%;
         /* margin-left: 120px; */
-        padding-left: 50px;
+        margin-left: -1%;
     }
 
     .thirdBlock {
@@ -217,6 +220,7 @@ a {
 
     .seventhBlock {
         /* background-color: red; */
+        /* display: none; */
         padding-left: 30%;
         /* padding-top: 10%; */
         /* display: flex;
@@ -230,5 +234,19 @@ a {
 
     .twelfthBlock {
         /* background-color: orange; */
+    }
+
+    .fifthBlock {
+        /* background-color: orange; */
+        padding-left: 15px;
+    }
+
+    .sixthBlock {
+        /* background-color: blue; */
+        /* display: initial; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* vertical-align: middle; */
     }
 }

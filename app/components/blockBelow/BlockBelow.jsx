@@ -53,7 +53,25 @@ function BlockBelow({ selectedScriptSection, scriptArray }) {
                     selectedScriptSection={selectedScriptSection}
                 />
             </div>
-            <div className="sixthBlock" />
+            <div className="sixthBlock">
+                <p>Наши преимущества</p>
+                <p>
+                    <img
+                        src={"/down32.png"}
+                        width={32}
+                        height={32}
+                        alt="Листать вниз"
+                        style={{
+                            // position: "absolute",
+                            marginTop: 62,
+                            marginLeft: -80,
+                            // top: "50%",
+                            // marginTop: -50,
+                        }}
+                    />
+                </p>
+            </div>
+
             <Tape />
             <div className="thirteenth" />
             <div className="fourteenth">
