@@ -56,21 +56,21 @@
 
 @media (min-width: 0px) and (max-width: 320px) {
     .advertising {
-        /* position: absolute; */
-        /* position: fixed; */
-        /* right: 13px; */
-        /* bottom: 34px; */
         bottom: 27.7px;
         width: 84.5%;
-        /* margin-left: -1px;
-        /* position: inherit; */
-        /* margin-bottom: 23px; */
+    }
+
+    .postAddForm {
+        /* background-color: white; */
+        /* position: fixed; */
+        /* position: absolute;
+        overflow: hidden; */
+        z-index: 750;
+        right: 7%;
+        left: 3%;
+        /* top: 28%; */
         /* border: 1px solid black;
-        height: 180px;
-        
-        padding: 4.5em 0;
-        text-align: center;
-        background: orange;
-        border-radius: 5px; */
+        border-radius: 5px;
+        padding: 7px; */
     }
 }
