@@ -34,11 +34,11 @@ function TopBlock({
                             ? "Показать возможности"
                             : "Скрыть возможности"
                     }
+                    onClick={chan}
                 >
                     <img
                         src={!showMenu ? "/menu.png" : "/closeMenu.png"}
                         alt="menu"
-                        onClick={chan}
                     />
                 </div>
             </div>
