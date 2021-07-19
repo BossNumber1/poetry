@@ -62,3 +62,11 @@
         overflow: hidden;
     }
 }
+
+@media (min-width: 769px) and (max-width: 999px) {
+    .logo img {
+        /* width: 50%;
+        height: 50%; */
+        overflow: hidden;
+    }
+}
