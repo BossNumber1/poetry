@@ -106,4 +106,10 @@
         /* right: 20px; */
         /* padding: 7px; */
     }
+
+    .statistics:hover::after {
+        width: 150px;
+        left: 49%;
+        top: -49%;
+    }
 }
