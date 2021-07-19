@@ -56,8 +56,9 @@
 
 @media (min-width: 0px) and (max-width: 320px) {
     .advertising {
-        bottom: 27.7px;
+        bottom: 25px;
         width: 84.5%;
+        height: 210px;
     }
 
     .postAddForm {
