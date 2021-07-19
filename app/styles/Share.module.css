@@ -38,3 +38,23 @@
 .okShare {
     left: 272px;
 }
+
+@media (min-width: 0px) and (max-width: 320px) {
+    .shareLabel {
+        margin-top: -390px;
+        margin-left: 13px;
+        /* z-index: 100; */
+    }
+    .shareIcons {
+        /* background-color: red; */
+        width: 100%;
+        height: 100%;
+        margin-top: 94px;
+        margin-left: 6px;
+        /* display: none; */
+    }
+    .shareIcons img {
+        width: 64px;
+        height: 64px;
+    }
+}

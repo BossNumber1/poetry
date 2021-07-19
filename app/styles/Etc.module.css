@@ -53,3 +53,24 @@
     top: 30%;
     text-align: center;
 }
+
+@media (min-width: 0px) and (max-width: 320px) {
+    .advertising {
+        /* position: absolute; */
+        /* position: fixed; */
+        /* right: 13px; */
+        /* bottom: 34px; */
+        bottom: 27.7px;
+        width: 84.5%;
+        /* margin-left: -1px;
+        /* position: inherit; */
+        /* margin-bottom: 23px; */
+        /* border: 1px solid black;
+        height: 180px;
+        
+        padding: 4.5em 0;
+        text-align: center;
+        background: orange;
+        border-radius: 5px; */
+    }
+}

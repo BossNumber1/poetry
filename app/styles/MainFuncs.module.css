@@ -73,3 +73,22 @@
     /* right: 20px; */
     padding: 7px;
 }
+
+@media (min-width: 0px) and (max-width: 320px) {
+    .iconBtns {
+        top: 115px;
+        /* right: 70px;
+        position: fixed; */
+    }
+
+    .iconBtns button {
+        margin-right: 10px;
+    }
+
+    .addPost,
+    .player,
+    .statistics {
+        width: 64px;
+        height: 64px;
+    }
+}
