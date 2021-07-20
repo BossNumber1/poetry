@@ -6,6 +6,7 @@ function Advertising() {
         <>
             <div className={etcStyles.advertising}>Рекламный блок 1</div>
             <div className={etcStyles.twoAdvertBlock}>Рекламный блок 2</div>
+            <div className={etcStyles.threeAdvertBlock}>Рекламный блок 3</div>
         </>
     );
 }

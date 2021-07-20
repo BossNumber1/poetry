@@ -33,6 +33,10 @@
     display: none;
 }
 
+.threeAdvertBlock {
+    display: none;
+}
+
 .avatar {
     overflow: hidden;
     width: 74px;
@@ -107,6 +111,71 @@
         position: fixed;
         right: 5%;
         top: 57.3%;
+        overflow: hidden;
+        z-index: 700;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .postAddForm {
+        /* background-color: white; */
+        /* position: fixed; */
+        /* position: absolute;
+        overflow: hidden; */
+        z-index: 750;
+        right: 4%;
+        left: 4%;
+        top: 19%;
+        font-size: 13px;
+        /* border: 1px solid black;
+        border-radius: 5px;
+        padding: 7px; */
+    }
+
+    .postAddForm input,
+    .postAddForm button {
+        font-size: 13px;
+    }
+
+    .postAddForm div {
+        margin-bottom: 3px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 640px) {
+    .advertising {
+        top: 26%;
+        width: 42.5%;
+        height: 210px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .twoAdvertBlock {
+        width: 43%;
+        height: 210px;
+        background-color: cornflowerblue;
+        position: fixed;
+        right: 3.3%;
+        top: 47.7%;
+        overflow: hidden;
+        z-index: 700;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .threeAdvertBlock {
+        width: 43%;
+        height: 210px;
+        background-color: rgb(100, 237, 100);
+        position: fixed;
+        right: 3.3%;
+        top: 69.5%;
         overflow: hidden;
         z-index: 700;
         border-radius: 5px;

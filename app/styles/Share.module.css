@@ -78,3 +78,23 @@
         height: 64px;
     }
 }
+
+@media (min-width: 481px) and (max-width: 640px) {
+    .shareLabel {
+        margin-top: -390px;
+        margin-left: 13px;
+        /* z-index: 100; */
+    }
+    .shareIcons {
+        /* background-color: red; */
+        width: 100%;
+        height: 100%;
+        margin-top: 94px;
+        margin-left: 7px;
+        /* display: none; */
+    }
+    .shareIcons img {
+        width: 64px;
+        height: 64px;
+    }
+}
