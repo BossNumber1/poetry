@@ -1,11 +1,14 @@
 .iconBtns {
-    top: 118px;
-    right: 70px;
-    position: fixed;
+    margin-top: -35%;
+    padding-left: 8%;
+    display: flex;
+    cursor: pointer;
 }
 
-.iconBtns button {
-    margin-right: 10px;
+.iconBtns img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
 }
 
 /* всплывающая подсказка при наведении для плеера, добавления поста и статистики */
@@ -23,7 +26,9 @@
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
-    top: -40%;
+    margin-top: -8.5%;
+    margin-left: -7%;
+    /* top: 156px; */
     text-align: center;
 }
 
@@ -42,23 +47,6 @@
     left: 50%;
 }
 
-.addPost,
-.player,
-.statistics {
-    border: 0px;
-    border-radius: 50px;
-    cursor: pointer;
-}
-
-.player:active,
-.player:focus,
-.addPost:active,
-.addPost:focus,
-.statistics:active,
-.statistics:focus {
-    outline: none;
-}
-
 .statisticWindow {
     background-color: white;
     border: 1px solid black;
@@ -75,36 +63,10 @@
 }
 
 @media (min-width: 0px) and (max-width: 320px) {
-    .iconBtns {
-        top: 85px;
-        right: 63px;
-        /* position: fixed; */
-    }
-
-    .iconBtns button {
-        margin-right: 10px;
-    }
-
-    .addPost,
-    .player,
-    .statistics {
-        width: 64px;
-        height: 64px;
-    }
-
     .statisticWindow {
         width: 84.5%;
         height: 100px;
         top: 36%;
-        /* background-color: white;
-    border: 1px solid black;
-    z-index: 150;
-    overflow: hidden;
-    border-radius: 5px;
-    position: fixed;
-    margin-left: -0.5px; */
-        /* right: 20px; */
-        /* padding: 7px; */
     }
 
     .statistics:hover::after {
@@ -116,36 +78,10 @@
 }
 
 @media (min-width: 321px) and (max-width: 480px) {
-    .iconBtns {
-        top: 85px;
-        right: 63px;
-        /* position: fixed; */
-    }
-
-    .iconBtns button {
-        margin-right: 10px;
-    }
-
-    .addPost,
-    .player,
-    .statistics {
-        width: 64px;
-        height: 64px;
-    }
-
     .statisticWindow {
         width: 56.5%;
         height: 100px;
         top: 18.5%;
-        /* background-color: white;
-    border: 1px solid black;
-    z-index: 150;
-    overflow: hidden;
-    border-radius: 5px;
-    position: fixed;
-    margin-left: -0.5px; */
-        /* right: 20px; */
-        /* padding: 7px; */
     }
 
     .statistics:hover::after {
@@ -157,36 +93,10 @@
 }
 
 @media (min-width: 481px) and (max-width: 640px) {
-    .iconBtns {
-        top: 85px;
-        right: 63px;
-        /* position: fixed; */
-    }
-
-    .iconBtns button {
-        margin-right: 10px;
-    }
-
-    .addPost,
-    .player,
-    .statistics {
-        width: 64px;
-        height: 64px;
-    }
-
     .statisticWindow {
         width: 42.4%;
         height: 100px;
         top: 15.5%;
-        /* background-color: white;
-    border: 1px solid black;
-    z-index: 150;
-    overflow: hidden;
-    border-radius: 5px;
-    position: fixed;
-    margin-left: -0.5px; */
-        /* right: 20px; */
-        /* padding: 7px; */
     }
 
     .statistics:hover::after {
@@ -198,36 +108,10 @@
 }
 
 @media (min-width: 641px) and (max-width: 768px) {
-    .iconBtns {
-        top: 85px;
-        right: 63px;
-        /* position: fixed; */
-    }
-
-    .iconBtns button {
-        margin-right: 10px;
-    }
-
-    .addPost,
-    .player,
-    .statistics {
-        width: 64px;
-        height: 64px;
-    }
-
     .statisticWindow {
         width: 35.2%;
         height: 100px;
         top: 14.3%;
-        /* background-color: white;
-    border: 1px solid black;
-    z-index: 150;
-    overflow: hidden;
-    border-radius: 5px;
-    position: fixed;
-    margin-left: -0.5px; */
-        /* right: 20px; */
-        /* padding: 7px; */
     }
 
     .statistics:hover::after {
@@ -239,36 +123,10 @@
 }
 
 @media (min-width: 769px) and (max-width: 999px) {
-    .iconBtns {
-        top: 85px;
-        right: 63px;
-        /* position: fixed; */
-    }
-
-    .iconBtns button {
-        margin-right: 10px;
-    }
-
-    .addPost,
-    .player,
-    .statistics {
-        width: 64px;
-        height: 64px;
-    }
-
     .statisticWindow {
         width: 27%;
         height: 100px;
         top: 14.3%;
-        /* background-color: white;
-    border: 1px solid black;
-    z-index: 150;
-    overflow: hidden;
-    border-radius: 5px;
-    position: fixed;
-    margin-left: -0.5px; */
-        /* right: 20px; */
-        /* padding: 7px; */
     }
 
     .statistics:hover::after {

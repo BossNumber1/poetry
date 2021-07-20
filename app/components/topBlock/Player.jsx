@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import mainFuncsStyles from "../../styles/MainFuncs.module.css";
 
 export default function Player({
@@ -16,33 +15,29 @@ export default function Player({
                 <source src="music.mp3" type="audio/mpeg" />
             </audio>
             <div className={mainFuncsStyles.iconBtns}>
-                <button
+                <div
                     onClick={switchOnSwitchOff}
                     className={mainFuncsStyles.player}
                     data-title="Фоновая музыка"
                 >
-                    <Image
+                    <img
                         src={imgMusic}
                         alt={onMusic !== "true" ? "icon_play" : "icon_pause"}
-                        width={64}
-                        height={64}
                     />
-                </button>
-                <button
+                </div>
+                <div
                     onClick={() => setShowForm(!showForm)}
                     className={mainFuncsStyles.addPost}
                     data-title={
                         showForm ? "Скрыть форму" : "Добавить свои стихи"
                     }
                 >
-                    <Image
+                    <img
                         src={showForm ? "/hide.png" : "/add.png"}
                         alt={showForm ? "hide form" : "add post"}
-                        width={64}
-                        height={64}
                     />
-                </button>
-                <button
+                </div>
+                <div
                     onClick={() => setShowStatistics(!showStatistics)}
                     className={mainFuncsStyles.statistics}
                     data-title={
@@ -51,7 +46,7 @@ export default function Player({
                             : "Показать статистику сайта"
                     }
                 >
-                    <Image
+                    <img
                         src={
                             showStatistics
                                 ? "/hideStatistics.png"
@@ -62,10 +57,8 @@ export default function Player({
                                 ? "Скрыть статистику сайта"
                                 : "Показать статистику сайта"
                         }
-                        width={64}
-                        height={64}
                     />
-                </button>
+                </div>
             </div>
             {showStatistics && (
                 <div className={mainFuncsStyles.statisticWindow}>
