@@ -85,3 +85,35 @@
         margin-bottom: 3px;
     }
 }
+
+@media (min-width: 321px) and (max-width: 480px) {
+    .advertising {
+        top: 31%;
+        width: 56.5%;
+        height: 210px;
+    }
+
+    .postAddForm {
+        /* background-color: white; */
+        /* position: fixed; */
+        /* position: absolute;
+        overflow: hidden; */
+        z-index: 750;
+        right: 4%;
+        left: 4%;
+        top: 19%;
+        font-size: 13px;
+        /* border: 1px solid black;
+        border-radius: 5px;
+        padding: 7px; */
+    }
+
+    .postAddForm input,
+    .postAddForm button {
+        font-size: 13px;
+    }
+
+    .postAddForm div {
+        margin-bottom: 3px;
+    }
+}
