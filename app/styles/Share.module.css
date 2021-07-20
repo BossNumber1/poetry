@@ -1,10 +1,22 @@
-.shareIcons {
+.shareIcons0 {
     /* background-color: red; */
     width: 100%;
     height: 100%;
     margin-top: 114px;
     margin-left: 23px;
     /* display: none; */
+}
+
+.shareIcons {
+    margin-top: 40%;
+    display: flex;
+    padding-right: 15%;
+}
+
+.shareIcons img {
+    max-width: 100%;
+    height: auto;
+    width: 85%;
 }
 
 .shareLabel {
@@ -45,18 +57,6 @@
         margin-left: 13px;
         /* z-index: 100; */
     }
-
-    .shareIcons {
-        margin-top: 40%;
-        display: flex;
-        padding-right: 15%;
-    }
-
-    .shareIcons img {
-        max-width: 100%;
-        height: auto;
-        width: 85%;
-    }
 }
 
 @media (min-width: 321px) and (max-width: 480px) {
@@ -64,18 +64,6 @@
         margin-top: -390px;
         margin-left: 13px;
         /* z-index: 100; */
-    }
-
-    .shareIcons {
-        margin-top: 40%;
-        display: flex;
-        padding-right: 15%;
-    }
-
-    .shareIcons img {
-        max-width: 100%;
-        height: auto;
-        width: 85%;
     }
 }
 
@@ -85,18 +73,6 @@
         margin-left: 13px;
         /* z-index: 100; */
     }
-
-    .shareIcons {
-        margin-top: 40%;
-        display: flex;
-        padding-right: 15%;
-    }
-
-    .shareIcons img {
-        max-width: 100%;
-        height: auto;
-        width: 85%;
-    }
 }
 
 @media (min-width: 641px) and (max-width: 768px) {
@@ -105,18 +81,6 @@
         margin-left: 13px;
         /* z-index: 100; */
     }
-
-    .shareIcons {
-        margin-top: 40%;
-        display: flex;
-        padding-right: 15%;
-    }
-
-    .shareIcons img {
-        max-width: 100%;
-        height: auto;
-        width: 85%;
-    }
 }
 
 @media (min-width: 769px) and (max-width: 999px) {
@@ -124,17 +88,5 @@
         margin-top: -390px;
         margin-left: 13px;
         /* z-index: 100; */
-    }
-
-    .shareIcons {
-        margin-top: 40%;
-        display: flex;
-        padding-right: 15%;
-    }
-
-    .shareIcons img {
-        max-width: 100%;
-        height: auto;
-        width: 85%;
     }
 }
