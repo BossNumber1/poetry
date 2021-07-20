@@ -29,6 +29,10 @@
     border-radius: 5px;
 }
 
+.twoAdvertBlock {
+    display: none;
+}
+
 .avatar {
     overflow: hidden;
     width: 74px;
@@ -91,6 +95,24 @@
         top: 31%;
         width: 56.5%;
         height: 210px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .twoAdvertBlock {
+        width: 56.5%;
+        height: 210px;
+        background-color: cornflowerblue;
+        position: fixed;
+        right: 5%;
+        top: 57.3%;
+        overflow: hidden;
+        z-index: 700;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .postAddForm {

@@ -208,7 +208,7 @@ export default function Home() {
     };
 
     return (
-        <div>
+        <>
             <Head>
                 <title>Пробел Поэзии</title>
                 <meta name="description" content="Стихи в новом формате" />
@@ -236,6 +236,6 @@ export default function Home() {
                     </div>
                 </div>
             </main>
-        </div>
+        </>
     );
 }
