@@ -67,11 +67,21 @@
         /* position: absolute;
         overflow: hidden; */
         z-index: 750;
-        right: 7%;
-        left: 3%;
-        /* top: 28%; */
+        right: 4%;
+        left: 4%;
+        top: 27%;
+        font-size: 13px;
         /* border: 1px solid black;
         border-radius: 5px;
         padding: 7px; */
+    }
+
+    .postAddForm input,
+    .postAddForm button {
+        font-size: 13px;
+    }
+
+    .postAddForm div {
+        margin-bottom: 3px;
     }
 }
