@@ -45,7 +45,7 @@
         margin-left: 13px;
         /* z-index: 100; */
     }
-    .shareIcons {
+    .shareIcons0 {
         /* background-color: red; */
         width: 100%;
         height: 100%;
@@ -53,9 +53,21 @@
         margin-left: 7px;
         /* display: none; */
     }
-    .shareIcons img {
+    .shareIcons0 img {
         width: 64px;
         height: 64px;
+    }
+
+    .shareIcons {
+        margin-top: 40%;
+        display: flex;
+        padding-right: 15%;
+    }
+
+    .shareIcons img {
+        max-width: 100%;
+        height: auto;
+        width: 85%;
     }
 }
 
@@ -65,7 +77,7 @@
         margin-left: 13px;
         /* z-index: 100; */
     }
-    .shareIcons {
+    .shareIcons0 {
         /* background-color: red; */
         width: 100%;
         height: 100%;
@@ -73,9 +85,21 @@
         margin-left: 7px;
         /* display: none; */
     }
-    .shareIcons img {
+    .shareIcons0 img {
         width: 64px;
         height: 64px;
+    }
+
+    .shareIcons {
+        margin-top: 40%;
+        display: flex;
+        padding-right: 15%;
+    }
+
+    .shareIcons img {
+        max-width: 100%;
+        height: auto;
+        width: 85%;
     }
 }
 
@@ -85,7 +109,7 @@
         margin-left: 13px;
         /* z-index: 100; */
     }
-    .shareIcons {
+    .shareIcons0 {
         /* background-color: red; */
         width: 100%;
         height: 100%;
@@ -93,9 +117,21 @@
         margin-left: 7px;
         /* display: none; */
     }
-    .shareIcons img {
+    .shareIcons0 img {
         width: 64px;
         height: 64px;
+    }
+
+    .shareIcons {
+        margin-top: 40%;
+        display: flex;
+        padding-right: 15%;
+    }
+
+    .shareIcons img {
+        max-width: 100%;
+        height: auto;
+        width: 85%;
     }
 }
 
@@ -105,7 +141,7 @@
         margin-left: 13px;
         /* z-index: 100; */
     }
-    .shareIcons {
+    .shareIcons0 {
         /* background-color: red; */
         width: 100%;
         height: 100%;
@@ -113,9 +149,21 @@
         margin-left: 7px;
         /* display: none; */
     }
-    .shareIcons img {
+    .shareIcons0 img {
         width: 64px;
         height: 64px;
+    }
+
+    .shareIcons {
+        margin-top: 40%;
+        display: flex;
+        padding-right: 15%;
+    }
+
+    .shareIcons img {
+        max-width: 100%;
+        height: auto;
+        width: 85%;
     }
 }
 
@@ -125,16 +173,16 @@
         margin-left: 13px;
         /* z-index: 100; */
     }
+
     .shareIcons {
-        /* background-color: red; */
-        width: 100%;
-        height: 100%;
-        margin-top: 94px;
-        margin-left: 7px;
-        /* display: none; */
+        margin-top: 40%;
+        display: flex;
+        padding-right: 15%;
     }
+
     .shareIcons img {
-        width: 64px;
-        height: 64px;
+        max-width: 100%;
+        height: auto;
+        width: 85%;
     }
 }
