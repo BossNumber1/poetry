@@ -208,3 +208,68 @@
         margin-bottom: 3px;
     }
 }
+
+@media (min-width: 641px) and (max-width: 768px) {
+    .advertising {
+        top: 24%;
+        width: 35.3%;
+        height: 210px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .twoAdvertBlock {
+        top: 44.5%;
+        right: 3%;
+        width: 35.5%;
+        height: 210px;
+        background-color: cornflowerblue;
+        position: fixed;
+        overflow: hidden;
+        z-index: 700;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .threeAdvertBlock {
+        top: 64.9%;
+        right: 3%;
+        width: 35.5%;
+        height: 210px;
+        background-color: rgb(100, 237, 100);
+        position: fixed;
+        overflow: hidden;
+        z-index: 700;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .postAddForm {
+        /* background-color: white; */
+        /* position: fixed; */
+        /* position: absolute;
+        overflow: hidden; */
+        z-index: 750;
+        right: 4%;
+        left: 4%;
+        top: 19%;
+        font-size: 13px;
+        /* border: 1px solid black;
+        border-radius: 5px;
+        padding: 7px; */
+    }
+
+    .postAddForm input,
+    .postAddForm button {
+        font-size: 13px;
+    }
+
+    .postAddForm div {
+        margin-bottom: 3px;
+    }
+}
