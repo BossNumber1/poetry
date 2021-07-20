@@ -1,4 +1,21 @@
-/* всплывающая подсказка при наведении на иконку меню */
+.menuWindow {
+    position: absolute;
+    right: 2%;
+    top: 35px;
+    width: 320px;
+    height: 370px;
+    z-index: 750;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.menuIcon {
+    cursor: pointer;
+    margin-right: 8px;
+    margin-top: 8px;
+}
+
 .menuIcon:hover::after {
     position: absolute;
     z-index: 1;
@@ -10,24 +27,6 @@
     right: -2.5%;
     width: 194px;
     text-align: center;
-}
-
-.menuIcon {
-    cursor: pointer;
-    margin-right: 8px;
-    margin-top: 8px;
-}
-
-.menuWindow {
-    position: absolute;
-    right: 2%;
-    top: 35px;
-    width: 320px;
-    height: 420px;
-    z-index: 750;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 5px;
 }
 
 .mainMenuLabel {
@@ -43,7 +42,7 @@
 @media (min-width: 0px) and (max-width: 320px) {
     .menuWindow {
         width: 95%;
-        height: 370px;
+        height: 36%;
     }
 
     .mainMenuLabel {
@@ -57,11 +56,6 @@
 }
 
 @media (min-width: 321px) and (max-width: 480px) {
-    .menuWindow {
-        /* width: 270px; */
-        height: 370px;
-    }
-
     .mainMenuLabel {
         margin-left: 13px;
     }
@@ -73,10 +67,6 @@
 }
 
 @media (min-width: 481px) and (max-width: 640px) {
-    .menuWindow {
-        height: 370px;
-    }
-
     .mainMenuLabel {
         margin-left: 13px;
     }
@@ -88,10 +78,6 @@
 }
 
 @media (min-width: 641px) and (max-width: 768px) {
-    .menuWindow {
-        height: 370px;
-    }
-
     .mainMenuLabel {
         margin-left: 13px;
     }
@@ -103,10 +89,6 @@
 }
 
 @media (min-width: 769px) and (max-width: 999px) {
-    .menuWindow {
-        height: 370px;
-    }
-
     .mainMenuLabel {
         margin-left: 13px;
     }

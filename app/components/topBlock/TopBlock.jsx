@@ -63,7 +63,7 @@ function TopBlock({
                         setShowMenu={setShowMenu}
                         showMenu={showMenu}
                     />
-                    <Advertising />
+                    {/* <Advertising /> */}
                 </div>
             )}
         </>
