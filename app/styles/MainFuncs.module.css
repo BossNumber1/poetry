@@ -11,12 +11,11 @@
     margin-right: 20px;
 }
 
-/* всплывающая подсказка при наведении для плеера, добавления поста и статистики */
 .player:hover::after,
 .addPost:hover::after,
 .statistics:hover::after {
     position: absolute;
-    z-index: 1;
+    z-index: 150;
     font-family: Arial, sans-serif;
     font-size: 11px;
     padding: 5px 10px;
@@ -26,7 +25,7 @@
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
-    margin-top: -8.5%;
+    margin-top: -25px;
     margin-left: -7%;
     /* top: 156px; */
     text-align: center;
@@ -48,91 +47,16 @@
 }
 
 .statisticWindow {
+    width: 320px;
+    height: 120px;
+    top: 139px;
     background-color: white;
     border: 1px solid black;
-    width: 24.9%;
-    height: 130px;
     z-index: 150;
     overflow: hidden;
     border-radius: 5px;
     position: fixed;
-    top: 33%;
     margin-left: -0.5px;
     /* right: 20px; */
     padding: 7px;
-}
-
-@media (min-width: 0px) and (max-width: 320px) {
-    .statisticWindow {
-        width: 84.5%;
-        height: 100px;
-        top: 36%;
-    }
-
-    .statistics:hover::after {
-        width: 150px;
-        left: 49%;
-        top: -49%;
-        font-size: 10px;
-    }
-}
-
-@media (min-width: 321px) and (max-width: 480px) {
-    .statisticWindow {
-        width: 56.5%;
-        height: 100px;
-        top: 18.5%;
-    }
-
-    .statistics:hover::after {
-        width: 150px;
-        left: 49%;
-        top: -49%;
-        font-size: 10px;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 640px) {
-    .statisticWindow {
-        width: 42.4%;
-        height: 100px;
-        top: 15.5%;
-    }
-
-    .statistics:hover::after {
-        width: 150px;
-        left: 49%;
-        top: -49%;
-        font-size: 10px;
-    }
-}
-
-@media (min-width: 641px) and (max-width: 768px) {
-    .statisticWindow {
-        width: 35.2%;
-        height: 100px;
-        top: 14.3%;
-    }
-
-    .statistics:hover::after {
-        width: 150px;
-        left: 49%;
-        top: -49%;
-        font-size: 10px;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 999px) {
-    .statisticWindow {
-        width: 27%;
-        height: 100px;
-        top: 14.3%;
-    }
-
-    .statistics:hover::after {
-        width: 150px;
-        left: 49%;
-        top: -49%;
-        font-size: 10px;
-    }
 }
