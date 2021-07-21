@@ -1,40 +1,51 @@
 .postAddForm {
     background-color: white;
-    /* position: fixed; */
     position: absolute;
-    right: 1.7%;
-    top: 34%;
+    width: 320px;
+    right: 2%;
+    top: 134px;
     overflow: hidden;
-    z-index: 150;
+    z-index: 750;
     border: 1px solid black;
     border-radius: 5px;
     padding: 7px;
 }
 
 .advertising {
-    /* position: absolute; */
-    position: fixed;
-    /* right: 13px; */
-    /* bottom: 34px; */
-    bottom: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-top: 130px;
     margin-left: -1px;
-    /* position: inherit; */
-    /* margin-bottom: 23px; */
-    border: 1px solid black;
     height: 180px;
-    width: 25%;
-    padding: 4.5em 0;
-    text-align: center;
+    width: 320px;
     background: orange;
     border-radius: 5px;
+    border: 1px solid black;
+}
+
+.twoAdvertBlock,
+.threeAdvertBlock {
+    display: none;
+    position: fixed;
+    overflow: hidden;
+    z-index: 700;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    height: 210px;
+    width: 320px;
 }
 
 .twoAdvertBlock {
-    display: none;
+    background-color: cornflowerblue;
+    top: 465px;
 }
 
 .threeAdvertBlock {
-    display: none;
+    background-color: rgb(100, 237, 100);
+    top: 675px;
 }
 
 .avatar {
@@ -45,7 +56,6 @@
     position: relative;
 }
 
-/* всплывающая подсказка при наведении */
 .avatar:hover::after {
     position: absolute;
     z-index: 1;
@@ -64,277 +74,41 @@
 
 @media (min-width: 0px) and (max-width: 320px) {
     .advertising {
-        bottom: 25px;
-        width: 84.5%;
-        height: 210px;
+        margin-top: 35%;
+        width: 101.5%;
     }
 
     .postAddForm {
-        /* background-color: white; */
-        /* position: fixed; */
-        /* position: absolute;
-        overflow: hidden; */
-        z-index: 750;
-        right: 4%;
-        left: 4%;
-        top: 27%;
-        font-size: 13px;
-        /* border: 1px solid black;
-        border-radius: 5px;
-        padding: 7px; */
-    }
-
-    .postAddForm input,
-    .postAddForm button {
-        font-size: 13px;
-    }
-
-    .postAddForm div {
-        margin-bottom: 3px;
+        left: 3%;
+        width: 95%;
     }
 }
 
 @media (min-width: 321px) and (max-width: 480px) {
-    .advertising {
-        top: 31%;
-        width: 56.5%;
-        height: 210px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     .twoAdvertBlock {
-        width: 56.5%;
-        height: 210px;
-        background-color: cornflowerblue;
-        position: fixed;
-        right: 5%;
-        top: 57.3%;
-        overflow: hidden;
-        z-index: 700;
-        border-radius: 5px;
         display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .postAddForm {
-        /* background-color: white; */
-        /* position: fixed; */
-        /* position: absolute;
-        overflow: hidden; */
-        z-index: 750;
-        right: 4%;
-        left: 4%;
-        top: 19%;
-        font-size: 13px;
-        /* border: 1px solid black;
-        border-radius: 5px;
-        padding: 7px; */
-    }
-
-    .postAddForm input,
-    .postAddForm button {
-        font-size: 13px;
-    }
-
-    .postAddForm div {
-        margin-bottom: 3px;
     }
 }
 
-@media (min-width: 481px) and (max-width: 640px) {
-    .advertising {
-        top: 26%;
-        width: 42.5%;
-        height: 210px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .twoAdvertBlock {
-        width: 43%;
-        height: 210px;
-        background-color: cornflowerblue;
-        position: fixed;
-        right: 3.3%;
-        top: 47.7%;
-        overflow: hidden;
-        z-index: 700;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
+@media (min-width: 481px) and (max-width: 999px) {
+    .twoAdvertBlock,
     .threeAdvertBlock {
-        width: 43%;
-        height: 210px;
-        background-color: rgb(100, 237, 100);
-        position: fixed;
-        right: 3.3%;
-        top: 69.5%;
-        overflow: hidden;
-        z-index: 700;
-        border-radius: 5px;
         display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .postAddForm {
-        /* background-color: white; */
-        /* position: fixed; */
-        /* position: absolute;
-        overflow: hidden; */
-        z-index: 750;
-        right: 4%;
-        left: 4%;
-        top: 19%;
-        font-size: 13px;
-        /* border: 1px solid black;
-        border-radius: 5px;
-        padding: 7px; */
-    }
-
-    .postAddForm input,
-    .postAddForm button {
-        font-size: 13px;
-    }
-
-    .postAddForm div {
-        margin-bottom: 3px;
     }
 }
 
-@media (min-width: 641px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 999px) {
     .advertising {
-        top: 24%;
-        width: 35.3%;
         height: 210px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .twoAdvertBlock {
-        top: 44.5%;
-        right: 3%;
-        width: 35.5%;
-        height: 210px;
-        background-color: cornflowerblue;
-        position: fixed;
-        overflow: hidden;
-        z-index: 700;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .threeAdvertBlock {
-        top: 64.9%;
-        right: 3%;
-        width: 35.5%;
-        height: 210px;
-        background-color: rgb(100, 237, 100);
-        position: fixed;
-        overflow: hidden;
-        z-index: 700;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .postAddForm {
-        /* background-color: white; */
-        /* position: fixed; */
-        /* position: absolute;
-        overflow: hidden; */
-        z-index: 750;
-        right: 4%;
-        left: 4%;
-        top: 19%;
-        font-size: 13px;
-        /* border: 1px solid black;
-        border-radius: 5px;
-        padding: 7px; */
-    }
-
-    .postAddForm input,
-    .postAddForm button {
-        font-size: 13px;
     }
 
     .postAddForm div {
         margin-bottom: 3px;
     }
-}
 
-@media (min-width: 769px) and (max-width: 999px) {
-    .advertising {
-        top: 24%;
-        width: 27%;
-        height: 210px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .twoAdvertBlock {
-        top: 44.5%;
-        right: 2.5%;
-        width: 27%;
-        height: 210px;
-        background-color: cornflowerblue;
-        position: fixed;
-        overflow: hidden;
-        z-index: 700;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .threeAdvertBlock {
-        top: 64.9%;
-        right: 2.5%;
-        width: 27%;
-        height: 210px;
-        background-color: rgb(100, 237, 100);
-        position: fixed;
-        overflow: hidden;
-        z-index: 700;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .postAddForm {
-        /* background-color: white; */
-        /* position: fixed; */
-        /* position: absolute;
-        overflow: hidden; */
-        z-index: 750;
-        right: 2.5%;
-        left: 70.5%;
-        top: 14.3%;
-        font-size: 13px;
-        /* border: 1px solid black;
-        border-radius: 5px;
-        padding: 7px; */
-    }
-
+    .postAddForm,
     .postAddForm input,
     .postAddForm button {
         font-size: 13px;
-    }
-
-    .postAddForm div {
-        margin-bottom: 3px;
     }
 }
