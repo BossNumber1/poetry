@@ -3,12 +3,16 @@ import axios from "axios";
 
 import etcStyles from "../styles/Etc.module.css";
 
+import Loading from "./Loading";
+
 const VerseAddingForm = () => {
     const [showError, setShowError] = React.useState(false);
     const [responseFromServer, setResponseFromServer] = React.useState(false);
     const [nameAuthorState, setNameAuthorState] = React.useState(
         localStorage.getItem("nameAuthor") || ""
     );
+
+    const [showLoader, setShowLoader] = React.useState(false);
 
     const changeAlias = (e) => {
         setNameAuthorState(e.target.value);
@@ -22,7 +26,7 @@ const VerseAddingForm = () => {
 
     const beforeSending = (e) => {
         e.preventDefault();
-
+        setShowLoader(true);
         let formDataStore = [];
 
         const formData = new FormData(document.querySelector("form"));
@@ -57,6 +61,7 @@ const VerseAddingForm = () => {
                     },
                 })
                 .then((res) => {
+                    setShowLoader(false);
                     setResponseFromServer(res.data);
                     setShowError(false);
                     document.querySelector("form").reset();
@@ -139,7 +144,7 @@ const VerseAddingForm = () => {
                     className="btn btn-warning"
                     onClick={beforeSending}
                 >
-                    Сделать частью истории
+                    {!showLoader ? "Сделать частью истории" : <Loading />}
                 </button>
             </form>
         </div>
