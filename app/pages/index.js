@@ -63,25 +63,34 @@ export default function Home() {
                 ) {
                     randomn = [];
 
-                    let lux = localStorage.getItem("selectedScriptSection");
+                    let LSSelectedScriptSection = localStorage.getItem(
+                        "selectedScriptSection"
+                    );
 
-                    if (lux === "false") {
+                    if (LSSelectedScriptSection === "false") {
                         localStorage.setItem("selectedScriptSection", "0");
-                        // document.getElementById("advertisingId") &&
-                        //     document.getElementById("advertisingId").remove();
-                    } else if (lux === "0") {
+                        document.getElementsByClassName("sixthBlock") &&
+                            document.getElementById("sixthBlockId") &&
+                            document.getElementById("sixthBlockId").remove();
+                    } else if (LSSelectedScriptSection === "0") {
                         localStorage.setItem("selectedScriptSection", "1");
-                        // document.getElementById("advertisingId") &&
-                        //     document.getElementById("advertisingId").remove();
-                    } else if (Number(lux) > 1 && Number(lux) < 8) {
+                        document.getElementsByClassName("sixthBlock") &&
+                            document.getElementById("sixthBlockId") &&
+                            document.getElementById("sixthBlockId").remove();
+                    } else if (
+                        Number(LSSelectedScriptSection) > 1 &&
+                        Number(LSSelectedScriptSection) < 8
+                    ) {
                         localStorage.setItem(
                             "selectedScriptSection",
-                            String(Number(lux) + 1)
+                            String(Number(LSSelectedScriptSection) + 1)
                         );
-                        // document.getElementById("advertisingId") &&
-                        //     document.getElementById("advertisingId").remove();
-                    } else if (lux === "9") {
+                        document.getElementById("sixthBlockId") &&
+                            document.getElementById("sixthBlockId").remove();
+                    } else if (LSSelectedScriptSection === "9") {
                         localStorage.removeItem("selectedScriptSection");
+                        document.getElementById("sixthBlockId") &&
+                            document.getElementById("sixthBlockId").remove();
                     }
 
                     func();

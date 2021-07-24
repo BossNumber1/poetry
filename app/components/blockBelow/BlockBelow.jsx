@@ -55,7 +55,7 @@ function BlockBelow({ selectedScriptSection, scriptArray }) {
                     selectedScriptSection={selectedScriptSection}
                 />
             </div>
-            <div className="sixthBlock">
+            <div className="sixthBlock" id="sixthBlockId">
                 <p>Наши преимущества</p>
                 <p>
                     <img
