@@ -57,13 +57,13 @@
     border-radius: 50px;
 }
 
-/* .illustration { */
-/* margin-top: 34px; */
-/* overflow: hidden; */
-/* width: 500px;
+.illustration {
+    margin-top: 34px;
+    /* overflow: hidden; */
+    /* width: 500px;
     height: 333px; */
-/* position: relative; */
-/* } */
+    /* position: relative; */
+}
 
 .avatar img {
     width: 100%;
