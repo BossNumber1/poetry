@@ -100,7 +100,7 @@ export default function Home() {
         localStorage.setItem("selectedScriptSection", "false");
         localStorage.setItem(
             "selectedText",
-            `<div style="line-height: 30px"><div>Приветствую, о, путник.</div><div>Нажимаешь на пробел и погружаешься в мир стихов.</div>
+            `<div style="line-height: 30px"><div>Приветствую, о, милый путник.</div><div>Нажимаешь на пробел и погружаешься в мир стихов.</div>
                 <p>Погнаааали! 🤘</p></div>`
         );
     }, []);

@@ -8,7 +8,7 @@ function BlockBelow({ selectedScriptSection, scriptArray }) {
         <>
             <div className="fourthBlock" />
             <div className="fifthBlock">
-                <div>
+                <div style={{ display: "flex" }}>
                     {typeof window !== "undefined" &&
                         localStorage.getItem("selectedScriptSection") &&
                         localStorage.getItem("selectedText") !== "конец" &&
@@ -33,9 +33,12 @@ function BlockBelow({ selectedScriptSection, scriptArray }) {
                                     // position: "absolute"
                                     overflow: "hidden",
                                     zIndex: 50,
-                                    textAlign: "center",
+                                    textAlign: "left",
                                     // left: 13,
                                     fontSize: 14,
+                                    // backgroundColor: "orange",
+                                    paddingLeft: 30,
+                                    paddingRight: 50,
                                 }}
                                 dangerouslySetInnerHTML={{
                                     __html: localStorage.getItem(

@@ -70,7 +70,8 @@ a {
     /* background-color: rgb(150, 108, 137); */
     text-align: center;
     /* margin: auto; */
-    display: flex;
+    /* display: flex; */
+    display: inline-block;
     align-items: center;
     justify-content: center;
     z-index: 150;
