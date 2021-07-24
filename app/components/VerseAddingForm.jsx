@@ -5,15 +5,21 @@ import Loading from "./Loading";
 
 const VerseAddingForm = () => {
     const [showError, setShowError] = React.useState(false);
+    const [showLoader, setShowLoader] = React.useState(false);
     const [responseFromServer, setResponseFromServer] = React.useState(false);
     const [nameAuthorState, setNameAuthorState] = React.useState(
         localStorage.getItem("nameAuthor") || ""
     );
-
-    const [showLoader, setShowLoader] = React.useState(false);
+    const [publicLinkState, setPublicLinkState] = React.useState(
+        localStorage.getItem("publicLink") || ""
+    );
 
     const changeAlias = (e) => {
         setNameAuthorState(e.target.value);
+    };
+
+    const changeLink = (e) => {
+        setPublicLinkState(e.target.value);
     };
 
     React.useEffect(() => {
@@ -37,20 +43,25 @@ const VerseAddingForm = () => {
         let avatar = formDataStore[1];
         let verse = formDataStore[2];
         let illustration = formDataStore[3];
+        let publicLink = formDataStore[4];
 
         if (
             nameAuthor !== "" &&
             avatar.name !== "" &&
             verse !== "" &&
-            illustration.name !== ""
+            illustration.name !== "" &&
+            publicLink !== ""
         ) {
             localStorage.setItem("nameAuthor", nameAuthor);
+            localStorage.getItem("publicLink", publicLink);
+
             let formData = new FormData();
 
             formData.append("nameAuthor", nameAuthor);
             formData.append("avatar", avatar);
             formData.append("verse", verse);
             formData.append("illustration", illustration);
+            formData.append("publicLink", publicLink);
 
             axios
                 .post("http://localhost:80/api/upload", formData, {
@@ -134,6 +145,19 @@ const VerseAddingForm = () => {
                         type="file"
                         name="illustration"
                         className="form-control form-control-sm"
+                    />
+                </div>
+
+                <div className="mb-3">
+                    <label htmlFor="publicLink" className="form-label">
+                        Ссылка на ваш паблик
+                    </label>
+                    <input
+                        type="text"
+                        name="publicLink"
+                        className="form-control"
+                        value={publicLinkState}
+                        onChange={changeLink}
                     />
                 </div>
 

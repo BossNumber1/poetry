@@ -157,6 +157,7 @@ export default function Home() {
                 localStorage.setItem("nameAuthor", scriptArray[0].nameAuthor);
                 localStorage.setItem("avatarka", scriptArray[0].avatar);
                 localStorage.setItem("picture", scriptArray[0].illustration);
+                localStorage.setItem("publicLink", scriptArray[0].publicLink);
             } else {
                 setSelectedScriptSection(Number(selectedScriptSection) + 1);
 
@@ -185,10 +186,17 @@ export default function Home() {
                           .illustration
                     : "";
 
+                let counterPublicLink = scriptArray[
+                    Number(selectedScriptSection) + 1
+                ]
+                    ? scriptArray[Number(selectedScriptSection) + 1].publicLink
+                    : "";
+
                 localStorage.setItem("selectedText", counterSelectedText);
                 localStorage.setItem("nameAuthor", counterNameAuthor);
                 localStorage.setItem("avatarka", counterAvatarka);
                 localStorage.setItem("picture", counterPicture);
+                localStorage.setItem("publicLink", counterPublicLink);
             }
         }
     }, [poetry]);

@@ -17,6 +17,10 @@ function BlockBelow({ selectedScriptSection, scriptArray }) {
                             <div
                                 className={postStyles.avatar}
                                 data-title={localStorage.getItem("nameAuthor")}
+                                onClick={() =>
+                                    (document.location.href =
+                                        localStorage.getItem("publicLink"))
+                                }
                             >
                                 <img
                                     src={localStorage.getItem("avatarka")}
