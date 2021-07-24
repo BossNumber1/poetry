@@ -28,18 +28,13 @@ function BlockBelow({ selectedScriptSection, scriptArray }) {
                     {typeof window !== "undefined" &&
                         localStorage.getItem("selectedScriptSection") && (
                             <div
-                                style={{
-                                    // marginLeft: 440,
-                                    // position: "absolute"
-                                    overflow: "hidden",
-                                    zIndex: 50,
-                                    textAlign: "left",
-                                    // left: 13,
-                                    fontSize: 14,
-                                    // backgroundColor: "orange",
-                                    paddingLeft: 30,
-                                    paddingRight: 50,
-                                }}
+                                className={
+                                    localStorage.getItem(
+                                        "selectedScriptSection"
+                                    ) === "false"
+                                        ? etcStyles.greetings
+                                        : etcStyles.verse
+                                }
                                 dangerouslySetInnerHTML={{
                                     __html: localStorage.getItem(
                                         "selectedText"
