@@ -1,7 +1,7 @@
 import React from "react";
 import Tape from "../Tape";
 import PictureForPoetry from "../PictureForPoetry";
-import etcStyles from "../../styles/Etc.module.css";
+import postStyles from "../../styles/Post.module.css";
 
 function BlockBelow({ selectedScriptSection, scriptArray }) {
     return (
@@ -15,7 +15,7 @@ function BlockBelow({ selectedScriptSection, scriptArray }) {
                         Number(localStorage.getItem("selectedScriptSection")) <
                             scriptArray.length && (
                             <div
-                                className={etcStyles.avatar}
+                                className={postStyles.avatar}
                                 data-title={localStorage.getItem("nameAuthor")}
                             >
                                 <img
@@ -32,8 +32,8 @@ function BlockBelow({ selectedScriptSection, scriptArray }) {
                                     localStorage.getItem(
                                         "selectedScriptSection"
                                     ) === "false"
-                                        ? etcStyles.greetings
-                                        : etcStyles.verse
+                                        ? postStyles.greetings
+                                        : postStyles.verse
                                 }
                                 dangerouslySetInnerHTML={{
                                     __html: localStorage.getItem(

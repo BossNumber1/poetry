@@ -1,8 +1,6 @@
 import React from "react";
 import axios from "axios";
-
 import etcStyles from "../styles/Etc.module.css";
-
 import Loading from "./Loading";
 
 const VerseAddingForm = () => {
