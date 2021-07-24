@@ -31,62 +31,6 @@ export default function Home() {
                     <div>вспоминай наше светлое чувство.</div>`,
             picture: "two.jpg",
         },
-
-        {
-            ava: "https://images.unsplash.com/photo-1624530639434-4501dc033afa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYyNTMxNDI1Mg&ixlib=rb-1.2.1&q=80&w=1080",
-            nameAuthor: "ff33",
-            text: ` <div>3</div>
-                    <div>стих</div>`,
-        },
-
-        {
-            ava: "https://images.unsplash.com/photo-1623207138972-d969a1459153?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYyNTMxNDI1Ng&ixlib=rb-1.2.1&q=80&w=1080",
-            nameAuthor: "ff44",
-            text: ` <div>4</div>
-                    <div>стих</div>`,
-        },
-
-        {
-            ava: "https://images.unsplash.com/photo-1625042880626-3705c85a4bbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYyNTMxNDI1OQ&ixlib=rb-1.2.1&q=80&w=1080",
-            nameAuthor: "ff55",
-            text: ` <div>5</div>
-                    <div>стих</div>`,
-        },
-
-        {
-            ava: "https://images.unsplash.com/photo-1623157470065-926c7eccb394?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYyNTMxNDI2Mw&ixlib=rb-1.2.1&q=80&w=1080",
-            nameAuthor: "ff66",
-            text: ` <div>6</div>
-                    <div>стих</div>`,
-        },
-
-        {
-            ava: "https://images.unsplash.com/photo-1614119391660-0480c9ad4c5f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYyNTMxNDI3MA&ixlib=rb-1.2.1&q=80&w=1080",
-            nameAuthor: "ff77",
-            text: ` <div>7</div>
-                    <div>стих</div>`,
-        },
-
-        {
-            ava: "https://images.unsplash.com/photo-1623207043151-9ff0dd2ba8aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYyNTMxNDI3MQ&ixlib=rb-1.2.1&q=80&w=1080",
-            nameAuthor: "ff88",
-            text: ` <div>8</div>
-                    <div>стих</div>`,
-        },
-
-        {
-            ava: "https://images.unsplash.com/photo-1624722960672-049c8b616649?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYyNTMxNDI3Ng&ixlib=rb-1.2.1&q=80&w=1080",
-            nameAuthor: "ff99",
-            text: ` <div>9</div>
-                    <div>стих</div>`,
-        },
-
-        {
-            ava: "https://images.unsplash.com/photo-1623001312783-01ccef32a7a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYyNTMxNDI0Ng&ixlib=rb-1.2.1&q=80&w=1080",
-            nameAuthor: "ff10",
-            text: ` <div>10</div>
-                    <div>стих</div>`,
-        },
     ];
 
     React.useEffect(() => {

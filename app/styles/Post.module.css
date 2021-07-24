@@ -44,7 +44,8 @@
 }
 
 .greetings,
-.verse {
+.verse,
+.end {
     /* //marginLeft: 440,
     // position: "absolute" */
     overflow: hidden;
@@ -62,4 +63,10 @@
     text-align: left;
     /* background-color: green; */
     padding: 13px 50px 0 30px;
+}
+
+.end {
+    /* background-color: rgb(128, 68, 0); */
+    margin-top: 50%;
+    margin-left: 50%;
 }

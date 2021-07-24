@@ -37,7 +37,11 @@ function BlockBelow({ selectedScriptSection, scriptArray }) {
                                         "selectedScriptSection"
                                     ) === "false"
                                         ? postStyles.greetings
-                                        : postStyles.verse
+                                        : localStorage.getItem(
+                                              "selectedText"
+                                          ) !== "конец"
+                                        ? postStyles.verse
+                                        : postStyles.end
                                 }
                                 dangerouslySetInnerHTML={{
                                     __html: localStorage.getItem(
