@@ -1,7 +1,6 @@
 import React from "react";
-import PictureForPoetry from "../PictureForPoetry";
 import Tape from "../Tape";
-
+import PictureForPoetry from "../PictureForPoetry";
 import etcStyles from "../../styles/Etc.module.css";
 
 function BlockBelow({ selectedScriptSection, scriptArray }) {
@@ -17,13 +16,10 @@ function BlockBelow({ selectedScriptSection, scriptArray }) {
                             scriptArray.length && (
                             <div
                                 className={etcStyles.avatar}
-                                style={{ borderRadius: 50 }}
                                 data-title={localStorage.getItem("nameAuthor")}
                             >
                                 <img
                                     src={localStorage.getItem("avatarka")}
-                                    width={74}
-                                    height={74}
                                     alt="аватарка автора"
                                 />
                             </div>
