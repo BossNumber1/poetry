@@ -4,6 +4,8 @@ import axios from "axios";
 import TopBlock from "../components/topBlock/TopBlock";
 import BlockBelow from "../components/blockBelow/BlockBelow";
 import VerseAddingForm from "../components/VerseAddingForm";
+import Swiper from "swiper";
+// import Image from "next/image";
 
 export default function Home() {
     const [poetry, setPoetry] = React.useState("");
@@ -11,7 +13,6 @@ export default function Home() {
     const [imgMusic, setImgMusic] = React.useState("/play.png");
     const [showForm, setShowForm] = React.useState(false);
     const [scriptArray, setScriptArray] = React.useState(false);
-
     const [showMenu, setShowMenu] = React.useState(false);
 
     let scriptArray2 = [
@@ -38,9 +39,7 @@ export default function Home() {
             setScriptArray(response.data);
             // console.log(response.data);
         });
-    }, []);
 
-    React.useEffect(() => {
         localStorage.setItem("selectedScriptSection", "false");
         localStorage.setItem(
             "selectedText",
@@ -61,6 +60,7 @@ export default function Home() {
                     event.code == "Space" &&
                     localStorage.getItem("selectedScriptSection")
                 ) {
+                    alert("blum!");
                     randomn = [];
 
                     let LSSelectedScriptSection = localStorage.getItem(
@@ -99,6 +99,75 @@ export default function Home() {
             };
 
             document.addEventListener("keydown", listener);
+
+            let listener2 = function (someone_swiped) {
+                if (someone_swiped == "true") {
+                    // alert("iiiiihoooo");
+                    // debugger;
+                    randomn = [];
+
+                    let LSSelectedScriptSection = localStorage.getItem(
+                        "selectedScriptSection"
+                    );
+
+                    if (LSSelectedScriptSection === "false") {
+                        localStorage.setItem("selectedScriptSection", "0");
+                        document.getElementsByClassName("sixthBlock") &&
+                            document.getElementById("sixthBlockId") &&
+                            document.getElementById("sixthBlockId").remove();
+                    } else if (LSSelectedScriptSection === "0") {
+                        localStorage.setItem("selectedScriptSection", "1");
+                        document.getElementsByClassName("sixthBlock") &&
+                            document.getElementById("sixthBlockId") &&
+                            document.getElementById("sixthBlockId").remove();
+                    } else if (
+                        Number(LSSelectedScriptSection) > 1 &&
+                        Number(LSSelectedScriptSection) < 8
+                    ) {
+                        localStorage.setItem(
+                            "selectedScriptSection",
+                            String(Number(LSSelectedScriptSection) + 1)
+                        );
+                        document.getElementById("sixthBlockId") &&
+                            document.getElementById("sixthBlockId").remove();
+                    } else if (LSSelectedScriptSection === "9") {
+                        localStorage.removeItem("selectedScriptSection");
+                        document.getElementById("sixthBlockId") &&
+                            document.getElementById("sixthBlockId").remove();
+                    }
+
+                    func();
+
+                    // document.removeEventListener("keydown", listener);
+                }
+            };
+
+            //---------------------------------------------
+
+            let swiper = new Swiper(".swiper-container", {
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+            });
+
+            // document.addEventListener("touchmove", () => alert("aeee!!!"));
+
+            //  document.addEventListener("touchmove", () => listener2("true"));
+
+            let startMoveEvent;
+
+            swiper.on("touchStart", (e) => {
+                startMoveEvent = e.touches.currentX;
+            });
+
+            swiper.on("touchEnd", (event) => {
+                if (event.touches.currentX != startMoveEvent) {
+                    //свайп
+                    listener2("true");
+
+                    // startMoveEvent = "";
+                }
+            });
         }
 
         runOnKeys(() => setPoetry(randomn));
@@ -173,29 +242,78 @@ export default function Home() {
             <Head>
                 <title>Пробел Поэзии</title>
                 <meta name="description" content="Стихи в новом формате" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+                />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <main>
-                <div className="body_page">
-                    <TopBlock
-                        onMusic={onMusic}
-                        imgMusic={imgMusic}
-                        switchOnSwitchOff={switchOnSwitchOff}
-                        setShowForm={setShowForm}
-                        showForm={showForm}
-                        setShowMenu={setShowMenu}
-                        showMenu={showMenu}
-                    />
-                    <BlockBelow
-                        selectedScriptSection={selectedScriptSection}
-                        scriptArray={scriptArray}
-                    />
-
-                    <div className="etc">
-                        {showForm && showMenu && <VerseAddingForm />}
+                <div className="swiper-container">
+                    <div className="swiper-wrapper">
+                        <div className="swiper-slide" id="brow">
+                            <div className="body_page">
+                                <TopBlock
+                                    onMusic={onMusic}
+                                    imgMusic={imgMusic}
+                                    switchOnSwitchOff={switchOnSwitchOff}
+                                    setShowForm={setShowForm}
+                                    showForm={showForm}
+                                    setShowMenu={setShowMenu}
+                                    showMenu={showMenu}
+                                />
+                                {/* <div className="swiper-container">
+                        <div className="swiper-wrapper">
+                            <div className="swiper-slide"> */}{" "}
+                                <BlockBelow
+                                    selectedScriptSection={
+                                        selectedScriptSection
+                                    }
+                                    scriptArray={scriptArray}
+                                />{" "}
+                                {/* </div>
+                            <div className="swiper-slide">434</div>
+                        </div>
+                        <div className="swiper-pagination swiper-pagination-white" />
+                    </div> */}
+                                <div className="etc">
+                                    {showForm && showMenu && (
+                                        <VerseAddingForm />
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="swiper-slide">
+                            {/* <Image
+                                src="/one.jpg"
+                                alt="pic1"
+                                width="300px"
+                                height="150px"
+                            /> */}
+                            <div className="body_page">
+                                <TopBlock
+                                    onMusic={onMusic}
+                                    imgMusic={imgMusic}
+                                    switchOnSwitchOff={switchOnSwitchOff}
+                                    setShowForm={setShowForm}
+                                    showForm={showForm}
+                                    setShowMenu={setShowMenu}
+                                    showMenu={showMenu}
+                                    hideLogo="true"
+                                />
+                                <BlockBelow
+                                    selectedScriptSection={
+                                        selectedScriptSection
+                                    }
+                                    scriptArray={scriptArray}
+                                    hideLogo="true"
+                                />
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <div className="swiper-pagination swiper-pagination-white" />
+                </div>{" "}
             </main>
         </>
     );

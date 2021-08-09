@@ -15,6 +15,7 @@ function TopBlock({
     showForm,
     setShowMenu,
     showMenu,
+    hideLogo = false,
 }) {
     let chan = () => {
         setShowMenu(!showMenu);
@@ -23,9 +24,13 @@ function TopBlock({
     return (
         <>
             <div className="firstBlock" />
-            <div className="secondBlock">
-                <Logo />
-            </div>
+            {!hideLogo ? (
+                <div className="secondBlock">
+                    <Logo />
+                </div>
+            ) : (
+                <div className="secondBlock" />
+            )}
             <div className="thirdBlock">
                 <div
                     className={menuStyles.menuIcon}
