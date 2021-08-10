@@ -15,6 +15,10 @@ export default function Home() {
     const [scriptArray, setScriptArray] = React.useState(false);
     const [showMenu, setShowMenu] = React.useState(false);
 
+    function сallDebug() {
+        // debugger;
+    }
+
     let scriptArray2 = [
         {
             ava: "https://images.unsplash.com/photo-1623084938405-0390c1d86ce8?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max",
@@ -110,12 +114,18 @@ export default function Home() {
                         "selectedScriptSection"
                     );
 
+                    сallDebug();
+
                     if (LSSelectedScriptSection === "false") {
+                        // console.log("false");
+                        сallDebug();
                         localStorage.setItem("selectedScriptSection", "0");
                         document.getElementsByClassName("sixthBlock") &&
                             document.getElementById("sixthBlockId") &&
                             document.getElementById("sixthBlockId").remove();
                     } else if (LSSelectedScriptSection === "0") {
+                        // console.log("0");
+                        сallDebug();
                         localStorage.setItem("selectedScriptSection", "1");
                         document.getElementsByClassName("sixthBlock") &&
                             document.getElementById("sixthBlockId") &&
@@ -124,6 +134,8 @@ export default function Home() {
                         Number(LSSelectedScriptSection) > 1 &&
                         Number(LSSelectedScriptSection) < 8
                     ) {
+                        // console.log("1-8");
+                        сallDebug();
                         localStorage.setItem(
                             "selectedScriptSection",
                             String(Number(LSSelectedScriptSection) + 1)
@@ -131,6 +143,8 @@ export default function Home() {
                         document.getElementById("sixthBlockId") &&
                             document.getElementById("sixthBlockId").remove();
                     } else if (LSSelectedScriptSection === "9") {
+                        // console.log("9");
+                        сallDebug();
                         localStorage.removeItem("selectedScriptSection");
                         document.getElementById("sixthBlockId") &&
                             document.getElementById("sixthBlockId").remove();

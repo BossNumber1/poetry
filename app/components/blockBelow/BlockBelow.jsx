@@ -5,6 +5,10 @@ import postStyles from "../../styles/Post.module.css";
 // import Swiper from "swiper";
 
 function BlockBelow({ selectedScriptSection, scriptArray, hideLogo = false }) {
+    React.useEffect(() => {
+        debugger;
+    }, [hideLogo]);
+
     // React.useEffect(() => {
     //     var swiper = new Swiper(".swiper-container", {
     //         pagination: {
@@ -16,8 +20,9 @@ function BlockBelow({ selectedScriptSection, scriptArray, hideLogo = false }) {
     return (
         <>
             <div className="fourthBlock" />
-            {!hideLogo ? (
+            {hideLogo !== "true" ? (
                 <div className="fifthBlock">
+                    1111
                     {/* <div className="swiper-container">
                     <div className="swiper-wrapper">
                         <div className="swiper-slide"> */}
@@ -78,6 +83,7 @@ function BlockBelow({ selectedScriptSection, scriptArray, hideLogo = false }) {
                 </div>
             ) : (
                 <div className="fifthBlock">
+                    2222
                     {/* <div className="swiper-container">
                     <div className="swiper-wrapper">
                         <div className="swiper-slide"> */}
