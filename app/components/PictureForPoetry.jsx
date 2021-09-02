@@ -1,18 +1,10 @@
 import React from "react";
 import postStyles from "../styles/Post.module.css";
 
-export default function PictureForPoetry({ selectedScriptSection }) {
+export default function PictureForPoetry({ illustration }) {
     return (
-        <>
-            {(selectedScriptSection === 0 || selectedScriptSection > 0) &&
-                localStorage.getItem("selectedText") !== "конец" && (
-                    <div className={postStyles.illustration}>
-                        <img
-                            src={localStorage.getItem("picture")}
-                            alt="illustration"
-                        />
-                    </div>
-                )}
-        </>
+        <div className={postStyles.illustration}>
+            <img src={illustration} alt="illustration" />
+        </div>
     );
 }

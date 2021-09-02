@@ -2,147 +2,63 @@ import React from "react";
 import Tape from "../Tape";
 import PictureForPoetry from "../PictureForPoetry";
 import postStyles from "../../styles/Post.module.css";
-// import Swiper from "swiper";
 
-function BlockBelow({ selectedScriptSection, scriptArray, hideLogo = false }) {
-    React.useEffect(() => {
-        debugger;
-    }, [hideLogo]);
-
-    // React.useEffect(() => {
-    //     var swiper = new Swiper(".swiper-container", {
-    //         pagination: {
-    //             el: ".swiper-pagination",
-    //         },
-    //     });
-    // }, []);
-
+function BlockBelow({ versesArray, epilogue, verseNumber }) {
     return (
         <>
             <div className="fourthBlock" />
-            {hideLogo !== "true" ? (
-                <div className="fifthBlock">
-                    1111
-                    {/* <div className="swiper-container">
-                    <div className="swiper-wrapper">
-                        <div className="swiper-slide"> */}
-                    <div style={{ display: "flex" }}>
-                        {typeof window !== "undefined" &&
-                            localStorage.getItem("selectedScriptSection") &&
-                            localStorage.getItem("selectedText") !== "конец" &&
-                            Number(
-                                localStorage.getItem("selectedScriptSection")
-                            ) < scriptArray.length && (
-                                <div
-                                    className={postStyles.avatar}
-                                    data-title={localStorage.getItem(
-                                        "nameAuthor"
-                                    )}
-                                    onClick={() =>
-                                        (document.location.href =
-                                            localStorage.getItem("publicLink"))
-                                    }
-                                >
-                                    <img
-                                        src={localStorage.getItem("avatarka")}
-                                        alt="аватарка автора"
-                                    />
-                                </div>
-                            )}
 
-                        {typeof window !== "undefined" &&
-                            localStorage.getItem("selectedScriptSection") && (
-                                <div
-                                    className={
-                                        localStorage.getItem(
-                                            "selectedScriptSection"
-                                        ) === "false"
-                                            ? postStyles.greetings
-                                            : localStorage.getItem(
-                                                  "selectedText"
-                                              ) !== "конец"
-                                            ? postStyles.verse
-                                            : postStyles.end
-                                    }
-                                    dangerouslySetInnerHTML={{
-                                        __html: localStorage.getItem(
-                                            "selectedText"
-                                        ),
-                                    }}
+            <div className="fifthBlock">
+                <div style={{ display: "flex" }}>
+                    {epilogue ? (
+                        epilogue
+                    ) : verseNumber !== "false" ? (
+                        <div>
+                            <div
+                                className={postStyles.avatar}
+                                data-title={versesArray[verseNumber].nameAuthor}
+                                onClick={() =>
+                                    (document.location.href =
+                                        versesArray[verseNumber].publicLink)
+                                }
+                            >
+                                <img
+                                    src={versesArray[verseNumber].avatar}
+                                    alt="аватарка автора"
                                 />
-                            )}
-                    </div>
-                    <PictureForPoetry
-                        selectedScriptSection={selectedScriptSection}
-                    />
-                    {/* </div>
-                        <div className="swiper-slide">434</div>
-                    </div>
-                    <div className="swiper-pagination swiper-pagination-white" />
-                </div> */}
+                            </div>
+                            <div
+                                className={
+                                    epilogue
+                                        ? postStyles.end
+                                        : verseNumber !== "false"
+                                        ? postStyles.verse
+                                        : postStyles.end
+                                }
+                                dangerouslySetInnerHTML={{
+                                    __html: versesArray[verseNumber].verse,
+                                }}
+                            ></div>
+                            <PictureForPoetry
+                                illustration={
+                                    versesArray[verseNumber].illustration
+                                }
+                            />
+                        </div>
+                    ) : (
+                        <div style={{ lineHeight: 2 }}>
+                            <div>Приветствую, о, милый путник.</div>
+                            <div>
+                                Нажимешь на пробел и погружаешься в мир стихов.
+                            </div>
+                            <div>
+                                <p>Погнаааали! 🤘</p>
+                            </div>
+                        </div>
+                    )}
                 </div>
-            ) : (
-                <div className="fifthBlock">
-                    2222
-                    {/* <div className="swiper-container">
-                    <div className="swiper-wrapper">
-                        <div className="swiper-slide"> */}
-                    <div style={{ display: "flex" }}>
-                        {typeof window !== "undefined" &&
-                            localStorage.getItem("selectedScriptSection") &&
-                            localStorage.getItem("selectedText") !== "конец" &&
-                            Number(
-                                localStorage.getItem("selectedScriptSection")
-                            ) < scriptArray.length && (
-                                <div
-                                    className={postStyles.avatar}
-                                    data-title={localStorage.getItem(
-                                        "nameAuthor"
-                                    )}
-                                    onClick={() =>
-                                        (document.location.href =
-                                            localStorage.getItem("publicLink"))
-                                    }
-                                >
-                                    <img
-                                        src={localStorage.getItem("avatarka")}
-                                        alt="аватарка автора"
-                                    />
-                                </div>
-                            )}
+            </div>
 
-                        {typeof window !== "undefined" &&
-                            localStorage.getItem("selectedScriptSection") && (
-                                <div
-                                    className={
-                                        localStorage.getItem(
-                                            "selectedScriptSection"
-                                        ) === "false"
-                                            ? postStyles.greetings
-                                            : localStorage.getItem(
-                                                  "selectedText"
-                                              ) !== "конец"
-                                            ? postStyles.verse
-                                            : postStyles.end
-                                    }
-                                    dangerouslySetInnerHTML={{
-                                        __html: localStorage.getItem(
-                                            "selectedText"
-                                        ),
-                                    }}
-                                />
-                            )}
-                    </div>
-                    <PictureForPoetry
-                        selectedScriptSection={selectedScriptSection}
-                    />
-                    {/* </div>
-                        <div className="swiper-slide">434</div>
-                    </div>
-                    <div className="swiper-pagination swiper-pagination-white" />
-                </div> */}
-                </div>
-            )}
             <div className="sixthBlock" id="sixthBlockId">
                 <p>Наши преимущества</p>
                 <p>
@@ -162,21 +78,17 @@ function BlockBelow({ selectedScriptSection, scriptArray, hideLogo = false }) {
                 </p>
             </div>
 
-            {!hideLogo && <Tape />}
+            {verseNumber === "false" && <Tape />}
+
             <div className="thirteenthBlock" />
             <div className="fourteenthBlock">
-                {!hideLogo &&
-                    typeof window !== "undefined" &&
-                    localStorage.getItem("selectedScriptSection") ==
-                        "false" && (
-                        <>
-                            ©{"    "}
-                            <a href="https://vk.com/moyustimov">
-                                Устинов Дмитрий
-                            </a>
-                            , 2021-й год
-                        </>
-                    )}
+                {verseNumber === "false" && (
+                    <>
+                        ©{"    "}
+                        <a href="https://vk.com/moyustimov">Устинов Дмитрий</a>,
+                        2021-й год
+                    </>
+                )}
             </div>
             <div className="fifteenthBlock" />
         </>

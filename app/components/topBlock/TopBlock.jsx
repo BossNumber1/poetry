@@ -8,23 +8,38 @@ import menuStyles from "../../styles/Menu.module.css";
 import shareStyles from "../../styles/Share.module.css";
 
 function TopBlock({
-    onMusic,
-    imgMusic,
-    switchOnSwitchOff,
     setShowForm,
     showForm,
     setShowMenu,
     showMenu,
-    hideLogo = false,
+
+    verseNumber,
 }) {
+    const [onMusic, setOnMusic] = React.useState(false);
+    const [imgMusic, setImgMusic] = React.useState("/play.png");
+
     let chan = () => {
         setShowMenu(!showMenu);
+    };
+
+    let switchOnSwitchOff = () => {
+        document.getElementById("track").volume = 0.1;
+
+        if (onMusic === false) {
+            document.getElementById("track").play();
+            setOnMusic(!onMusic);
+            setImgMusic("/pause.png");
+        } else {
+            document.getElementById("track").pause();
+            setImgMusic("/play.png");
+            setOnMusic(!onMusic);
+        }
     };
 
     return (
         <>
             <div className="firstBlock" />
-            {!hideLogo ? (
+            {verseNumber === "false" ? (
                 <div className="secondBlock">
                     <Logo />
                 </div>
