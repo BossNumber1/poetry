@@ -5,14 +5,10 @@ import TopBlock from "../components/topBlock/TopBlock";
 import BlockBelow from "../components/blockBelow/BlockBelow";
 import VerseAddingForm from "../components/VerseAddingForm";
 import Swiper from "swiper";
-// import Image from "next/image";
 
 export default function Home() {
     const [showForm, setShowForm] = React.useState(false);
     const [showMenu, setShowMenu] = React.useState(false);
-
-    //-------------------------------------------------------------------------------------------
-
     const [versesArray, setVersesArray] = React.useState(false);
     const [verseNumber, setVerseNumber] = React.useState("false");
     const [epilogue, setEpilogue] = React.useState(false);
@@ -51,23 +47,16 @@ export default function Home() {
         let verseSwitch = function () {
             if (verseNumber === "false") {
                 setVerseNumber(0);
-                document.getElementsByClassName("sixthBlock") &&
-                    document.getElementById("sixthBlockId") &&
-                    document.getElementById("sixthBlockId").remove();
             } else if (
                 verseNumber !== "false" &&
                 +verseNumber < versesArray.length - 1
             ) {
                 setVerseNumber(+verseNumber + 1);
-                document.getElementById("sixthBlockId") &&
-                    document.getElementById("sixthBlockId").remove();
             } else if (
                 verseNumber !== "false" &&
                 +verseNumber === versesArray.length - 1
             ) {
-                setEpilogue("Конец. Рассказать друзьям :)");
-                document.getElementById("sixthBlockId") &&
-                    document.getElementById("sixthBlockId").remove();
+                setEpilogue("The end. Рассказать друзьям :)");
             }
         };
     }, [verseNumber, versesArray]);
@@ -87,7 +76,7 @@ export default function Home() {
             <main>
                 <div className="swiper-container">
                     <div className="swiper-wrapper">
-                        <div className="swiper-slide" id="brow">
+                        <div className="swiper-slide">
                             <div className="body_page">
                                 <TopBlock
                                     setShowForm={setShowForm}
@@ -109,7 +98,6 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="swiper-pagination swiper-pagination-white" />
                 </div>
             </main>
         </>
