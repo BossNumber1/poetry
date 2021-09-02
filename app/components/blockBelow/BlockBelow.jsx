@@ -9,11 +9,11 @@ function BlockBelow({ versesArray, epilogue, verseNumber }) {
             <div className="fourthBlock" />
 
             <div className="fifthBlock">
-                <div style={{ display: "flex" }}>
-                    {epilogue ? (
-                        epilogue
-                    ) : verseNumber !== "false" ? (
-                        <div>
+                {epilogue ? (
+                    epilogue
+                ) : verseNumber !== "false" ? (
+                    <>
+                        <div style={{ display: "flex" }}>
                             <div
                                 className={postStyles.avatar}
                                 data-title={versesArray[verseNumber].nameAuthor}
@@ -24,7 +24,7 @@ function BlockBelow({ versesArray, epilogue, verseNumber }) {
                             >
                                 <img
                                     src={versesArray[verseNumber].avatar}
-                                    alt="аватарка автора"
+                                    alt="Аватарка автора"
                                 />
                             </div>
                             <div
@@ -33,30 +33,28 @@ function BlockBelow({ versesArray, epilogue, verseNumber }) {
                                         ? postStyles.end
                                         : verseNumber !== "false"
                                         ? postStyles.verse
-                                        : postStyles.end
+                                        : postStyles.greetings
                                 }
                                 dangerouslySetInnerHTML={{
                                     __html: versesArray[verseNumber].verse,
                                 }}
                             ></div>
-                            <PictureForPoetry
-                                illustration={
-                                    versesArray[verseNumber].illustration
-                                }
-                            />
                         </div>
-                    ) : (
-                        <div style={{ lineHeight: 2 }}>
-                            <div>Приветствую, о, милый путник.</div>
-                            <div>
-                                Нажимешь на пробел и погружаешься в мир стихов.
-                            </div>
-                            <div>
-                                <p>Погнаааали! 🤘</p>
-                            </div>
+                        <PictureForPoetry
+                            illustration={versesArray[verseNumber].illustration}
+                        />
+                    </>
+                ) : (
+                    <div style={{ lineHeight: 2 }}>
+                        <div>Приветствую, о, милый путник.</div>
+                        <div>
+                            Нажимешь на пробел и погружаешься в мир стихов.
                         </div>
-                    )}
-                </div>
+                        <div>
+                            <p>Погнаааали! 🤘</p>
+                        </div>
+                    </div>
+                )}
             </div>
 
             <div className="sixthBlock" id="sixthBlockId">
