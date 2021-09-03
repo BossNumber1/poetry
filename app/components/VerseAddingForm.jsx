@@ -41,7 +41,7 @@ const VerseAddingForm = () => {
 
         let nameAuthor = formDataStore[0];
         let avatar = formDataStore[1];
-        let verse = formDataStore[2];
+        let verse = formDataStore[2].replace(/\r\n/g, "<br>");
         let illustration = formDataStore[3];
         let publicLink = formDataStore[4];
 
