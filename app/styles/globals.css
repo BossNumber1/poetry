@@ -176,6 +176,16 @@ a {
     display: none;
 }
 
+.iconsShare {
+    margin: 15px 0 0 15px;
+}
+
+.iconsShare img {
+    margin-right: 10px;
+    width: 32px;
+    cursor: pointer;
+}
+
 @media (min-width: 0px) and (max-width: 320px) {
     html,
     body {

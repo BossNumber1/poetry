@@ -56,7 +56,9 @@ export default function Home() {
                 verseNumber !== "false" &&
                 +verseNumber === versesArray.length - 1
             ) {
-                setEpilogue("The end. Рассказать друзьям :)");
+                setEpilogue(
+                    `<div style="margin-bottom: 32px; font-size: 26px;">The end</div><div style="color: rgb(83, 83, 83); font-size: 13px; font-style: italic;">Рассказать друзьям :)</div>`
+                );
             }
         };
     }, [verseNumber, versesArray]);

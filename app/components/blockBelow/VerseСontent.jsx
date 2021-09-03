@@ -1,17 +1,30 @@
 import React from "react";
 import PictureForPoetry from "../PictureForPoetry";
 import postStyles from "../../styles/Post.module.css";
+import Share from "../topBlock/Share";
+import Vk from "../topBlock/shareIcon/Vk";
+import Fb from "../topBlock/shareIcon/Fb";
+import Twt from "../topBlock/shareIcon/Twt";
+import Ok from "../topBlock/shareIcon/Ok";
 
 function VerseСontent({ epilogue, verseNumber, versesArray }) {
     return (
         <>
             {epilogue ? (
-                <div
-                    className={postStyles.end}
-                    dangerouslySetInnerHTML={{
-                        __html: epilogue,
-                    }}
-                ></div>
+                <>
+                    <div
+                        className={postStyles.end}
+                        dangerouslySetInnerHTML={{
+                            __html: epilogue,
+                        }}
+                    />
+                    <div className="iconsShare">
+                        <Vk />
+                        <Fb />
+                        <Twt />
+                        <Ok />
+                    </div>
+                </>
             ) : verseNumber !== "false" ? (
                 <>
                     <div style={{ display: "flex" }}>
