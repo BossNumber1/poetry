@@ -10,7 +10,12 @@ function BlockBelow({ versesArray, epilogue, verseNumber }) {
 
             <div className="fifthBlock">
                 {epilogue ? (
-                    epilogue
+                    <div
+                        className={postStyles.end}
+                        dangerouslySetInnerHTML={{
+                            __html: epilogue,
+                        }}
+                    ></div>
                 ) : verseNumber !== "false" ? (
                     <>
                         <div style={{ display: "flex" }}>
@@ -28,24 +33,18 @@ function BlockBelow({ versesArray, epilogue, verseNumber }) {
                                 />
                             </div>
                             <div
-                                className={
-                                    epilogue
-                                        ? postStyles.end
-                                        : verseNumber !== "false"
-                                        ? postStyles.verse
-                                        : postStyles.greetings
-                                }
+                                className={postStyles.verse}
                                 dangerouslySetInnerHTML={{
                                     __html: versesArray[verseNumber].verse,
                                 }}
-                            ></div>
+                            />
                         </div>
                         <PictureForPoetry
                             illustration={versesArray[verseNumber].illustration}
                         />
                     </>
                 ) : (
-                    <div style={{ lineHeight: 2 }}>
+                    <div className={postStyles.greetings}>
                         <div>Приветствую, о, милый путник.</div>
                         <div>
                             Нажимешь на пробел и погружаешься в мир стихов.
