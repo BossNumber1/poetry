@@ -43,6 +43,7 @@
     .logo img {
         /* width: 50%;
         height: 50%; */
+        margin-top: 35px;
         overflow: hidden;
     }
 }
