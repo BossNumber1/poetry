@@ -12,7 +12,6 @@ function TopBlock({
     showForm,
     setShowMenu,
     showMenu,
-
     verseNumber,
 }) {
     const [onMusic, setOnMusic] = React.useState(false);

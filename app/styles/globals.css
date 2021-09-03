@@ -34,7 +34,7 @@ a {
         90%; */
     /* grid-auto-rows: minmax(20%, auto); */
 
-    grid-template-rows: 25% 25% 25% 10%;
+    grid-template-rows: 110px 200px 160px 50px;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 1em;
     font-size: 15px;
@@ -76,7 +76,8 @@ a {
     display: inline-block;
     align-items: center;
     justify-content: center;
-    z-index: 150;
+    z-index: 50;
+    padding-top: 35px;
 }
 
 .sixthBlock {

@@ -22,6 +22,7 @@ export default function Home() {
     React.useEffect(() => {
         document.addEventListener("keydown", function (event) {
             if (event.code === "Space") {
+                event.preventDefault();
                 verseSwitch();
             }
         });
@@ -47,11 +48,15 @@ export default function Home() {
         let verseSwitch = function () {
             if (verseNumber === "false") {
                 setVerseNumber(0);
+                document.getElementsByClassName("fifthBlock")[0].style =
+                    "padding-top: 0";
             } else if (
                 verseNumber !== "false" &&
                 +verseNumber < versesArray.length - 1
             ) {
                 setVerseNumber(+verseNumber + 1);
+                document.getElementsByClassName("fifthBlock")[0].style =
+                    "padding-top: 0";
             } else if (
                 verseNumber !== "false" &&
                 +verseNumber === versesArray.length - 1
