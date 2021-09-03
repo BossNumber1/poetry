@@ -89,7 +89,7 @@ a {
 .seventhBlock {
     grid-area: seventhBlock;
     /* background-color: rgb(255, 8, 0); */
-    /* text-align: center; */
+    text-align: center;
     /* margin: auto; */
     display: flex;
     align-items: center;
@@ -187,6 +187,16 @@ a {
     margin-right: 10px;
     width: 32px;
     cursor: pointer;
+}
+
+.cardName {
+    font-weight: 600;
+    text-align: center;
+}
+
+.cardImg img {
+    height: 60px;
+    /* text-align: center; */
 }
 
 /* common */

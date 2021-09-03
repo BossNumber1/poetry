@@ -8,96 +8,41 @@ function Tape() {
                 <>
                     <div className="seventhBlock">
                         <div>
-                            <div>
+                            <div className="cardImg">
                                 <img
                                     src="https://clck.ru/WCBTB"
-                                    height="60px"
+                                    style={{ textAlign: "center" }}
                                 />
                             </div>
-                            <p
-                                style={{
-                                    fontWeight: "bold",
-                                }}
-                            >
-                                Удобство
-                            </p>
-                            <div
-                                style={{
-                                    bottom: 97,
-                                }}
-                            >
-                                Интуитивный интерфейс
-                            </div>
+                            <p className="cardName">Удобство</p>
+                            <div>Интуитивный интерфейс</div>
                         </div>
                     </div>
                     <div className="eighthBlock">
                         <div>
-                            <div>
-                                <img
-                                    src="https://clck.ru/WCBpk"
-                                    height="60px"
-                                />
+                            <div className="cardImg">
+                                <img src="https://clck.ru/WCBpk" />
                             </div>
-                            <p
-                                style={{
-                                    fontWeight: "bold",
-                                }}
-                            >
-                                Красота
-                            </p>
-                            <div
-                                style={{
-                                    bottom: 97,
-                                }}
-                            >
-                                Эстетичный дизайн
-                            </div>
+                            <p className="cardName">Красота</p>
+                            <div>Эстетичный дизайн</div>
                         </div>
                     </div>
                     <div className="ninthBlock">
                         <div>
-                            <div>
-                                <img
-                                    src="https://clck.ru/WCBxa"
-                                    height="60px"
-                                />
+                            <div className="cardImg">
+                                <img src="https://clck.ru/WCBxa" />
                             </div>
-                            <p
-                                style={{
-                                    fontWeight: "bold",
-                                }}
-                            >
-                                Простота
-                            </p>
-                            <div
-                                style={{
-                                    bottom: 97,
-                                }}
-                            >
-                                Ничего лишнего, всё по делу
-                            </div>
+                            <p className="cardName">Простота</p>
+                            <div>Ничего лишнего, всё по делу</div>
                         </div>
                     </div>
                     <div className="tenthBlock">
                         <div>
-                            <div>
-                                <img
-                                    src="https://clck.ru/WCBwF"
-                                    height="60px"
-                                />
+                            <div className="cardImg">
+                                <img src="https://clck.ru/WCBwF" />
                             </div>
-                            <p
-                                style={{
-                                    fontWeight: "bold",
-                                }}
-                            >
-                                Нет рекламы
-                            </p>
-                            <div
-                                style={{
-                                    bottom: 97,
-                                }}
-                            >
+                            <p className="cardName">Нет рекламы</p>
+                            <div>
                                 <div>Чтобы не нарушать идею,</div>
                                 <div>убрана с видного места</div>
                             </div>
@@ -105,50 +50,20 @@ function Tape() {
                     </div>
                     <div className="eleventhBlock">
                         <div>
-                            <div>
-                                <img
-                                    src="https://clck.ru/WCC7Y"
-                                    height="60px"
-                                />
+                            <div className="cardImg">
+                                <img src="https://clck.ru/WCC7Y" />
                             </div>
-                            <p
-                                style={{
-                                    fontWeight: "bold",
-                                }}
-                            >
-                                Новизна
-                            </p>
-                            <div
-                                style={{
-                                    bottom: 97,
-                                }}
-                            >
-                                Вы такое встречали? Я - нет
-                            </div>
+                            <p className="cardName">Новизна</p>
+                            <div>Вы такое встречали? Я - нет</div>
                         </div>
                     </div>
                     <div className="twelfthBlock">
                         <div>
-                            <div>
-                                <img
-                                    src="https://clck.ru/WCC4j"
-                                    height="60px"
-                                />
+                            <div className="cardImg">
+                                <img src="https://clck.ru/WCC4j" />
                             </div>
-                            <p
-                                style={{
-                                    fontWeight: "bold",
-                                }}
-                            >
-                                Перспективность
-                            </p>
-                            <div
-                                style={{
-                                    bottom: 97,
-                                }}
-                            >
-                                У меня ещё полно идей 😉
-                            </div>
+                            <p className="cardName">Перспективность</p>
+                            <div>У меня ещё полно идей 😉</div>
                         </div>
                     </div>
                 </>
