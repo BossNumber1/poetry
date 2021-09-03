@@ -2,6 +2,7 @@ import React from "react";
 import Tape from "../Tape";
 import PictureForPoetry from "../PictureForPoetry";
 import postStyles from "../../styles/Post.module.css";
+import Signature from "./Signature";
 
 function BlockBelow({ versesArray, epilogue, verseNumber }) {
     return (
@@ -79,25 +80,7 @@ function BlockBelow({ versesArray, epilogue, verseNumber }) {
 
             <div className="thirteenthBlock" />
             <div className="fourteenthBlock">
-                {verseNumber === "false" && (
-                    <>
-                        ©
-                        <a
-                            href="https://vk.com/moyustimov"
-                            style={{ margin: "0 5px 0 5px" }}
-                        >
-                            Устинов
-                        </a>
-                        и
-                        <a
-                            href="https://vk.com/dimitron_rock"
-                            style={{ margin: "0 5px 0 5px" }}
-                        >
-                            Рогут,
-                        </a>
-                        2021-й год
-                    </>
-                )}
+                <Signature verseNumber={verseNumber} />
             </div>
             <div className="fifteenthBlock" />
         </>
