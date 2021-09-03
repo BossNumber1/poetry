@@ -20,12 +20,12 @@
     position: absolute;
     z-index: 1;
     font-family: Arial, sans-serif;
-    font-size: 11px;
+    font-size: 9px;
     padding: 5px 10px;
     content: attr(data-title);
-    top: -0.2%;
-    right: -2.5%;
-    width: 194px;
+    top: 3px;
+    right: 20px;
+    width: 104px;
     text-align: center;
 }
 
