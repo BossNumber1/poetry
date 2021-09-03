@@ -89,61 +89,43 @@ a {
 .seventhBlock {
     grid-area: seventhBlock;
     /* background-color: rgb(255, 8, 0); */
-    text-align: center;
-    /* margin: auto; */
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
 }
 
 .eighthBlock {
     grid-area: eighthBlock;
     /* background-color: rgb(94, 255, 0); */
-    text-align: center;
-    /* margin: auto; */
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
 }
 
 .ninthBlock {
     grid-area: ninthBlock;
     /* background-color: rgb(238, 255, 0); */
-    text-align: center;
-    /* margin: auto; */
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
 }
 
 .tenthBlock {
     grid-area: tenthBlock;
     /* background-color: rgb(25, 0, 255); */
-    text-align: center;
-    /* margin: auto; */
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
 }
 
 .eleventhBlock {
     grid-area: eleventhBlock;
     /* background-color: rgb(0, 255, 200); */
-    text-align: center;
-    /* margin: auto; */
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
 }
 
 .twelfthBlock {
     grid-area: twelfthBlock;
     /* background-color: rgb(0, 255, 98); */
-    text-align: center;
-    /* margin: auto; */
-    /* display: flex; */
+}
+
+.twelfthBlock,
+.eleventhBlock,
+.tenthBlock,
+.ninthBlock,
+.eighthBlock,
+.seventhBlock {
     align-items: center;
     justify-content: center;
+    text-align: center;
+    /* margin: auto; */
 }
 
 .thirteenthBlock {
