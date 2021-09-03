@@ -260,7 +260,7 @@ a {
         90%; */
         /* grid-auto-rows: minmax(20%, auto); */
 
-        grid-template-rows: 15% 30% 30% 30% 5%;
+        grid-template-rows: 50px 30% 30% 30% 5%;
         grid-template-columns: 18% 18% 18% 18% 18% 0.1fr;
         grid-gap: 0.5em;
         /* font-size: 15px; */
@@ -303,7 +303,7 @@ a {
         90%; */
         /* grid-auto-rows: minmax(20%, auto); */
 
-        grid-template-rows: 15% 15% 15% 15% 15% 15% 15% 15% 15% 3%;
+        grid-template-rows: 50px 15% 15% 15% 15% 15% 15% 15% 15% 3%;
         grid-template-columns: 91% 0.1fr;
         grid-gap: 0.5em;
         /* font-size: 15px; */
