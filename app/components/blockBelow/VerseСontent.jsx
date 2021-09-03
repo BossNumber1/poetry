@@ -1,7 +1,6 @@
 import React from "react";
 import PictureForPoetry from "../PictureForPoetry";
 import postStyles from "../../styles/Post.module.css";
-import Share from "../topBlock/Share";
 import Vk from "../topBlock/shareIcon/Vk";
 import Fb from "../topBlock/shareIcon/Fb";
 import Twt from "../topBlock/shareIcon/Twt";

@@ -1,12 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap");
+@font-face {
+    font-family: OpenSans;
+    src: url("../fonts/OpenSans.ttf");
+}
 
 html,
 body {
     padding: 0;
     margin: 0;
-    /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
-    font-family: "STIX Two Math", serif;
+    font-family: normal 16px "Open Sans", sans-serif;
+    font-weight: 350;
     /* overflow: hidden; */
 }
 
