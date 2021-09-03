@@ -48,15 +48,11 @@ export default function Home() {
         let verseSwitch = function () {
             if (verseNumber === "false") {
                 setVerseNumber(0);
-                document.getElementsByClassName("fifthBlock")[0].style =
-                    "padding-top: 0";
             } else if (
                 verseNumber !== "false" &&
                 +verseNumber < versesArray.length - 1
             ) {
                 setVerseNumber(+verseNumber + 1);
-                document.getElementsByClassName("fifthBlock")[0].style =
-                    "padding-top: 0";
             } else if (
                 verseNumber !== "false" &&
                 +verseNumber === versesArray.length - 1
@@ -65,6 +61,8 @@ export default function Home() {
                     `<div style="margin-bottom: 32px; font-size: 26px;">The end</div><div style="color: rgb(83, 83, 83); font-size: 13px; font-style: italic;">Рассказать друзьям :)</div>`
                 );
             }
+            document.getElementsByClassName("fifthBlock")[0].style =
+                "padding-top: 0";
         };
     }, [verseNumber, versesArray]);
 
