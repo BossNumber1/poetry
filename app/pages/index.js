@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import axios from "axios";
 import TopBlock from "../components/topBlock/TopBlock";
 import BlockBelow from "../components/blockBelow/BlockBelow";
@@ -65,16 +64,6 @@ export default function Home() {
 
     return (
         <>
-            <Head>
-                <title>Пробел Поэзии</title>
-                <meta name="description" content="Стихи в новом формате" />
-                <meta
-                    name="viewport"
-                    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-                />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-
             <main>
                 <div className="swiper-container">
                     <div className="swiper-wrapper">
