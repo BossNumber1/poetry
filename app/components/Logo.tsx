@@ -1,5 +1,7 @@
 import React from "react";
 import logoStyles from "../styles/Logo.module.css";
+import Image from 'next/image'
+import logotip from '../public/mue.png'
 
 function Logo() {
     return (
@@ -10,7 +12,7 @@ function Logo() {
             {typeof window !== "undefined" &&
                 localStorage.getItem("selectedScriptSection") === "false" && (
                     <a href="https://www.ustinnov.ru">
-                        <img src="/mue.png" />
+                        <Image src={logotip} alt="Логотип компании"/>
                     </a>
                 )}
         </div>
