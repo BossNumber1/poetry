@@ -1,79 +1,22 @@
 import React from "react";
 import Tape from "../Tape";
-import PictureForPoetry from "../PictureForPoetry";
-import postStyles from "../../styles/Post.module.css";
 import Signature from "./Signature";
+import Advantages from "./Advantages";
+import VerseСontent from "./VerseСontent";
 
 function BlockBelow({ versesArray, epilogue, verseNumber }) {
     return (
         <>
             <div className="fourthBlock" />
-
             <div className="fifthBlock">
-                {epilogue ? (
-                    <div
-                        className={postStyles.end}
-                        dangerouslySetInnerHTML={{
-                            __html: epilogue,
-                        }}
-                    ></div>
-                ) : verseNumber !== "false" ? (
-                    <>
-                        <div style={{ display: "flex" }}>
-                            <div
-                                className={postStyles.avatar}
-                                data-title={versesArray[verseNumber].nameAuthor}
-                                onClick={() =>
-                                    (document.location.href =
-                                        versesArray[verseNumber].publicLink)
-                                }
-                            >
-                                <img
-                                    src={versesArray[verseNumber].avatar}
-                                    alt="Аватарка автора"
-                                />
-                            </div>
-                            <div
-                                className={postStyles.verse}
-                                dangerouslySetInnerHTML={{
-                                    __html: versesArray[verseNumber].verse,
-                                }}
-                            />
-                        </div>
-                        <PictureForPoetry
-                            illustration={versesArray[verseNumber].illustration}
-                        />
-                    </>
-                ) : (
-                    <div className={postStyles.greetings}>
-                        <div>Приветствую, о, милый путник.</div>
-                        <div>
-                            Нажимешь на пробел и погружаешься в мир стихов.
-                        </div>
-                        <div>
-                            <p>Погнаааали! 🤘</p>
-                        </div>
-                    </div>
-                )}
+                <VerseСontent
+                    epilogue={epilogue}
+                    verseNumber={verseNumber}
+                    versesArray={versesArray}
+                />
             </div>
-
             <div className="sixthBlock" id="sixthBlockId">
-                <p>Наши преимущества</p>
-                <p>
-                    <img
-                        src={"/down32.png"}
-                        width={32}
-                        height={32}
-                        alt="Листать вниз"
-                        style={{
-                            // position: "absolute",
-                            marginTop: 62,
-                            marginLeft: -80,
-                            // top: "50%",
-                            // marginTop: -50,
-                        }}
-                    />
-                </p>
+                <Advantages />
             </div>
 
             {verseNumber === "false" && <Tape />}
