@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "tsc:w": "tsc -w"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -18,6 +19,8 @@
     "swiper": "^6.8.0"
   },
   "devDependencies": {
+    "@types/react": "^17.0.19",
+    "@types/react-dom": "^17.0.9",
     "eslint": "7.29.0",
     "eslint-config-next": "11.0.0",
     "typescript": "^4.4.2"
