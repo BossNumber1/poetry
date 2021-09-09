@@ -4,7 +4,7 @@ import etcStyles from "../styles/Etc.module.css";
 import Loading from "./Loading";
 
 const VerseAddingForm = () => {
-    const [showError, setShowError] = React.useState(false);
+    const [showError, setShowError] = React.useState("");
     const [showLoader, setShowLoader] = React.useState(false);
     const [responseFromServer, setResponseFromServer] = React.useState(false);
     const [nameAuthorState, setNameAuthorState] = React.useState(
@@ -14,26 +14,26 @@ const VerseAddingForm = () => {
         localStorage.getItem("publicLink") || ""
     );
 
-    const changeAlias = (e) => {
+    const changeAlias = (e: React.ChangeEvent<HTMLInputElement>) => {
         setNameAuthorState(e.target.value);
     };
 
-    const changeLink = (e) => {
+    const changeLink = (e: React.ChangeEvent<HTMLInputElement>) => {
         setPublicLinkState(e.target.value);
     };
 
     React.useEffect(() => {
-        document.querySelector("form").addEventListener("keydown", (event) => {
+        document.querySelector("form")!.addEventListener("keydown", (event) => {
             event.stopPropagation();
         });
     }, []);
 
-    const beforeSending = (e) => {
+    const beforeSending = (e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault();
         setShowLoader(true);
-        let formDataStore = [];
 
-        const formData = new FormData(document.querySelector("form"));
+        let formDataStore = [];
+        const formData: any = new FormData(document.querySelector("form")!);
 
         for (let pair of formData.entries()) {
             formDataStore.push(pair[1]);
@@ -53,7 +53,7 @@ const VerseAddingForm = () => {
             publicLink !== ""
         ) {
             localStorage.setItem("nameAuthor", nameAuthor);
-            localStorage.getItem("publicLink", publicLink);
+            localStorage.setItem("publicLink", publicLink);
 
             let formData = new FormData();
 
@@ -72,10 +72,8 @@ const VerseAddingForm = () => {
                 .then((res) => {
                     setShowLoader(false);
                     setResponseFromServer(res.data);
-                    setShowError(false);
-                    document.querySelector("form").reset();
-                    document.getElementsByName("nameAuthor")[0].value =
-                        localStorage.getItem("nameAuthor");
+                    setShowError("");
+                    document.querySelector("form")!.reset();
                 });
         } else {
             setShowError("Стоит заполнить все поля");
@@ -101,11 +99,7 @@ const VerseAddingForm = () => {
                     {showError || responseFromServer}
                 </div>
             )}
-            <form
-                action="http://localhost:80/upload"
-                method="post"
-                encType="multipart/form-data"
-            >
+            <form>
                 <div className="mb-3">
                     <label htmlFor="nik" className="form-label">
                         Ваш творческий псевдоним
@@ -134,7 +128,7 @@ const VerseAddingForm = () => {
                     <label htmlFor="verse" className="form-label">
                         Стих
                     </label>
-                    <textarea name="verse" className="form-control" rows="1" />
+                    <textarea name="verse" className="form-control" rows={1} />
                 </div>
 
                 <div className="mb-3">
