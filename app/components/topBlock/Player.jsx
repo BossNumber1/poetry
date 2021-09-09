@@ -33,7 +33,7 @@ export default function Player({
                     }
                 >
                     <img
-                        src={showForm ? "/hide.png" : "/add.png"}
+                        src={showForm ? "/close.png" : "/add.png"}
                         alt={showForm ? "hide form" : "add post"}
                     />
                 </div>
@@ -47,11 +47,7 @@ export default function Player({
                     }
                 >
                     <img
-                        src={
-                            showStatistics
-                                ? "/hideStatistics.png"
-                                : "/statistics.png"
-                        }
+                        src={showStatistics ? "/close.png" : "/statistics.png"}
                         alt={
                             showStatistics
                                 ? "Скрыть статистику сайта"
