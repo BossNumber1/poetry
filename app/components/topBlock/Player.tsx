@@ -1,13 +1,21 @@
 import React from "react";
 import mainFuncsStyles from "../../styles/MainFuncs.module.css";
 
+interface DescriptionLocalProps {
+    onMusic: boolean;
+    imgMusic: string;
+    switchOnSwitchOff: () => void;
+    setShowForm: (arg: boolean) => boolean;
+    showForm: boolean
+}
+
 export default function Player({
     onMusic,
     imgMusic,
     switchOnSwitchOff,
     setShowForm,
     showForm,
-}) {
+}: DescriptionLocalProps){
     const [showStatistics, setShowStatistics] = React.useState(false);
     return (
         <>
@@ -22,7 +30,7 @@ export default function Player({
                 >
                     <img
                         src={imgMusic}
-                        alt={onMusic !== "true" ? "icon_play" : "icon_pause"}
+                        alt={onMusic !== true ? "icon_play" : "icon_pause"}
                     />
                 </div>
                 <div
