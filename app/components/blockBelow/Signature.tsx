@@ -1,9 +1,13 @@
 import React from "react";
 
-function Signature({ verseNumber }) {
+interface DescriptionLocalProps {
+  readVerse: boolean
+}
+
+function Signature({ readVerse }: DescriptionLocalProps) {
     return (
         <>
-            {verseNumber === false && (
+            {readVerse === false && (
                 <>
                     ©
                     <a

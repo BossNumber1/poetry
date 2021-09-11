@@ -1,16 +1,26 @@
-import React from "react";
+import React, { FC } from "react";
 import axios from "axios";
 import TopBlock from "../components/topBlock/TopBlock";
 import BlockBelow from "../components/blockBelow/BlockBelow";
 import VerseAddingForm from "../components/VerseAddingForm";
 import Swiper from "swiper";
 
+// interface IPost {
+//     id_post: number;
+//     nameAuthor: string;
+//     avatar: string;
+//     verse: string;
+//     illustration: string;
+//     publicLink: string;
+// }
+
 export default function Home() {
     const [showForm, setShowForm] = React.useState(false);
     const [showMenu, setShowMenu] = React.useState(false);
-    const [versesArray, setVersesArray] = React.useState(false);
-    const [verseNumber, setVerseNumber] = React.useState(false);
-    const [epilogue, setEpilogue] = React.useState(false);
+    const [versesArray, setVersesArray] = React.useState<[]>([]);
+    const [readVerse, setReadVerse] = React.useState(false);
+    const [verseNumber, setVerseNumber] = React.useState(0);
+    const [epilogue, setEpilogue] = React.useState("");
 
     React.useEffect(() => {
         axios.get(`http://localhost:80/api/getAllVerses/`).then((response) => {
@@ -32,7 +42,7 @@ export default function Home() {
             },
         });
 
-        let startMoveEvent;
+        let startMoveEvent: number;
 
         swiper.on("touchStart", (e) => {
             startMoveEvent = e.touches.currentX;
@@ -45,8 +55,9 @@ export default function Home() {
         });
 
         let verseSwitch = function () {
-            if (verseNumber === false) {
+            if (readVerse === false) {
                 setVerseNumber(0);
+                setReadVerse(true);
             } else if (+verseNumber < versesArray.length - 1) {
                 setVerseNumber(+verseNumber + 1);
             } else if (+verseNumber === versesArray.length - 1) {
@@ -55,16 +66,12 @@ export default function Home() {
                 );
             }
 
-            document.getElementsByClassName("fifthBlock")[0].style =
-                "padding-top: 0";
-            document.getElementsByClassName("sixthBlock")[0].style =
-                "display: none";
+            (document.getElementsByClassName("fifthBlock")[0] as HTMLElement).style.paddingTop = "0";
+            (document.getElementsByClassName("sixthBlock")[0] as HTMLElement).style.display = "none";
         };
-    }, [verseNumber, versesArray]);
+    }, [verseNumber, versesArray, readVerse]);
 
     return (
-        <>
-            <main>
                 <div className="swiper-container">
                     <div className="swiper-wrapper">
                         <div className="swiper-slide">
@@ -74,12 +81,13 @@ export default function Home() {
                                     showForm={showForm}
                                     setShowMenu={setShowMenu}
                                     showMenu={showMenu}
-                                    verseNumber={verseNumber}
+                                    readVerse={readVerse}
                                 />
                                 <BlockBelow
                                     versesArray={versesArray}
                                     verseNumber={verseNumber}
                                     epilogue={epilogue}
+                                    readVerse={readVerse}
                                 />
                                 <div className="etc">
                                     {showForm && showMenu && (
@@ -90,7 +98,5 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </main>
-        </>
     );
 }

@@ -7,11 +7,11 @@ import menuStyles from "../../styles/Menu.module.css";
 import shareStyles from "../../styles/Share.module.css";
 
 interface DescriptionLocalProps {
-    setShowForm: (arg: boolean) => boolean;
+    setShowForm: (arg: boolean) => void;
     showForm: boolean;
-    setShowMenu: (arg: boolean) => boolean;
+    setShowMenu: (arg: boolean) => void;
     showMenu: boolean;
-    verseNumber: boolean;
+    readVerse: boolean;
 }
 
 function TopBlock({
@@ -19,7 +19,7 @@ function TopBlock({
     showForm,
     setShowMenu,
     showMenu,
-    verseNumber,
+    readVerse,
 }: DescriptionLocalProps) {
     let adjustMenu = () => {
         setShowMenu(!showMenu);
@@ -28,7 +28,7 @@ function TopBlock({
     return (
         <>
             <div className="firstBlock" />
-            {verseNumber === false ? (
+            {readVerse === false ? (
                 <div className="secondBlock">
                     <Logo />
                 </div>

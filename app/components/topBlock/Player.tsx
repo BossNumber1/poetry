@@ -2,7 +2,7 @@ import React from "react";
 import mainFuncsStyles from "../../styles/MainFuncs.module.css";
 
 interface DescriptionLocalProps {
-    setShowForm: (arg: boolean) => boolean;
+    setShowForm: (arg: boolean) => void;
     showForm: boolean
 }
 

@@ -6,7 +6,7 @@ import Fb from "../topBlock/shareIcon/Fb";
 import Twt from "../topBlock/shareIcon/Twt";
 import Ok from "../topBlock/shareIcon/Ok";
 
-function VerseСontent({ epilogue, verseNumber, versesArray }) {
+function VerseСontent({ epilogue, verseNumber, versesArray, readVerse }) {
     return (
         <>
             {epilogue ? (
@@ -24,7 +24,7 @@ function VerseСontent({ epilogue, verseNumber, versesArray }) {
                         <Ok />
                     </div>
                 </>
-            ) : verseNumber !== false ? (
+            ) : readVerse !== false ? (
                 <>
                     <div style={{ display: "flex" }}>
                         <div
