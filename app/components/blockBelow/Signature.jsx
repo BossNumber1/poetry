@@ -3,7 +3,7 @@ import React from "react";
 function Signature({ verseNumber }) {
     return (
         <>
-            {verseNumber === "false" && (
+            {verseNumber === false && (
                 <>
                     ©
                     <a

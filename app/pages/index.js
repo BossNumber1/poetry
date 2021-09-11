@@ -9,7 +9,7 @@ export default function Home() {
     const [showForm, setShowForm] = React.useState(false);
     const [showMenu, setShowMenu] = React.useState(false);
     const [versesArray, setVersesArray] = React.useState(false);
-    const [verseNumber, setVerseNumber] = React.useState("false");
+    const [verseNumber, setVerseNumber] = React.useState(false);
     const [epilogue, setEpilogue] = React.useState(false);
 
     React.useEffect(() => {
@@ -45,7 +45,7 @@ export default function Home() {
         });
 
         let verseSwitch = function () {
-            if (verseNumber === "false") {
+            if (verseNumber === false) {
                 setVerseNumber(0);
             } else if (+verseNumber < versesArray.length - 1) {
                 setVerseNumber(+verseNumber + 1);

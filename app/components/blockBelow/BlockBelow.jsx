@@ -19,7 +19,7 @@ function BlockBelow({ versesArray, epilogue, verseNumber }) {
                 <Advantages />
             </div>
 
-            {verseNumber === "false" && <Tape />}
+            {verseNumber === false && <Tape />}
 
             <div className="thirteenthBlock" />
             <div className="fourteenthBlock">

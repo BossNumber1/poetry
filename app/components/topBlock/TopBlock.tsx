@@ -3,9 +3,16 @@ import Advertising from "../Advertising";
 import Logo from "../Logo";
 import Player from "./Player";
 import Share from "./Share";
-
 import menuStyles from "../../styles/Menu.module.css";
 import shareStyles from "../../styles/Share.module.css";
+
+interface DescriptionLocalProps {
+    setShowForm: (arg: boolean) => boolean;
+    showForm: boolean;
+    setShowMenu: (arg: boolean) => boolean;
+    showMenu: boolean;
+    verseNumber: boolean;
+}
 
 function TopBlock({
     setShowForm,
@@ -13,32 +20,15 @@ function TopBlock({
     setShowMenu,
     showMenu,
     verseNumber,
-}) {
-    const [onMusic, setOnMusic] = React.useState(false);
-    const [imgMusic, setImgMusic] = React.useState("/play.png");
-
-    let chan = () => {
+}: DescriptionLocalProps) {
+    let adjustMenu = () => {
         setShowMenu(!showMenu);
-    };
-
-    let switchOnSwitchOff = () => {
-        document.getElementById("track").volume = 0.1;
-
-        if (onMusic === false) {
-            document.getElementById("track").play();
-            setOnMusic(!onMusic);
-            setImgMusic("/pause.png");
-        } else {
-            document.getElementById("track").pause();
-            setImgMusic("/play.png");
-            setOnMusic(!onMusic);
-        }
     };
 
     return (
         <>
             <div className="firstBlock" />
-            {verseNumber === "false" ? (
+            {verseNumber === false ? (
                 <div className="secondBlock">
                     <Logo />
                 </div>
@@ -53,7 +43,7 @@ function TopBlock({
                             ? "Показать возможности"
                             : "Скрыть возможности"
                     }
-                    onClick={chan}
+                    onClick={adjustMenu}
                 >
                     <img
                         src={!showMenu ? "/menu.png" : "/closeMenu.png"}
@@ -72,15 +62,9 @@ function TopBlock({
                     </div>
                     <Share />
                     <div className={shareStyles.shareLabel}>Поделиться</div>
-
                     <Player
-                        onMusic={onMusic}
-                        imgMusic={imgMusic}
-                        switchOnSwitchOff={switchOnSwitchOff}
                         setShowForm={setShowForm}
                         showForm={showForm}
-                        setShowMenu={setShowMenu}
-                        showMenu={showMenu}
                     />
                     <Advertising />
                 </div>

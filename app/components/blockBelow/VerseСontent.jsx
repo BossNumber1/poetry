@@ -24,7 +24,7 @@ function VerseСontent({ epilogue, verseNumber, versesArray }) {
                         <Ok />
                     </div>
                 </>
-            ) : verseNumber !== "false" ? (
+            ) : verseNumber !== false ? (
                 <>
                     <div style={{ display: "flex" }}>
                         <div

@@ -2,26 +2,39 @@ import React from "react";
 import mainFuncsStyles from "../../styles/MainFuncs.module.css";
 
 interface DescriptionLocalProps {
-    onMusic: boolean;
-    imgMusic: string;
-    switchOnSwitchOff: () => void;
     setShowForm: (arg: boolean) => boolean;
     showForm: boolean
 }
 
 export default function Player({
-    onMusic,
-    imgMusic,
-    switchOnSwitchOff,
     setShowForm,
     showForm,
 }: DescriptionLocalProps){
     const [showStatistics, setShowStatistics] = React.useState(false);
+    const [onMusic, setOnMusic] = React.useState(false);
+    const [imgMusic, setImgMusic] = React.useState("/play.png");
+    const [track, setTrack] = React.useState(new Audio());
+
+    React.useEffect(() => {
+        const songs = ["music.mp3"];
+        track.src = songs[0];
+        track.volume = 0.1;
+    }, [track]);
+
+    let switchOnSwitchOff = () => {
+        if (!onMusic) {
+            track.play();
+            setOnMusic(true); 
+            setImgMusic("/pause.png");
+        } else {
+            track.pause();
+            setOnMusic(false); 
+            setImgMusic("/play.png");
+        }
+    };
+
     return (
-        <>
-            <audio id="track">
-                <source src="music.mp3" type="audio/mpeg" />
-            </audio>
+        <>            
             <div className={mainFuncsStyles.iconBtns}>
                 <div
                     onClick={switchOnSwitchOff}
@@ -30,7 +43,7 @@ export default function Player({
                 >
                     <img
                         src={imgMusic}
-                        alt={onMusic !== true ? "icon_play" : "icon_pause"}
+                        alt={!onMusic ? "Кнопка проигрывания музыки" : "Кнопка поставить на паузу"}
                     />
                 </div>
                 <div
