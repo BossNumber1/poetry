@@ -2,7 +2,7 @@ import React from "react";
 const popup = require("../../common/popup");
 
 function Ok() {
-    function odnoklassniki(purl, text) {
+    function odnoklassniki(purl: string, text: string) {
         let url = "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1";
         url += "&st.comments=" + encodeURIComponent(text);
         url += "&st._surl=" + encodeURIComponent(purl);

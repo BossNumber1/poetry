@@ -1,18 +1,9 @@
-import React, { FC } from "react";
+import React from "react";
 import axios from "axios";
 import TopBlock from "../components/topBlock/TopBlock";
 import BlockBelow from "../components/blockBelow/BlockBelow";
 import VerseAddingForm from "../components/VerseAddingForm";
 import Swiper from "swiper";
-
-// interface IPost {
-//     id_post: number;
-//     nameAuthor: string;
-//     avatar: string;
-//     verse: string;
-//     illustration: string;
-//     publicLink: string;
-// }
 
 export default function Home() {
     const [showForm, setShowForm] = React.useState(false);

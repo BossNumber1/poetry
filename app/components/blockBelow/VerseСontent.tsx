@@ -6,7 +6,23 @@ import Fb from "../topBlock/shareIcon/Fb";
 import Twt from "../topBlock/shareIcon/Twt";
 import Ok from "../topBlock/shareIcon/Ok";
 
-function VerseСontent({ epilogue, verseNumber, versesArray, readVerse }) {
+interface IPost {
+    id_post: number;
+    nameAuthor: string;
+    avatar: string;
+    verse: string;
+    illustration: string;
+    publicLink: string;
+}
+
+interface DescriptionLocalProps {
+    epilogue: string;
+    verseNumber: number;
+    versesArray: IPost[];
+    readVerse: boolean;
+}
+
+function VerseСontent({ epilogue, verseNumber, versesArray, readVerse }: DescriptionLocalProps) {
     return (
         <>
             {epilogue ? (

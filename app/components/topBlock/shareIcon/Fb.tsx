@@ -2,7 +2,8 @@ import React from "react";
 const popup = require("../../common/popup");
 
 function Fb() {
-    function facebook(purl, ptitle, pimg, text) {
+
+    function facebook(purl: string, ptitle: string, pimg: string, text: string) {
         let url = "http://www.facebook.com/sharer.php?s=100";
         url += "&p[title]=" + encodeURIComponent(ptitle);
         url += "&p[summary]=" + encodeURIComponent(text);

@@ -2,7 +2,7 @@ import React from "react";
 const popup = require("../../common/popup");
 
 function Twt() {
-    function twitter(purl, ptitle) {
+    function twitter(purl: string, ptitle: string) {
         let url = "http://twitter.com/share?";
         url += "text=" + encodeURIComponent(ptitle);
         url += "&url=" + encodeURIComponent(purl);

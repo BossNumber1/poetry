@@ -2,7 +2,7 @@ import React from "react";
 const popup = require("../../common/popup");
 
 function Vk() {
-    function vk(purl, ptitle, pimg, text) {
+    function vk(purl: string, ptitle: string, pimg: string, text: string) {
         let url = "http://vkontakte.ru/share.php?";
         url += "url=" + encodeURIComponent(purl);
         url += "&title=" + encodeURIComponent(ptitle);
