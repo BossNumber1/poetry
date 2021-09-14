@@ -64,7 +64,7 @@ const VerseAddingForm = () => {
             formData.append("publicLink", publicLink);
 
             axios
-                .post("http://localhost:80/api/upload", formData, {
+                .post("http://localhost:80/upload", formData, {
                     headers: {
                         "Content-Type": "multipart/form-data",
                     },

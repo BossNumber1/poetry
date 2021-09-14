@@ -14,7 +14,7 @@ export default function Home() {
     const [epilogue, setEpilogue] = React.useState("");
 
     React.useEffect(() => {
-        axios.get(`http://localhost:80/api/getAllVerses/`).then((response) => {
+        axios.get(`http://localhost:80/getAllVerses/`).then((response) => {
             setVersesArray(response.data);
         });
     }, []);
