@@ -71,6 +71,7 @@ const VerseAddingForm = () => {
                 })
                 .then((res) => {
                     setShowLoader(false);
+                    window.scrollTo(0, 0);
                     setResponseFromServer(res.data);
                     setShowError("");
                     document.querySelector("form")!.reset();
