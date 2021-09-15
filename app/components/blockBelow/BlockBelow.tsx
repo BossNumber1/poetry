@@ -1,6 +1,6 @@
 import React from "react";
 import Tape from "../Tape";
-import Signature from "./Signature";
+import SignatureBlock from "./SignatureBlock";
 import Advantages from "./Advantages";
 import VerseСontent from "./VerseСontent";
 
@@ -31,7 +31,7 @@ function BlockBelow({ versesArray, epilogue, verseNumber, readVerse }: Descripti
 
             <div className="thirteenthBlock" />
             <div className="fourteenthBlock">
-                <Signature readVerse={readVerse} />
+                <SignatureBlock readVerse={readVerse} />
             </div>
             <div className="fifteenthBlock" />
         </>

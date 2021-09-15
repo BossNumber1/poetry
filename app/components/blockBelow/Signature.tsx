@@ -1,33 +1,22 @@
-import React from "react";
+import React from 'react'
+import styles from '../../styles/signature.module.scss'
 
 interface DescriptionLocalProps {
-  readVerse: boolean
+  name: string
+  role: string
 }
 
-function Signature({ readVerse }: DescriptionLocalProps) {
+export default function Signature({name, role}: DescriptionLocalProps) {
     return (
-        <>
-            {readVerse === false && (
-                <>
-                    ©
-                    <a
-                        href="https://vk.com/moyustimov"
-                        style={{ margin: "0 5px 0 5px" }}
-                    >
-                        Устинов
-                    </a>
-                    и
-                    <a
-                        href="https://vk.com/dimitron_rock"
-                        style={{ margin: "0 5px 0 5px" }}
-                    >
-                        Рогут,
-                    </a>
-                    2021-й год
-                </>
-            )}
-        </>
-    );
+        <div>
+            <div className={styles.content}>
+                <div className={styles.content__container}>
+                    <div className={styles.content__container__list}>
+                        <div className={styles.content__container__list__item}>{name}</div>
+                        <div className={styles.content__container__list__item}>{role}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
 }
-
-export default Signature;
