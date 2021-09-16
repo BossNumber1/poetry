@@ -6,7 +6,7 @@ export default function Error() {
 
     React.useEffect(() => {
         router.push("http://localhost:3000/");
-    }, []);
+    });
 
     return (
         <div className="errorMessage">
