@@ -5,6 +5,7 @@ import Vk from "../topBlock/shareIcon/Vk";
 import Fb from "../topBlock/shareIcon/Fb";
 import Twt from "../topBlock/shareIcon/Twt";
 import Ok from "../topBlock/shareIcon/Ok";
+import CustomLoader from '../common/CustomLoader'
 
 interface IPost {
     id_post: number;
@@ -23,6 +24,27 @@ interface DescriptionLocalProps {
 }
 
 function VerseСontent({ epilogue, verseNumber, versesArray, readVerse }: DescriptionLocalProps) {
+    const [loaded, setLoaded] = React.useState(false)
+
+    React.useEffect(() => {
+        if (readVerse !== false) {
+            const avatar = new Image();
+            const illustration = new Image();
+            avatar.src = versesArray[verseNumber].avatar;
+            illustration.src = versesArray[verseNumber].illustration;
+
+            avatar.onload = () => {
+                illustration.onload = () => {
+                    setLoaded(true)
+                }
+            }
+        }
+
+        return () => {
+            setLoaded(false)
+        }
+    }, [readVerse, versesArray, verseNumber, setLoaded])
+
     return (
         <>
             {epilogue ? (
@@ -40,7 +62,7 @@ function VerseСontent({ epilogue, verseNumber, versesArray, readVerse }: Descri
                         <Ok />
                     </div>
                 </>
-            ) : readVerse !== false ? (
+            ) : readVerse !== false ? loaded === false ? <CustomLoader /> : (
                 <>
                     <div style={{ display: "flex" }}>
                         <div
