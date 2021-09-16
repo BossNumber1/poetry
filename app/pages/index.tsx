@@ -4,8 +4,13 @@ import TopBlock from "../components/topBlock/TopBlock";
 import BlockBelow from "../components/blockBelow/BlockBelow";
 import VerseAddingForm from "../components/VerseAddingForm";
 import Swiper from "swiper";
+import { GetServerSideProps } from 'next'
 
-export default function Home() {
+interface DescriptionLocalProps {
+    data: [];
+}
+
+export default function Home({data}: DescriptionLocalProps) {
     const [showForm, setShowForm] = React.useState(false);
     const [showMenu, setShowMenu] = React.useState(false);
     const [versesArray, setVersesArray] = React.useState<[]>([]);
@@ -14,10 +19,8 @@ export default function Home() {
     const [epilogue, setEpilogue] = React.useState("");
 
     React.useEffect(() => {
-        axios.get(`http://localhost:80/getAllVerses/`).then((response) => {
-            setVersesArray(response.data);
-        });
-    }, []);
+        setVersesArray(data)
+    }, [data]);
 
     React.useEffect(() => {
         document.addEventListener("keydown", function (event) {
@@ -90,4 +93,14 @@ export default function Home() {
                     </div>
                 </div>
     );
+}
+
+export const getServerSideProps: GetServerSideProps = async () => {
+    const allVerses = await axios.get(`http://localhost:80/getAllVerses/`)
+
+    return {
+        props: {
+            data: allVerses.data
+        }
+    }
 }
