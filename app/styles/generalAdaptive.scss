@@ -1,0 +1,47 @@
+@media (min-width: 0px) and (max-width: 999px) {
+    html,
+    body {
+        overflow: scroll;
+    }
+
+    .fifthBlock {
+        @include bgcolor(orange);
+        padding-left: 15px;
+    }
+
+    .seventhBlock {
+        padding-left: 30%;
+    }
+
+    .fourteenthBlock {
+        @include bgcolor(rgb(43, 255, 0));
+        @include centerContent;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 999px) {
+    .sixthBlock {
+        display: none;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 999px) {
+    .body_page {
+        display: grid;
+        grid-template-areas:
+            "secondBlock secondBlock secondBlock secondBlock secondBlock thirdBlock"
+            "fifthBlock fifthBlock fifthBlock fifthBlock fifthBlock fifthBlock"
+            "seventhBlock seventhBlock eighthBlock eighthBlock ninthBlock ninthBlock"
+            "tenthBlock tenthBlock eleventhBlock eleventhBlock twelfthBlock twelfthBlock"
+            "fourteenthBlock fourteenthBlock fourteenthBlock fourteenthBlock fourteenthBlock fourteenthBlock";
+
+        grid-template-rows: 50px 30% 30% 30% 5%;
+        grid-template-columns: 18% 18% 18% 18% 18% 0.1fr;
+        grid-gap: 0.5em;
+    }
+
+    .secondBlock {
+        margin-top: 2%;
+        margin-left: 5%;
+    }
+}

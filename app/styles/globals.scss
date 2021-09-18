@@ -1,0 +1,169 @@
+@import "mixins.scss";
+@import "generalAdaptive.scss";
+@import "privateAdaptive.scss";
+@import url("https://unpkg.com/swiper/swiper-bundle.css");
+@import url("https://unpkg.com/swiper/swiper-bundle.min.css");
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css");
+
+@font-face {
+    font-family: OpenSans;
+    src: url("../fonts/OpenSans.ttf");
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: normal 16px "Open Sans", sans-serif;
+    font-weight: 350;
+    /* overflow: hidden; */
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.body_page {
+    display: grid;
+    grid-template-areas:
+        "firstBlock firstBlock secondBlock secondBlock thirdBlock thirdBlock"
+        "fourthBlock fourthBlock fifthBlock fifthBlock sixthBlock sixthBlock"
+        "seventhBlock eighthBlock ninthBlock tenthBlock eleventhBlock twelfthBlock"
+        "thirteenthBlock thirteenthBlock fourteenthBlock fourteenthBlock fifteenthBlock fifteenthBlock";
+
+    grid-template-rows: 110px 200px 160px 50px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1em;
+    font-size: 15px;
+}
+
+.twelfthBlock,
+.eleventhBlock,
+.tenthBlock,
+.ninthBlock,
+.eighthBlock,
+.seventhBlock {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.firstBlock {
+    @include bgcolor(yellow);
+    grid-area: firstBlock;
+}
+
+.secondBlock {
+    @include bgcolor(green);
+    @include centerContent;
+    grid-area: secondBlock;
+}
+
+.thirdBlock {
+    @include bgcolor(orange);
+    grid-area: thirdBlock;
+    text-align: right;
+}
+
+.fourthBlock {
+    @include bgcolor(rgb(0, 255, 200));
+    grid-area: fourthBlock;
+}
+
+.fifthBlock {
+    @include bgcolor(rgb(150, 108, 137));
+    grid-area: fifthBlock;
+    text-align: center;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    padding-top: 35px;
+}
+
+.sixthBlock {
+    @include bgcolor(rgb(255, 0, 179));
+    grid-area: sixthBlock;
+    display: none;
+}
+
+.seventhBlock {
+    @include bgcolor(rgb(255, 8, 0));
+    grid-area: seventhBlock;
+}
+
+.eighthBlock {
+    @include bgcolor(rgb(94, 255, 0));
+    grid-area: eighthBlock;
+}
+
+.ninthBlock {
+    @include bgcolor(yellow);
+    grid-area: ninthBlock;
+}
+
+.tenthBlock {
+    @include bgcolor(rgb(25, 0, 255));
+    grid-area: tenthBlock;
+}
+
+.eleventhBlock {
+    @include bgcolor(rgb(0, 255, 200));
+    grid-area: eleventhBlock;
+}
+
+.twelfthBlock {
+    @include bgcolor(rgb(0, 255, 98));
+    grid-area: twelfthBlock;
+}
+
+.thirteenthBlock {
+    @include bgcolor(rgb(25, 0, 255));
+    grid-area: thirteenthBlock;
+}
+
+.fourteenthBlock {
+    @include bgcolor(rgb(43, 255, 0));
+    grid-area: fourteenthBlock;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: rgb(83, 83, 83);
+    font-size: 13px;
+}
+
+.fifteenthBlock {
+    @include bgcolor(rgb(0, 255, 98));
+    grid-area: fifteenthBlock;
+}
+
+.twoAdvertBlock {
+    display: none;
+}
+
+.iconsShare {
+    margin: 15px 0 0 15px;
+    
+    img {
+        margin-right: 10px;
+        width: 32px;
+        cursor: pointer;
+    }
+}
+
+.cardName {
+    font-weight: 600;
+    text-align: center;
+}
+
+.cardImg {
+    img {
+        height: 60px;
+    }
+}

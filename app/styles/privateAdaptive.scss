@@ -1,0 +1,52 @@
+@media (min-width: 0px) and (max-width: 320px) {
+    .body_page {
+        display: grid;
+        grid-template-areas:
+            "secondBlock thirdBlock"
+            "fifthBlock fifthBlock"
+            "sixthBlock sixthBlock"
+            "seventhBlock seventhBlock"
+            "eighthBlock eighthBlock"
+            "ninthBlock ninthBlock"
+            "tenthBlock tenthBlock"
+            "eleventhBlock eleventhBlock"
+            "twelfthBlock twelfthBlock"
+            "fourteenthBlock fourteenthBlock";
+
+        grid-template-rows: 50px 15% 15% 15% 15% 15% 15% 15% 15% 3%;
+        grid-template-columns: 91% 0.1fr;
+        grid-gap: 0.5em;
+    }
+
+    .secondBlock {
+        margin-top: -42%;
+        margin-left: -1%;
+    }
+
+    .sixthBlock {
+        @include bgcolor(blue);
+        @include centerContent;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 480px) {
+    .body_page {
+        display: grid;
+        grid-template-areas:
+            "secondBlock secondBlock secondBlock thirdBlock"
+            "fifthBlock fifthBlock fifthBlock fifthBlock"
+            "seventhBlock seventhBlock eighthBlock eighthBlock"
+            "ninthBlock ninthBlock tenthBlock tenthBlock"
+            "eleventhBlock eleventhBlock twelfthBlock twelfthBlock"
+            "fourteenthBlock fourteenthBlock fourteenthBlock fourteenthBlock";
+
+        grid-template-rows: 50px 20% 20% 20% 20% 5%;
+        grid-template-columns: 24% 24% 24% 24% 0.1fr;
+        grid-gap: 0.5em;
+    }
+
+    .secondBlock {
+        margin-top: 2%;
+        margin-left: 40%;
+    }
+}
