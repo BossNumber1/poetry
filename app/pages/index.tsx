@@ -7,16 +7,20 @@ import Swiper from "swiper";
 import { GetServerSideProps } from 'next'
 import { connect } from "react-redux";
 import { AppState } from '../redux/store';
+import {
+  setReadVerse
+} from '../redux/actions'
 
 interface DescriptionLocalProps {
     data: [];
     showForm: boolean;
     showMenu: boolean;
+    readVerse: boolean;
+    setReadVerse: (arg: boolean) => void
 }
 
-function Home({data, showForm, showMenu}: DescriptionLocalProps) {
+function Home({data, showForm, showMenu, readVerse, setReadVerse}: DescriptionLocalProps) {
     const [versesArray, setVersesArray] = React.useState<[]>([]);
-    const [readVerse, setReadVerse] = React.useState(false);
     const [verseNumber, setVerseNumber] = React.useState(0);
     const [epilogue, setEpilogue] = React.useState("");
 
@@ -65,43 +69,44 @@ function Home({data, showForm, showMenu}: DescriptionLocalProps) {
             (document.getElementsByClassName("fifthBlock")[0] as HTMLElement).style.paddingTop = "0";
             (document.getElementsByClassName("sixthBlock")[0] as HTMLElement).style.display = "none";
         };
-    }, [verseNumber, versesArray, readVerse]);
+    }, [verseNumber, versesArray, readVerse, setReadVerse]);
 
     return (
-                <div className="swiper-container">
-                    <div className="swiper-wrapper">
-                        <div className="swiper-slide">
-                            <div className="body_page">
-                                <TopBlock
-                                    readVerse={readVerse}
-                                />
-                                <BlockBelow
-                                    versesArray={versesArray}
-                                    verseNumber={verseNumber}
-                                    epilogue={epilogue}
-                                    readVerse={readVerse}
-                                />
-                                <div className="etc">
-                                    {showForm && showMenu && (
-                                        <VerseAddingForm />
-                                    )}
-                                </div>
-                            </div>
+        <div className="swiper-container">
+            <div className="swiper-wrapper">
+                <div className="swiper-slide">
+                    <div className="body_page">
+                        <TopBlock />
+                        <BlockBelow
+                            versesArray={versesArray}
+                            verseNumber={verseNumber}
+                            epilogue={epilogue}
+                        />
+                        <div className="etc">
+                            {showForm && showMenu && (
+                                <VerseAddingForm />
+                            )}
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
     );
 }
-
 
 const mapStateToProps = (state: AppState) => {
     return {
         showForm: state.profile.showForm,
-        showMenu: state.profile.showMenu
+        showMenu: state.profile.showMenu,
+        readVerse: state.profile.readVerse
     };
 };
 
-export default connect(mapStateToProps, null)(Home);
+const mapDispatchToProps = {
+    setReadVerse
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
 
 export const getServerSideProps: GetServerSideProps = async () => {
     const allVerses = await axios.get(`http://localhost:80/getAllVerses/`)

@@ -3,12 +3,14 @@ import Tape from "../Tape";
 import SignatureBlock from "./SignatureBlock";
 import Advantages from "./Advantages";
 import VerseСontent from "./VerseСontent";
+import { connect } from "react-redux";
+import { AppState } from '../../redux/store';
 
 interface DescriptionLocalProps {
   versesArray: [];
   epilogue: string;
   verseNumber: number;
-  readVerse: boolean;
+  readVerse?: boolean;
 }
 
 function BlockBelow({ versesArray, epilogue, verseNumber, readVerse }: DescriptionLocalProps) {
@@ -20,7 +22,6 @@ function BlockBelow({ versesArray, epilogue, verseNumber, readVerse }: Descripti
                     epilogue={epilogue}
                     verseNumber={verseNumber}
                     versesArray={versesArray}
-                    readVerse={readVerse}
                 />
             </div>
             <div className="sixthBlock" id="sixthBlockId">
@@ -31,11 +32,17 @@ function BlockBelow({ versesArray, epilogue, verseNumber, readVerse }: Descripti
 
             <div className="thirteenthBlock" />
             <div className="fourteenthBlock">
-                <SignatureBlock readVerse={readVerse} />
+                <SignatureBlock />
             </div>
             <div className="fifteenthBlock" />
         </>
     );
 }
 
-export default BlockBelow;
+const mapStateToProps = (state: AppState) => {
+    return {
+        readVerse: state.profile.readVerse
+    };
+};
+
+export default connect(mapStateToProps, null)(BlockBelow);

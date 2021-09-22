@@ -73,7 +73,8 @@ function TopBlock({
 
 const mapStateToProps = (state: AppState) => {
     return {
-        showMenu: state.profile.showMenu
+        showMenu: state.profile.showMenu,
+        readVerse: state.profile.readVerse
     };
 };
 

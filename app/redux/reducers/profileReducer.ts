@@ -3,11 +3,13 @@ import { ActionTypes, AllActions } from "../types";
 interface InitialState {
     showForm: boolean;
     showMenu: boolean;
+    readVerse: boolean;
 }
 
 const initialState: InitialState = {
     showForm: false,
-    showMenu: false
+    showMenu: false,
+    readVerse: false
 };
 
 export const profileReducer = (state = initialState, action: AllActions) => {
@@ -21,6 +23,11 @@ export const profileReducer = (state = initialState, action: AllActions) => {
             return {
                 ...state,
                 showMenu: action.payload,
+            };
+        case ActionTypes.READ_VERSE:
+            return {
+                ...state,
+                readVerse: action.payload,
             };
         default:
             return state;

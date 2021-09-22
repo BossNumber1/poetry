@@ -6,6 +6,8 @@ import Fb from "../topBlock/shareIcon/Fb";
 import Twt from "../topBlock/shareIcon/Twt";
 import Ok from "../topBlock/shareIcon/Ok";
 import CustomLoader from '../common/CustomLoader'
+import { connect } from "react-redux";
+import { AppState } from '../../redux/store';
 
 interface IPost {
     id_post: number;
@@ -20,7 +22,7 @@ interface DescriptionLocalProps {
     epilogue: string;
     verseNumber: number;
     versesArray: IPost[];
-    readVerse: boolean;
+    readVerse?: boolean;
 }
 
 function VerseСontent({ epilogue, verseNumber, versesArray, readVerse }: DescriptionLocalProps) {
@@ -102,4 +104,10 @@ function VerseСontent({ epilogue, verseNumber, versesArray, readVerse }: Descri
     );
 }
 
-export default VerseСontent;
+const mapStateToProps = (state: AppState) => {
+    return {
+        readVerse: state.profile.readVerse
+    };
+};
+
+export default connect(mapStateToProps, null)(VerseСontent);

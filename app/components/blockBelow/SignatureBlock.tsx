@@ -1,8 +1,10 @@
 import React from "react";
 import Signature from "./Signature";
+import { connect } from "react-redux";
+import { AppState } from '../../redux/store';
 
 interface DescriptionLocalProps {
-  readVerse: boolean
+  readVerse?: boolean
 }
 
 function SignatureBlock({ readVerse }: DescriptionLocalProps) {
@@ -31,4 +33,10 @@ function SignatureBlock({ readVerse }: DescriptionLocalProps) {
     );
 }
 
-export default SignatureBlock;
+const mapStateToProps = (state: AppState) => {
+    return {
+        readVerse: state.profile.readVerse
+    };
+};
+
+export default connect(mapStateToProps, null)(SignatureBlock);
