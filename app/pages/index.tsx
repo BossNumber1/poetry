@@ -11,10 +11,10 @@ import { AppState } from '../redux/store';
 interface DescriptionLocalProps {
     data: [];
     showForm: boolean;
+    showMenu: boolean;
 }
 
-function Home({data, showForm}: DescriptionLocalProps) {
-    const [showMenu, setShowMenu] = React.useState(false);
+function Home({data, showForm, showMenu}: DescriptionLocalProps) {
     const [versesArray, setVersesArray] = React.useState<[]>([]);
     const [readVerse, setReadVerse] = React.useState(false);
     const [verseNumber, setVerseNumber] = React.useState(0);
@@ -73,8 +73,6 @@ function Home({data, showForm}: DescriptionLocalProps) {
                         <div className="swiper-slide">
                             <div className="body_page">
                                 <TopBlock
-                                    setShowMenu={setShowMenu}
-                                    showMenu={showMenu}
                                     readVerse={readVerse}
                                 />
                                 <BlockBelow
@@ -98,7 +96,8 @@ function Home({data, showForm}: DescriptionLocalProps) {
 
 const mapStateToProps = (state: AppState) => {
     return {
-        showForm: state.profile.showForm
+        showForm: state.profile.showForm,
+        showMenu: state.profile.showMenu
     };
 };
 

@@ -5,6 +5,11 @@ import Player from "./Player";
 import Share from "./Share";
 import menuStyles from "../../styles/Menu.module.css";
 import shareStyles from "../../styles/Share.module.css";
+import {
+  setShowMenu
+} from '../../redux/actions'
+import { connect } from "react-redux";
+import { AppState } from '../../redux/store';
 
 interface DescriptionLocalProps {
     setShowMenu: (arg: boolean) => void;
@@ -66,4 +71,15 @@ function TopBlock({
     );
 }
 
-export default TopBlock;
+const mapStateToProps = (state: AppState) => {
+    return {
+        showMenu: state.profile.showMenu
+    };
+};
+
+const mapDispatchToProps = {
+    setShowMenu
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(TopBlock);
+

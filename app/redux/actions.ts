@@ -1,4 +1,4 @@
-import { ActionTypes, ShowFormAction } from "./types";
+import { ActionTypes, ShowFormAction, ShowMenuAction } from "./types";
 
 export function setShowForm(value: boolean): ShowFormAction {
     return {
@@ -7,4 +7,9 @@ export function setShowForm(value: boolean): ShowFormAction {
     };
 }
 
-
+export function setShowMenu(value: boolean): ShowMenuAction {
+    return {
+        type: ActionTypes.SHOW_MENU,
+        payload: value,
+    };
+}
