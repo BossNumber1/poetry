@@ -1,7 +1,8 @@
 export enum ActionTypes {
     SHOW_FORM = "SHOW_FORM",
     SHOW_MENU = "SHOW_MENU",
-    READ_VERSE = "READ_VERSE"
+    READ_VERSE = "READ_VERSE", 
+    EPILOGUE = "EPILOGUE"
 }
 
 export interface ShowFormAction {
@@ -19,4 +20,9 @@ export interface ReadVerseAction {
     payload: boolean
 }
 
-export type AllActions = ShowFormAction | ShowMenuAction | ReadVerseAction
+export interface EpilogueAction {
+    type: ActionTypes.EPILOGUE, 
+    payload: string
+}
+
+export type AllActions = ShowFormAction | ShowMenuAction | ReadVerseAction | EpilogueAction

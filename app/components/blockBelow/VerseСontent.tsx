@@ -19,7 +19,7 @@ interface IPost {
 }
 
 interface DescriptionLocalProps {
-    epilogue: string;
+    epilogue?: string;
     verseNumber: number;
     versesArray: IPost[];
     readVerse?: boolean;
@@ -106,7 +106,8 @@ function VerseСontent({ epilogue, verseNumber, versesArray, readVerse }: Descri
 
 const mapStateToProps = (state: AppState) => {
     return {
-        readVerse: state.profile.readVerse
+        readVerse: state.profile.readVerse, 
+        epilogue: state.profile.epilogue
     };
 };
 

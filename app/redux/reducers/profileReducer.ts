@@ -4,12 +4,14 @@ interface InitialState {
     showForm: boolean;
     showMenu: boolean;
     readVerse: boolean;
+    epilogue: string;
 }
 
 const initialState: InitialState = {
     showForm: false,
     showMenu: false,
-    readVerse: false
+    readVerse: false,
+    epilogue: ""
 };
 
 export const profileReducer = (state = initialState, action: AllActions) => {
@@ -29,6 +31,11 @@ export const profileReducer = (state = initialState, action: AllActions) => {
                 ...state,
                 readVerse: action.payload,
             };
+        case ActionTypes.EPILOGUE:
+            return {
+                ...state,
+                epilogue: action.payload,
+            };  
         default:
             return state;
     }

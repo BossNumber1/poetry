@@ -8,7 +8,7 @@ import { GetServerSideProps } from 'next'
 import { connect } from "react-redux";
 import { AppState } from '../redux/store';
 import {
-  setReadVerse
+  setReadVerse, setEpilogue
 } from '../redux/actions'
 
 interface DescriptionLocalProps {
@@ -16,13 +16,13 @@ interface DescriptionLocalProps {
     showForm: boolean;
     showMenu: boolean;
     readVerse: boolean;
-    setReadVerse: (arg: boolean) => void
+    setReadVerse: (arg: boolean) => void;
+    setEpilogue: (arg: string) => void;
 }
 
-function Home({data, showForm, showMenu, readVerse, setReadVerse}: DescriptionLocalProps) {
+function Home({data, showForm, showMenu, readVerse, setReadVerse, setEpilogue}: DescriptionLocalProps) {
     const [versesArray, setVersesArray] = React.useState<[]>([]);
     const [verseNumber, setVerseNumber] = React.useState(0);
-    const [epilogue, setEpilogue] = React.useState("");
 
     React.useEffect(() => {
         setVersesArray(data)
@@ -69,7 +69,7 @@ function Home({data, showForm, showMenu, readVerse, setReadVerse}: DescriptionLo
             (document.getElementsByClassName("fifthBlock")[0] as HTMLElement).style.paddingTop = "0";
             (document.getElementsByClassName("sixthBlock")[0] as HTMLElement).style.display = "none";
         };
-    }, [verseNumber, versesArray, readVerse, setReadVerse]);
+    }, [verseNumber, versesArray, readVerse, setReadVerse, setEpilogue]);
 
     return (
         <div className="swiper-container">
@@ -80,7 +80,6 @@ function Home({data, showForm, showMenu, readVerse, setReadVerse}: DescriptionLo
                         <BlockBelow
                             versesArray={versesArray}
                             verseNumber={verseNumber}
-                            epilogue={epilogue}
                         />
                         <div className="etc">
                             {showForm && showMenu && (
@@ -103,7 +102,7 @@ const mapStateToProps = (state: AppState) => {
 };
 
 const mapDispatchToProps = {
-    setReadVerse
+    setReadVerse, setEpilogue
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
