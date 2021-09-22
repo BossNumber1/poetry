@@ -8,17 +8,15 @@ import { AppState } from '../../redux/store';
 
 interface DescriptionLocalProps {
   versesArray: [];
-  verseNumber: number;
   readVerse?: boolean;
 }
 
-function BlockBelow({ versesArray, verseNumber, readVerse }: DescriptionLocalProps) {
+function BlockBelow({ versesArray, readVerse }: DescriptionLocalProps) {
     return (
         <>
             <div className="fourthBlock" />
             <div className="fifthBlock">
                 <VerseСontent
-                    verseNumber={verseNumber}
                     versesArray={versesArray}
                 />
             </div>

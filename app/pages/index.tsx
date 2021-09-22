@@ -8,7 +8,7 @@ import { GetServerSideProps } from 'next'
 import { connect } from "react-redux";
 import { AppState } from '../redux/store';
 import {
-  setReadVerse, setEpilogue
+  setReadVerse, setEpilogue, setVerseNumber
 } from '../redux/actions'
 
 interface DescriptionLocalProps {
@@ -18,11 +18,12 @@ interface DescriptionLocalProps {
     readVerse: boolean;
     setReadVerse: (arg: boolean) => void;
     setEpilogue: (arg: string) => void;
+    setVerseNumber: (arg: number) => void;
+    verseNumber: number;
 }
 
-function Home({data, showForm, showMenu, readVerse, setReadVerse, setEpilogue}: DescriptionLocalProps) {
+function Home({data, showForm, showMenu, readVerse, setReadVerse, setEpilogue, setVerseNumber, verseNumber}: DescriptionLocalProps) {
     const [versesArray, setVersesArray] = React.useState<[]>([]);
-    const [verseNumber, setVerseNumber] = React.useState(0);
 
     React.useEffect(() => {
         setVersesArray(data)
@@ -69,7 +70,7 @@ function Home({data, showForm, showMenu, readVerse, setReadVerse, setEpilogue}: 
             (document.getElementsByClassName("fifthBlock")[0] as HTMLElement).style.paddingTop = "0";
             (document.getElementsByClassName("sixthBlock")[0] as HTMLElement).style.display = "none";
         };
-    }, [verseNumber, versesArray, readVerse, setReadVerse, setEpilogue]);
+    }, [verseNumber, versesArray, readVerse, setReadVerse, setEpilogue, setVerseNumber]);
 
     return (
         <div className="swiper-container">
@@ -79,7 +80,6 @@ function Home({data, showForm, showMenu, readVerse, setReadVerse, setEpilogue}: 
                         <TopBlock />
                         <BlockBelow
                             versesArray={versesArray}
-                            verseNumber={verseNumber}
                         />
                         <div className="etc">
                             {showForm && showMenu && (
@@ -97,12 +97,13 @@ const mapStateToProps = (state: AppState) => {
     return {
         showForm: state.profile.showForm,
         showMenu: state.profile.showMenu,
-        readVerse: state.profile.readVerse
+        readVerse: state.profile.readVerse, 
+        verseNumber: state.profile.verseNumber
     };
 };
 
 const mapDispatchToProps = {
-    setReadVerse, setEpilogue
+    setReadVerse, setEpilogue, setVerseNumber
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

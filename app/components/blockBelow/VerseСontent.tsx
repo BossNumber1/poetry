@@ -20,12 +20,12 @@ interface IPost {
 
 interface DescriptionLocalProps {
     epilogue?: string;
-    verseNumber: number;
+    verseNumber?: number;
     versesArray: IPost[];
     readVerse?: boolean;
 }
 
-function VerseСontent({ epilogue, verseNumber, versesArray, readVerse }: DescriptionLocalProps) {
+function VerseСontent({ epilogue, verseNumber = 0, versesArray, readVerse }: DescriptionLocalProps) {
     const [loaded, setLoaded] = React.useState(false)
 
     React.useEffect(() => {
@@ -107,7 +107,8 @@ function VerseСontent({ epilogue, verseNumber, versesArray, readVerse }: Descri
 const mapStateToProps = (state: AppState) => {
     return {
         readVerse: state.profile.readVerse, 
-        epilogue: state.profile.epilogue
+        epilogue: state.profile.epilogue,
+        verseNumber: state.profile.verseNumber
     };
 };
 

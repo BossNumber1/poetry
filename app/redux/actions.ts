@@ -1,4 +1,4 @@
-import { ActionTypes, EpilogueAction, ReadVerseAction, ShowFormAction, ShowMenuAction } from "./types";
+import { ActionTypes, EpilogueAction, ReadVerseAction, ShowFormAction, ShowMenuAction, VerseNumberAction } from "./types";
 
 export function setShowForm(value: boolean): ShowFormAction {
     return {
@@ -24,6 +24,13 @@ export function setReadVerse(value: boolean): ReadVerseAction {
 export function setEpilogue(value: string): EpilogueAction {
     return {
         type: ActionTypes.EPILOGUE,
+        payload: value,
+    };
+}
+
+export function setVerseNumber(value: number): VerseNumberAction {
+    return {
+        type: ActionTypes.VERSE_NUMBER,
         payload: value,
     };
 }

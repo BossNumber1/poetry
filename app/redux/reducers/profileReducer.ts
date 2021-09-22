@@ -5,13 +5,15 @@ interface InitialState {
     showMenu: boolean;
     readVerse: boolean;
     epilogue: string;
+    verseNumber: number;
 }
 
 const initialState: InitialState = {
     showForm: false,
     showMenu: false,
     readVerse: false,
-    epilogue: ""
+    epilogue: "",
+    verseNumber: 0
 };
 
 export const profileReducer = (state = initialState, action: AllActions) => {
@@ -35,6 +37,11 @@ export const profileReducer = (state = initialState, action: AllActions) => {
             return {
                 ...state,
                 epilogue: action.payload,
+            };  
+        case ActionTypes.VERSE_NUMBER:
+            return {
+                ...state,
+                verseNumber: action.payload,
             };  
         default:
             return state;
