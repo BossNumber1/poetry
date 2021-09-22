@@ -3,7 +3,6 @@ import axios from "axios";
 import TopBlock from "../components/topBlock/TopBlock";
 import BlockBelow from "../components/blockBelow/BlockBelow";
 import VerseAddingForm from "../components/VerseAddingForm";
-import Swiper from "swiper";
 import { GetServerSideProps } from 'next'
 import { connect } from "react-redux";
 import { AppState } from '../redux/store';
@@ -30,46 +29,14 @@ function Home({data, showForm, showMenu, readVerse, setReadVerse, setEpilogue, s
     }, [data]);
 
     React.useEffect(() => {
-        document.addEventListener("keydown", function (event) {
-            if (event.code === "Space") {
-                event.preventDefault();
-                verseSwitch();
-            }
-        });
-
-        let swiper = new Swiper(".swiper-container", {
-            pagination: {
-                el: ".swiper-pagination",
-            },
-        });
-
-        let startMoveEvent: number;
-
-        swiper.on("touchStart", (e) => {
-            startMoveEvent = e.touches.currentX;
-        });
-
-        swiper.on("touchEnd", (e) => {
-            if (e.touches.currentX != startMoveEvent) {
-                verseSwitch();
-            }
-        });
-
-        let verseSwitch = function () {
-            if (readVerse === false) {
-                setVerseNumber(0);
-                setReadVerse(true);
-            } else if (+verseNumber < versesArray.length - 1) {
-                setVerseNumber(+verseNumber + 1);
-            } else if (+verseNumber === versesArray.length - 1) {
-                setEpilogue(
-                    `<div style="margin-bottom: 32px; font-size: 26px;">The end</div><div style="color: rgb(83, 83, 83); font-size: 13px; font-style: italic;">Рассказать друзьям :)</div>`
-                );
-            }
-
-            (document.getElementsByClassName("fifthBlock")[0] as HTMLElement).style.paddingTop = "0";
-            (document.getElementsByClassName("sixthBlock")[0] as HTMLElement).style.display = "none";
-        };
+        const SpaceAction = require("../components/startPage/SpaceAction");
+            SpaceAction(
+                readVerse, setVerseNumber, setReadVerse, verseNumber, versesArray, setEpilogue
+            );
+        const SwiperAction = require("../components/startPage/SwiperAction");
+            SwiperAction(
+                readVerse, setVerseNumber, setReadVerse, verseNumber, versesArray, setEpilogue
+            );
     }, [verseNumber, versesArray, readVerse, setReadVerse, setEpilogue, setVerseNumber]);
 
     return (
