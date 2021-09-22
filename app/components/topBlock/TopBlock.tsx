@@ -7,16 +7,12 @@ import menuStyles from "../../styles/Menu.module.css";
 import shareStyles from "../../styles/Share.module.css";
 
 interface DescriptionLocalProps {
-    setShowForm: (arg: boolean) => void;
-    showForm: boolean;
     setShowMenu: (arg: boolean) => void;
     showMenu: boolean;
     readVerse: boolean;
 }
 
 function TopBlock({
-    setShowForm,
-    showForm,
     setShowMenu,
     showMenu,
     readVerse,
@@ -62,10 +58,7 @@ function TopBlock({
                     </div>
                     <Share />
                     <div className={shareStyles.shareLabel}>Поделиться</div>
-                    <Player
-                        setShowForm={setShowForm}
-                        showForm={showForm}
-                    />
+                    <Player />
                     <Advertising />
                 </div>
             )}

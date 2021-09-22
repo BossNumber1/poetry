@@ -1,12 +1,17 @@
 import React from "react";
 import mainFuncsStyles from "../../styles/MainFuncs.module.css";
+import {
+  setShowForm
+} from '../../redux/actions'
+import { connect } from "react-redux";
+import { AppState } from '../../redux/store';
 
 interface DescriptionLocalProps {
     setShowForm: (arg: boolean) => void;
     showForm: boolean
 }
 
-export default function Player({
+function Player({
     setShowForm,
     showForm,
 }: DescriptionLocalProps){
@@ -85,3 +90,15 @@ export default function Player({
         </>
     );
 }
+
+const mapStateToProps = (state: AppState) => {
+    return {
+        showForm: state.profile.showForm
+    };
+};
+
+const mapDispatchToProps = {
+    setShowForm
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Player);

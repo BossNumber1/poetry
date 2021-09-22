@@ -5,13 +5,15 @@ import BlockBelow from "../components/blockBelow/BlockBelow";
 import VerseAddingForm from "../components/VerseAddingForm";
 import Swiper from "swiper";
 import { GetServerSideProps } from 'next'
+import { connect } from "react-redux";
+import { AppState } from '../redux/store';
 
 interface DescriptionLocalProps {
     data: [];
+    showForm: boolean;
 }
 
-export default function Home({data}: DescriptionLocalProps) {
-    const [showForm, setShowForm] = React.useState(false);
+function Home({data, showForm}: DescriptionLocalProps) {
     const [showMenu, setShowMenu] = React.useState(false);
     const [versesArray, setVersesArray] = React.useState<[]>([]);
     const [readVerse, setReadVerse] = React.useState(false);
@@ -71,8 +73,6 @@ export default function Home({data}: DescriptionLocalProps) {
                         <div className="swiper-slide">
                             <div className="body_page">
                                 <TopBlock
-                                    setShowForm={setShowForm}
-                                    showForm={showForm}
                                     setShowMenu={setShowMenu}
                                     showMenu={showMenu}
                                     readVerse={readVerse}
@@ -94,6 +94,15 @@ export default function Home({data}: DescriptionLocalProps) {
                 </div>
     );
 }
+
+
+const mapStateToProps = (state: AppState) => {
+    return {
+        showForm: state.profile.showForm
+    };
+};
+
+export default connect(mapStateToProps, null)(Home);
 
 export const getServerSideProps: GetServerSideProps = async () => {
     const allVerses = await axios.get(`http://localhost:80/getAllVerses/`)
