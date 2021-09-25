@@ -5,7 +5,7 @@ interface InitialState {
     showMenu: boolean;
     readVerse: boolean;
     epilogue: string;
-    verseNumber: number;
+    verseNumber: number | null;
 }
 
 const initialState: InitialState = {
@@ -13,7 +13,7 @@ const initialState: InitialState = {
     showMenu: false,
     readVerse: false,
     epilogue: "",
-    verseNumber: 0
+    verseNumber: null
 };
 
 export const profileReducer = (state = initialState, action: AllActions) => {

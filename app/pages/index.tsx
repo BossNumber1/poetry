@@ -25,19 +25,22 @@ function Home({data, showForm, showMenu, readVerse, setReadVerse, setEpilogue, s
     const [versesArray, setVersesArray] = React.useState<[]>([]);
 
     React.useEffect(() => {
-        setVersesArray(data)
-    }, [data]);
+        // if (versesArray.length === 0) {
+            // debugger
+            setVersesArray(data);
 
-    React.useEffect(() => {
-        const SpaceAction = require("../components/startPage/SpaceAction");
-            SpaceAction(
-                readVerse, setVerseNumber, setReadVerse, verseNumber, versesArray, setEpilogue
-            );
-        const SwiperAction = require("../components/startPage/SwiperAction");
-            SwiperAction(
-                readVerse, setVerseNumber, setReadVerse, verseNumber, versesArray, setEpilogue
-            );
-    }, [verseNumber, versesArray, readVerse, setReadVerse, setEpilogue, setVerseNumber]);
+            console.log("1000");
+
+            const SpaceAction = require("../components/startPage/SpaceAction");
+                SpaceAction(
+                    readVerse, setVerseNumber, setReadVerse, verseNumber, versesArray, setEpilogue
+                );
+            const SwiperAction = require("../components/startPage/SwiperAction");
+                SwiperAction(
+                    readVerse, setVerseNumber, setReadVerse, verseNumber, versesArray, setEpilogue
+                );
+        // }        
+    }, [data, verseNumber, versesArray, readVerse, setReadVerse, setEpilogue, setVerseNumber]);
 
     return (
         <div className="swiper-container">

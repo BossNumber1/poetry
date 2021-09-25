@@ -8,11 +8,13 @@ module.exports = function SpaceAction(
         versesArray: [], 
         setEpilogue: (arg: string) => void
     ) {
-        document.addEventListener("keydown", function (event) {
+        let distributor = function (event: KeyboardEvent) {
             if (event.code === "Space") {
                 event.preventDefault();
                 verseSwitch(readVerse, setVerseNumber, setReadVerse, verseNumber, versesArray, setEpilogue);
+                document.removeEventListener("keydown", distributor);
             }
         }
-    );
+        
+        document.addEventListener("keydown", distributor);
 }
