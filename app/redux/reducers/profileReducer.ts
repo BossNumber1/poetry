@@ -1,6 +1,6 @@
 import { ActionTypes, AllActions } from "../types";
 
-interface InitialState {
+export interface InitialState {
     showForm: boolean;
     showMenu: boolean;
     readVerse: boolean;

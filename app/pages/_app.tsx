@@ -1,12 +1,12 @@
-import { AppProps } from "next/dist/next-server/lib/router/router";
+import {FC} from 'react';
+import {AppProps} from 'next/app';
 import Head from "next/head";
 import "../styles/globals.scss";
-import { Provider } from 'react-redux'
-import store from '../redux/store'
+import {wrapper} from "../redux/store";
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp: FC<AppProps> = ({Component, pageProps}) => {
     return (
-        <Provider store={store}>
+        <>
             <Head>
                 <title>Пробел Поэзии</title>
                 <meta name="description" content="Стихи в новом формате" />
@@ -16,8 +16,8 @@ function MyApp({ Component, pageProps }: AppProps) {
                 />
             </Head>
             <Component {...pageProps} />
-        </Provider>
+        </>
     );
 }
 
-export default MyApp;
+export default wrapper.withRedux(MyApp);

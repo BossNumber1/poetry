@@ -1,14 +1,8 @@
-import { profileReducer } from '../redux/reducers/profileReducer'
-import { configureStore } from '@reduxjs/toolkit'
+import {Context, createWrapper, MakeStore} from "next-redux-wrapper";
+import {createStore} from "redux";
+import {reducer, RootState} from "../redux/reducers/rootReducer";
 
-export function makeStore() {
-  return configureStore({
-    reducer: { profile: profileReducer },
-  })
-}
+const makeStore: MakeStore<RootState>
+    = (context: Context) => createStore(reducer);
 
-const store = makeStore()
-
-export type AppState = ReturnType<typeof store.getState>
-
-export default store
+export const wrapper = createWrapper<RootState>(makeStore, {debug: true});
